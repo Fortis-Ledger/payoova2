@@ -1,0 +1,17 @@
+{
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler"
+  },
+  "auth": {
+    "login": "Connexion",
+    "signup": "Inscription",
+    "welcome_back": "Bienvenue"
+  },
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "portfolio_overview": "Aperçu du Portefeuille"
+  }
+}

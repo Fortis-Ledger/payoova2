@@ -1,6 +1,7 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import axios from 'axios';
+
+import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
+// import io from 'socket.io-client'; // Temporarily disabled until dependency is resolved
 
 const WalletContext = createContext();
 
@@ -17,74 +18,180 @@ export const WalletProvider = ({ children }) => {
   const [wallets, setWallets] = useState([]);
   const [balances, setBalances] = useState({});
   const [transactions, setTransactions] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [prices, setPrices] = useState({});
+  const [loading, setLoading] = useState(false);
+  // const [socket, setSocket] = useState(null);
+  const [connected, setConnected] = useState(false);
 
-  // Load wallets when user is authenticated
+  // Initialize WebSocket connection - Temporarily disabled
+  /*
   useEffect(() => {
     if (user && token) {
-      loadWallets();
-      loadBalances();
-      loadPrices();
-    } else {
-      setWallets([]);
-      setBalances({});
-      setTransactions([]);
+      const newSocket = io(process.env.REACT_APP_API_URL || 'http://localhost:5000', {
+        auth: { token }
+      });
+
+      newSocket.on('connect', () => {
+        console.log('WebSocket connected');
+        setConnected(true);
+        
+        // Subscribe to balance updates
+        const networks = ['ethereum', 'polygon', 'bsc'];
+        newSocket.emit('subscribe_balance_updates', { networks });
+        newSocket.emit('subscribe_transaction_updates');
+      });
+
+      newSocket.on('disconnect', () => {
+        console.log('WebSocket disconnected');
+        setConnected(false);
+      });
+
+      newSocket.on('balance_update', (data) => {
+        console.log('Balance update received:', data);
+        setBalances(prev => ({
+          ...prev,
+          [data.network]: {
+            ...prev[data.network],
+            [data.address]: data.balance
+          }
+        }));
+      });
+
+      newSocket.on('transaction_update', (data) => {
+        console.log('Transaction update received:', data);
+        setTransactions(prev => prev.map(tx => 
+          tx.id === data.transaction.id 
+            ? { ...tx, ...data.transaction }
+            : tx
+        ));
+      });
+
+      newSocket.on('new_transaction', (data) => {
+        console.log('New transaction received:', data);
+        setTransactions(prev => [data.transaction, ...prev]);
+        
+        // Update balance if needed
+        if (data.balance_update) {
+          setBalances(prev => ({
+            ...prev,
+            [data.balance_update.network]: {
+              ...prev[data.balance_update.network],
+              [data.balance_update.address]: data.balance_update.balance
+            }
+          }));
+        }
+      });
+
+      newSocket.on('error', (error) => {
+        console.error('WebSocket error:', error);
+      });
+
+      setSocket(newSocket);
+
+      return () => {
+        newSocket.close();
+      };
     }
   }, [user, token]);
+  */
 
-  const loadWallets = async () => {
+  // Request notification permission
+  useEffect(() => {
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+  }, []);
+
+  const getNetworkSymbol = (network) => {
+    const symbols = {
+      ethereum: 'ETH',
+      polygon: 'MATIC',
+      bsc: 'BNB'
+    };
+    return symbols[network] || network.toUpperCase();
+  };
+
+  const fetchWallets = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('/api/wallet/list');
-      if (response.data.success) {
-        setWallets(response.data.wallets);
-        setBalances(response.data.balances);
+      const response = await fetch('/api/wallet/list', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setWallets(data.wallets);
+          
+          // Extract balances
+          const balanceMap = {};
+          data.wallets.forEach(wallet => {
+            balanceMap[wallet.network] = wallet.balance;
+          });
+          setBalances(balanceMap);
+        }
       }
     } catch (error) {
-      console.error('Failed to load wallets:', error);
+      console.error('Error fetching wallets:', error);
     } finally {
       setLoading(false);
-    }
-  };
-
-  const loadBalances = async () => {
-    try {
-      const response = await axios.get('/api/wallet/balances');
-      if (response.data.success) {
-        setBalances(response.data.balances);
-      }
-    } catch (error) {
-      console.error('Failed to load balances:', error);
-    }
-  };
-
-  const loadPrices = async () => {
-    try {
-      const response = await axios.get('/api/wallet/prices');
-      if (response.data.success) {
-        setPrices(response.data.prices);
-      }
-    } catch (error) {
-      console.error('Failed to load prices:', error);
     }
   };
 
   const generateWallet = async (network) => {
     try {
       setLoading(true);
-      const response = await axios.post('/api/wallet/generate', { network });
+      const response = await fetch(`/api/wallet/create/${network}`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
 
-      if (response.data.success) {
-        // Reload wallets after generation
-        await loadWallets();
-        return { success: true, wallet: response.data.wallet };
+      const data = await response.json();
+      
+      if (data.success) {
+        await fetchWallets(); // Refresh wallets list
+        return { success: true, wallet: data.wallet };
       } else {
-        return { success: false, error: response.data.error };
+        return { success: false, error: data.error };
       }
     } catch (error) {
-      const errorMessage = error.response?.data?.error || 'Failed to generate wallet';
-      return { success: false, error: errorMessage };
+      console.error('Error generating wallet:', error);
+      return { success: false, error: 'Failed to generate wallet' };
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const refreshBalances = async () => {
+    try {
+      setLoading(true);
+      const response = await fetch('/api/wallet/refresh-balances', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setBalances(data.balances);
+        
+        // Update wallets with new balances
+        setWallets(prev => prev.map(wallet => ({
+          ...wallet,
+          balance: data.balances[wallet.network] || wallet.balance
+        })));
+      }
+    } catch (error) {
+      console.error('Error refreshing balances:', error);
     } finally {
       setLoading(false);
     }
@@ -93,59 +200,63 @@ export const WalletProvider = ({ children }) => {
   const sendCrypto = async (transactionData) => {
     try {
       setLoading(true);
-      const response = await axios.post('/api/wallet/send', transactionData);
+      const response = await fetch('/api/wallet/send', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from_address: transactionData.fromAddress,
+          to_address: transactionData.toAddress,
+          amount: transactionData.amount,
+          network: transactionData.network
+        })
+      });
 
-      if (response.data.success) {
-        // Reload wallets and transactions after sending
-        await loadWallets();
-        await loadTransactions();
-        return { success: true, transaction: response.data.transaction };
+      const data = await response.json();
+      
+      if (data.success) {
+        // Add transaction to local state
+        setTransactions(prev => [data.transaction, ...prev]);
+        
+        // Refresh balances after sending
+        setTimeout(() => refreshBalances(), 2000);
+        
+        return { success: true, transaction: data.transaction };
       } else {
-        return { success: false, error: response.data.error };
+        return { success: false, error: data.error };
       }
     } catch (error) {
-      const errorMessage = error.response?.data?.error || 'Transaction failed';
-      return { success: false, error: errorMessage };
+      console.error('Error sending crypto:', error);
+      return { success: false, error: 'Failed to send transaction' };
     } finally {
       setLoading(false);
     }
   };
 
-  const loadTransactions = async (filters = {}) => {
+  const estimateGasFee = async (fromAddress, toAddress, amount, network) => {
     try {
-      setLoading(true);
-      const params = new URLSearchParams(filters);
-      const response = await axios.get(`/api/wallet/transactions?${params}`);
+      const response = await fetch('/api/wallet/estimate-gas', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          from_address: fromAddress,
+          to_address: toAddress,
+          amount: amount,
+          network: network
+        })
+      });
 
-      if (response.data.success) {
-        setTransactions(response.data.transactions);
-        return { success: true, transactions: response.data.transactions, pagination: response.data.pagination };
-      } else {
-        return { success: false, error: response.data.error };
-      }
+      const data = await response.json();
+      return data;
     } catch (error) {
-      const errorMessage = error.response?.data?.error || 'Failed to load transactions';
-      return { success: false, error: errorMessage };
-    } finally {
-      setLoading(false);
+      console.error('Error estimating gas fee:', error);
+      return { success: false, error: 'Failed to estimate gas fee' };
     }
-  };
-
-  const refreshBalances = async () => {
-    await loadBalances();
-    await loadPrices();
-  };
-
-  const getWalletByNetwork = (network) => {
-    return wallets.find(wallet => wallet.network === network);
-  };
-
-  const getBalanceByNetwork = (network) => {
-    return balances[network] || '0';
-  };
-
-  const getPriceBySymbol = (symbol) => {
-    return prices[symbol] || { price: 0, change_24h: 0 };
   };
 
   const value = {
@@ -154,13 +265,12 @@ export const WalletProvider = ({ children }) => {
     transactions,
     prices,
     loading,
+    connected,
+    fetchWallets,
     generateWallet,
-    sendCrypto,
-    loadTransactions,
     refreshBalances,
-    getWalletByNetwork,
-    getBalanceByNetwork,
-    getPriceBySymbol
+    sendCrypto,
+    estimateGasFee
   };
 
   return (

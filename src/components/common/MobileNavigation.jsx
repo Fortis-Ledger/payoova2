@@ -22,7 +22,9 @@ import {
   Shield,
   LogOut,
   Bell,
-  Smartphone
+  Smartphone,
+  FileText,
+  CreditCard
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -36,6 +38,8 @@ const MobileNavigation = () => {
     { path: '/send', label: 'Send Crypto', icon: Send },
     { path: '/receive', label: 'Receive', icon: Download },
     { path: '/transactions', label: 'History', icon: History },
+    { path: '/cards', label: 'My Cards', icon: CreditCard },
+    { path: '/kyc', label: 'KYC/AML', icon: FileText },
     { path: '/settings', label: 'Settings', icon: Settings },
   ];
 
@@ -43,6 +47,7 @@ const MobileNavigation = () => {
     { path: '/admin/dashboard', label: 'Admin Dashboard', icon: Shield },
     { path: '/admin/users', label: 'Users', icon: User },
     { path: '/admin/transactions', label: 'Transactions', icon: History },
+    { path: '/admin/kyc', label: 'KYC/AML Admin', icon: FileText },
     { path: '/admin/analytics', label: 'Analytics', icon: Settings },
   ];
 

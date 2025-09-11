@@ -25,27 +25,75 @@ class BlockchainService:
         self.networks = {
             'ethereum': {
                 'rpc_url': None,  # Will be set from config when available
+                'testnet_rpc_url': None,
                 'chain_id': 1,
+                'testnet_chain_id': 11155111,  # Sepolia
                 'name': 'Ethereum Mainnet',
+                'testnet_name': 'Ethereum Sepolia',
                 'symbol': 'ETH',
                 'decimals': 18,
-                'explorer': 'https://etherscan.io'
+                'explorer': 'https://etherscan.io',
+                'testnet_explorer': 'https://sepolia.etherscan.io'
             },
             'polygon': {
                 'rpc_url': None,  # Will be set from config when available
+                'testnet_rpc_url': None,
                 'chain_id': 137,
+                'testnet_chain_id': 80001,  # Mumbai
                 'name': 'Polygon',
+                'testnet_name': 'Polygon Mumbai',
                 'symbol': 'MATIC',
                 'decimals': 18,
-                'explorer': 'https://polygonscan.com'
+                'explorer': 'https://polygonscan.com',
+                'testnet_explorer': 'https://mumbai.polygonscan.com'
             },
             'bsc': {
                 'rpc_url': None,  # Will be set from config when available
+                'testnet_rpc_url': None,
                 'chain_id': 56,
+                'testnet_chain_id': 97,  # BSC Testnet
                 'name': 'Binance Smart Chain',
+                'testnet_name': 'BSC Testnet',
                 'symbol': 'BNB',
                 'decimals': 18,
-                'explorer': 'https://bscscan.com'
+                'explorer': 'https://bscscan.com',
+                'testnet_explorer': 'https://testnet.bscscan.com'
+            },
+            'arbitrum': {
+                'rpc_url': None,
+                'testnet_rpc_url': None,
+                'chain_id': 42161,
+                'testnet_chain_id': 421613,  # Arbitrum Goerli
+                'name': 'Arbitrum One',
+                'testnet_name': 'Arbitrum Goerli',
+                'symbol': 'ETH',
+                'decimals': 18,
+                'explorer': 'https://arbiscan.io',
+                'testnet_explorer': 'https://goerli.arbiscan.io'
+            },
+            'optimism': {
+                'rpc_url': None,
+                'testnet_rpc_url': None,
+                'chain_id': 10,
+                'testnet_chain_id': 420,  # Optimism Goerli
+                'name': 'Optimism',
+                'testnet_name': 'Optimism Goerli',
+                'symbol': 'ETH',
+                'decimals': 18,
+                'explorer': 'https://optimistic.etherscan.io',
+                'testnet_explorer': 'https://goerli-optimism.etherscan.io'
+            },
+            'avalanche': {
+                'rpc_url': None,
+                'testnet_rpc_url': None,
+                'chain_id': 43114,
+                'testnet_chain_id': 43113,  # Fuji
+                'name': 'Avalanche C-Chain',
+                'testnet_name': 'Avalanche Fuji',
+                'symbol': 'AVAX',
+                'decimals': 18,
+                'explorer': 'https://snowtrace.io',
+                'testnet_explorer': 'https://testnet.snowtrace.io'
             }
         }
         # Load config if app context is available
@@ -56,9 +104,20 @@ class BlockchainService:
         try:
             # Only try to access current_app if we're in an application context
             if current_app:
-                self.networks['ethereum']['rpc_url'] = current_app.config.get('ETHEREUM_RPC_URL')
-                self.networks['polygon']['rpc_url'] = current_app.config.get('POLYGON_RPC_URL')
-                self.networks['bsc']['rpc_url'] = current_app.config.get('BSC_RPC_URL')
+                network_mode = current_app.config.get('NETWORK_MODE', 'testnet')
+                
+                if network_mode == 'mainnet':
+                    self.networks['ethereum']['rpc_url'] = current_app.config.get('ETHEREUM_RPC_URL')
+                    self.networks['polygon']['rpc_url'] = current_app.config.get('POLYGON_RPC_URL')
+                    self.networks['bsc']['rpc_url'] = current_app.config.get('BSC_RPC_URL')
+                    self.networks['arbitrum']['rpc_url'] = current_app.config.get('ARBITRUM_RPC_URL')
+                    self.networks['optimism']['rpc_url'] = current_app.config.get('OPTIMISM_RPC_URL')
+                    self.networks['avalanche']['rpc_url'] = current_app.config.get('AVALANCHE_RPC_URL')
+                else:
+                    # Use testnet RPCs
+                    self.networks['ethereum']['rpc_url'] = current_app.config.get('ETHEREUM_TESTNET_RPC_URL')
+                    self.networks['polygon']['rpc_url'] = current_app.config.get('POLYGON_TESTNET_RPC_URL')
+                    self.networks['bsc']['rpc_url'] = current_app.config.get('BSC_TESTNET_RPC_URL')
         except RuntimeError:
             # We're not in an application context, use defaults
             pass
@@ -270,6 +329,8 @@ class BlockchainService:
                     'transaction_hash': tx_hash,
                     'status': 'pending',
                     'network': network,
+                    'gas_used': '21000',  # Standard gas limit for ETH transfer
+                    'gas_price': '20000000000',  # 20 Gwei
                     'mock': True,
                     'message': 'Web3 not available - using mock transaction'
                 }

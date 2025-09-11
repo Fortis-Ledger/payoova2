@@ -26,12 +26,24 @@ class CacheManager:
     def _init_redis(self):
         """Initialize Redis connection"""
         try:
-            redis_url = current_app.config.get('REDIS_URL')
+            # Check if we're in an application context
+            try:
+                app = current_app
+            except RuntimeError:
+                # Outside of application context
+                return
+
+            redis_url = app.config.get('REDIS_URL')
             if redis_url:
                 self.redis_client = redis.from_url(redis_url)
                 self.redis_client.ping()  # Test connection
         except Exception as e:
-            current_app.logger.warning(f"Redis not available, using local cache: {e}")
+            # Only log if we have an app context
+            try:
+                current_app.logger.warning(f"Redis not available, using local cache: {e}")
+            except RuntimeError:
+                # Can't log without app context
+                pass
     
     def get(self, key: str) -> Any:
         """Get value from cache"""

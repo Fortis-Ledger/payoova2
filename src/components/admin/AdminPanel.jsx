@@ -18,13 +18,15 @@ import {
   XCircle,
   Search,
   Filter,
-  Download
+  Download,
+  FileText
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import AdminDashboard from './AdminDashboard';
 import AdminUsers from './AdminUsers';
 import AdminTransactions from './AdminTransactions';
 import AdminSettings from './AdminSettings';
+import KYCAdmin from './KYCAdmin';
 
 const AdminPanel = () => {
   const { user, logout } = useAuth();
@@ -34,6 +36,7 @@ const AdminPanel = () => {
     { id: 'dashboard', label: 'Dashboard', icon: Activity, path: '/admin' },
     { id: 'users', label: 'Users', icon: Users, path: '/admin/users' },
     { id: 'transactions', label: 'Transactions', icon: Wallet, path: '/admin/transactions' },
+    { id: 'kyc', label: 'KYC/AML', icon: FileText, path: '/admin/kyc' },
     { id: 'settings', label: 'Settings', icon: Settings, path: '/admin/settings' }
   ];
 
@@ -108,6 +111,7 @@ const AdminPanel = () => {
           <Route path="/" element={<AdminDashboard />} />
           <Route path="/users" element={<AdminUsers />} />
           <Route path="/transactions" element={<AdminTransactions />} />
+          <Route path="/kyc" element={<KYCAdmin />} />
           <Route path="/settings" element={<AdminSettings />} />
         </Routes>
       </div>

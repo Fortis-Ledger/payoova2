@@ -75,6 +75,8 @@ class Transaction(db.Model):
     transaction_type = db.Column(db.String(10), nullable=False)  # 'send' or 'receive'
     status = db.Column(db.String(20), default='pending')  # 'pending', 'confirmed', 'failed'
     gas_fee = db.Column(db.String(50))
+    gas_used = db.Column(db.Integer)
+    gas_price = db.Column(db.String(50))
     block_number = db.Column(db.Integer)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     confirmed_at = db.Column(db.DateTime)
@@ -95,6 +97,8 @@ class Transaction(db.Model):
             'transaction_type': self.transaction_type,
             'status': self.status,
             'gas_fee': self.gas_fee,
+            'gas_used': self.gas_used,
+            'gas_price': self.gas_price,
             'block_number': self.block_number,
             'created_at': self.created_at.isoformat(),
             'confirmed_at': self.confirmed_at.isoformat() if self.confirmed_at else None

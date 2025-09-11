@@ -229,6 +229,8 @@ def send_crypto():
             transaction_type='send',
             status='pending',
             gas_fee=str(gas_fee),
+            gas_used=tx_result.get('gas_used'),
+            gas_price=tx_result.get('gas_price'),
             created_at=datetime.utcnow()
         )
         
@@ -251,6 +253,8 @@ def send_crypto():
                 'network': network,
                 'status': 'pending',
                 'gas_fee': str(gas_fee),
+                'gas_used': new_transaction.gas_used,
+                'gas_price': new_transaction.gas_price,
                 'created_at': new_transaction.created_at.isoformat()
             }
         })
@@ -311,6 +315,8 @@ def get_transactions():
                 'transaction_type': tx.transaction_type,
                 'status': tx.status,
                 'gas_fee': tx.gas_fee,
+                'gas_used': tx.gas_used,
+                'gas_price': tx.gas_price,
                 'block_number': tx.block_number,
                 'created_at': tx.created_at.isoformat(),
                 'confirmed_at': tx.confirmed_at.isoformat() if tx.confirmed_at else None

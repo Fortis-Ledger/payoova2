@@ -26,11 +26,25 @@ class Config:
     # Encryption Keys
     WALLET_ENCRYPTION_KEY = os.environ.get('WALLET_ENCRYPTION_KEY')
     
-    # Blockchain Configuration
-    ETHEREUM_RPC_URL = os.environ.get('ETHEREUM_RPC_URL', 'https://eth-sepolia.g.alchemy.com/v2/Bo80P-brwtM1N9eghAii3')
-    POLYGON_RPC_URL = os.environ.get('POLYGON_RPC_URL', 'https://polygon-amoy.g.alchemy.com/v2/Bo80P-brwtM1N9eghAii3')
-    BSC_RPC_URL = os.environ.get('BSC_RPC_URL', 'https://bnb-testnet.g.alchemy.com/v2/Bo80P-brwtM1N9eghAii3')
-    INFURA_PROJECT_ID = os.environ.get('INFURA_PROJECT_ID', 'Bo80P-brwtM1N9eghAii3')
+    # Blockchain Configuration - Production RPCs
+    ETHEREUM_RPC_URL = os.getenv('ETHEREUM_RPC_URL', 'https://eth-mainnet.g.alchemy.com/v2/demo')
+    ETHEREUM_TESTNET_RPC_URL = os.getenv('ETHEREUM_TESTNET_RPC_URL', 'https://eth-sepolia.g.alchemy.com/v2/demo')
+    POLYGON_RPC_URL = os.getenv('POLYGON_RPC_URL', 'https://polygon-mainnet.g.alchemy.com/v2/demo')
+    POLYGON_TESTNET_RPC_URL = os.getenv('POLYGON_TESTNET_RPC_URL', 'https://polygon-mumbai.g.alchemy.com/v2/demo')
+    BSC_RPC_URL = os.getenv('BSC_RPC_URL', 'https://bsc-dataseed1.binance.org/')
+    BSC_TESTNET_RPC_URL = os.getenv('BSC_TESTNET_RPC_URL', 'https://data-seed-prebsc-1-s1.binance.org:8545/')
+    ARBITRUM_RPC_URL = os.getenv('ARBITRUM_RPC_URL', 'https://arb-mainnet.g.alchemy.com/v2/demo')
+    OPTIMISM_RPC_URL = os.getenv('OPTIMISM_RPC_URL', 'https://opt-mainnet.g.alchemy.com/v2/demo')
+    AVALANCHE_RPC_URL = os.getenv('AVALANCHE_RPC_URL', 'https://api.avax.network/ext/bc/C/rpc')
+    
+    # Network Configuration
+    NETWORK_MODE = os.getenv('NETWORK_MODE', 'testnet')  # 'mainnet' or 'testnet'
+    
+    # API Keys
+    ALCHEMY_API_KEY = os.getenv('ALCHEMY_API_KEY', '')
+    INFURA_PROJECT_ID = os.getenv('INFURA_PROJECT_ID', '')
+    MORALIS_API_KEY = os.getenv('MORALIS_API_KEY', '')
+    COINGECKO_API_KEY = os.environ.get('COINGECKO_API_KEY')
     
     # Explorer API Keys
     ETHERSCAN_API_KEY = os.environ.get('ETHERSCAN_API_KEY')
@@ -54,6 +68,17 @@ class Config:
     
     # Security Settings
     BCRYPT_LOG_ROUNDS = int(os.environ.get('BCRYPT_ROUNDS', 12))
+    
+    # KYC/AML Configuration
+    KYC_API_KEY = os.environ.get('KYC_API_KEY')
+    KYC_API_URL = os.environ.get('KYC_API_URL', 'https://api.jumio.com')
+    AML_API_KEY = os.environ.get('AML_API_KEY')
+    AML_API_URL = os.environ.get('AML_API_URL', 'https://api.worldcheck.com')
+    
+    # Compliance Settings
+    KYC_REQUIRED_FOR_TRANSACTIONS = os.environ.get('KYC_REQUIRED_FOR_TRANSACTIONS', 'true').lower() == 'true'
+    AML_SCREENING_ENABLED = os.environ.get('AML_SCREENING_ENABLED', 'true').lower() == 'true'
+    TRANSACTION_MONITORING_ENABLED = os.environ.get('TRANSACTION_MONITORING_ENABLED', 'true').lower() == 'true'
     
     # CORS Settings
     CORS_ORIGINS = [

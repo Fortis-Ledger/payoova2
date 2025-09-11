@@ -10,6 +10,8 @@ import SendCrypto from './components/wallet/SendCrypto';
 import ReceiveCrypto from './components/wallet/ReceiveCrypto';
 import TransactionHistory from './components/wallet/TransactionHistory';
 import AdvancedFeatures from './components/wallet/AdvancedFeatures';
+import Cards from './components/cards/Cards';
+import KYCVerification from './components/kyc/KYCVerification';
 import AdminPanel from './components/admin/AdminPanel';
 import AdminAnalytics from './components/admin/AdminAnalytics';
 import TestRunner from './components/common/TestRunner';
@@ -47,7 +49,9 @@ function AppRoutes() {
           <Route path="/send" element={<SendCrypto />} />
           <Route path="/receive" element={<ReceiveCrypto />} />
           <Route path="/transactions" element={<TransactionHistory />} />
+          <Route path="/cards" element={<Cards />} />
           <Route path="/advanced-features" element={<AdvancedFeatures />} />
+          <Route path="/kyc" element={<KYCVerification />} />
           <Route path="/test-runner" element={<TestRunner />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>

@@ -213,6 +213,10 @@ def admin_rate_limit(max_requests: int = 100, window_seconds: int = 60):
     """Rate limiting for admin operations"""
     return user_rate_limit(max_requests, window_seconds)
 
+def kyc_rate_limit(max_requests: int = 3, window_seconds: int = 3600):
+    """Rate limiting for KYC operations (very strict - 3 per hour)"""
+    return user_rate_limit(max_requests, window_seconds)
+
 class RateLimitExceeded(Exception):
     """Exception raised when rate limit is exceeded"""
 

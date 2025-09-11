@@ -122,7 +122,13 @@
 
   /* Custom button styles */
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105;
+    background: linear-gradient(90deg, #3b82f6 0%, #9333ea 100%);
+    @apply text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200;
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+    transform: scale(1.05);
   }
 
   .btn-secondary {

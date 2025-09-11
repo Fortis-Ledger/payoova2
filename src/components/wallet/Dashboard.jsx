@@ -17,7 +17,8 @@ import {
   LogOut,
   History,
   TrendingUp,
-  AlertCircle
+  AlertCircle,
+  CreditCard
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useWallet } from '../../contexts/WalletContext';
@@ -144,7 +145,7 @@ const Dashboard = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
           <Link to="/send">
             <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-pointer">
               <CardContent className="flex items-center space-x-4 p-6">
@@ -168,6 +169,20 @@ const Dashboard = () => {
                 <div>
                   <div className="text-white font-semibold">Receive Crypto</div>
                   <div className="text-gray-400 text-sm">Get your wallet address</div>
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
+
+          <Link to="/cards">
+            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors cursor-pointer">
+              <CardContent className="flex items-center space-x-4 p-6">
+                <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center">
+                  <CreditCard className="w-6 h-6 text-indigo-400" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">My Cards</div>
+                  <div className="text-gray-400 text-sm">Manage payment cards</div>
                 </div>
               </CardContent>
             </Card>
