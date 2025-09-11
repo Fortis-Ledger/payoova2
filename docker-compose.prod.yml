@@ -1,0 +1,110 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: payoova-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl.conf:/etc/nginx/conf.d/ssl.conf:ro
+      - ./dist:/usr/share/nginx/html:ro
+      - ./nginx/ssl:/etc/ssl:ro
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - backend
+    restart: unless-stopped
+    networks:
+      - payoova-network
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: payoova-backend
+    environment:
+      - FLASK_ENV=production
+      - NODE_ENV=production
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
+      - ./uploads:/app/uploads
+      - ./backups:/app/backups
+    depends_on:
+      - redis
+      - postgres
+    restart: unless-stopped
+    networks:
+      - payoova-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: payoova-postgres
+    environment:
+      POSTGRES_DB: payoova
+      POSTGRES_USER: payoova
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-payoova123}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backups:/backups
+    restart: unless-stopped
+    networks:
+      - payoova-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U payoova"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: payoova-redis
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-redis123}
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+    networks:
+      - payoova-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  backup:
+    image: postgres:15-alpine
+    container_name: payoova-backup
+    environment:
+      PGPASSWORD: ${POSTGRES_PASSWORD:-payoova123}
+    volumes:
+      - ./backups:/backups
+      - ./scripts:/scripts
+    command: >
+      sh -c "
+        while true; do
+          sleep 86400;
+          pg_dump -h postgres -U payoova payoova > /backups/backup_$$(date +%Y%m%d_%H%M%S).sql;
+          find /backups -name '*.sql' -mtime +30 -delete;
+        done
+      "
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - payoova-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  payoova-network:
+    driver: bridge

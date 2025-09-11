@@ -1,0 +1,10 @@
+2025-09-11 13:17:52,301 - INFO - Using in-memory rate limiting
+2025-09-11 13:17:53,381 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.102.202.86:5000
+2025-09-11 13:17:53,381 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-11 13:17:53,386 - INFO -  * Restarting with stat
+2025-09-11 13:17:55,940 - INFO - Using in-memory rate limiting
+2025-09-11 13:17:56,026 - WARNING -  * Debugger is active!
+2025-09-11 13:17:56,040 - INFO -  * Debugger PIN: 473-760-574
