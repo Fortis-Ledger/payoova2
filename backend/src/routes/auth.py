@@ -6,33 +6,6 @@ import secrets
 
 auth_bp = Blueprint('auth', __name__)
 
-def create_demo_user():
-    """Create demo user if it doesn't exist"""
-    demo_user = User.query.filter_by(email='demo@payoova.com').first()
-    if not demo_user:
-        demo_user = User(
-            name='Demo User',
-            email='demo@payoova.com',
-            role='user'
-        )
-        demo_user.set_password('demo123')
-        db.session.add(demo_user)
-        db.session.commit()
-    return demo_user
-
-def create_admin_user():
-    """Create admin user if it doesn't exist"""
-    admin_user = User.query.filter_by(email='admin@payoova.com').first()
-    if not admin_user:
-        admin_user = User(
-            name='Admin User',
-            email='admin@payoova.com',
-            role='admin'
-        )
-        admin_user.set_password('admin123')
-        db.session.add(admin_user)
-        db.session.commit()
-    return admin_user
 
 @auth_bp.route('/auth/signup', methods=['POST', 'OPTIONS'])
 @cross_origin()
@@ -95,10 +68,6 @@ def login():
         # Validate required fields
         if not data or not all(k in data for k in ('email', 'password')):
             return jsonify({'message': 'Email and password are required'}), 400
-        
-        # Create demo and admin users if they don't exist
-        create_demo_user()
-        create_admin_user()
         
         # Find user
         user = User.query.filter_by(email=data['email']).first()

@@ -34,18 +34,6 @@ const Login = () => {
     setLoading(false);
   };
 
-  const handleDemoLogin = async () => {
-    setError('');
-    setLoading(true);
-    
-    const result = await login('demo@payoova.com', 'demo123');
-    
-    if (!result.success) {
-      setError(result.error);
-    }
-    
-    setLoading(false);
-  };
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
@@ -163,23 +151,6 @@ const Login = () => {
                 </Button>
               </form>
 
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-white/20" />
-                </div>
-                <div className="relative flex justify-center text-sm">
-                  <span className="bg-slate-900 px-2 text-gray-400">or</span>
-                </div>
-              </div>
-
-              <Button 
-                onClick={handleDemoLogin}
-                variant="outline" 
-                className="w-full border-white/20 text-white hover:bg-white/10"
-                disabled={loading}
-              >
-                Try Demo Account
-              </Button>
 
               <div className="text-center">
                 <Link 

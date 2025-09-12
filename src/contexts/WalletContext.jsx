@@ -114,7 +114,8 @@ export const WalletProvider = ({ children }) => {
   const fetchWallets = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/wallet/list', {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+      const response = await fetch(`${apiBase}/wallet/list`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -144,7 +145,8 @@ export const WalletProvider = ({ children }) => {
   const generateWallet = async (network) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/wallet/create/${network}`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+      const response = await fetch(`${apiBase}/wallet/create/${network}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -171,7 +173,8 @@ export const WalletProvider = ({ children }) => {
   const refreshBalances = async () => {
     try {
       setLoading(true);
-      const response = await fetch('/api/wallet/refresh-balances', {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+      const response = await fetch(`${apiBase}/wallet/refresh-balances`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -200,7 +203,8 @@ export const WalletProvider = ({ children }) => {
   const sendCrypto = async (transactionData) => {
     try {
       setLoading(true);
-      const response = await fetch('/api/wallet/send', {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+      const response = await fetch(`${apiBase}/wallet/send`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -237,7 +241,8 @@ export const WalletProvider = ({ children }) => {
 
   const estimateGasFee = async (fromAddress, toAddress, amount, network) => {
     try {
-      const response = await fetch('/api/wallet/estimate-gas', {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+      const response = await fetch(`${apiBase}/wallet/estimate-gas`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,

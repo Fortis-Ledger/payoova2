@@ -49,14 +49,19 @@ const TestRunner = () => {
           if (test.method === 'GET') {
             response = await axios.get(test.endpoint);
           } else {
-            // Mock data for POST requests
-            const mockData = test.endpoint.includes('signup') 
-              ? { name: 'Test User', email: `test${Date.now()}@test.com`, password: 'test123' }
-              : test.endpoint.includes('login')
-              ? { email: 'demo@payoova.com', password: 'demo123' }
-              : {};
-            
-            response = await axios.post(test.endpoint, mockData);
+            // Data for POST requests
+            if (test.endpoint.includes('signup')) {
+              const email = `test${Date.now()}@test.com`;
+              const creds = { name: 'Test User', email, password: 'test123' };
+              response = await axios.post(test.endpoint, creds);
+              // Save credentials globally for subsequent login
+              window.__lastTestUser = { email, password: 'test123' };
+            } else if (test.endpoint.includes('login')) {
+              const creds = window.__lastTestUser || { email: 'nonexistent@test.com', password: 'wrong' };
+              response = await axios.post(test.endpoint, creds);
+            } else {
+              response = await axios.post(test.endpoint, {});
+            }
           }
 
           const duration = Date.now() - startTime;

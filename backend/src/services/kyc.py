@@ -180,8 +180,12 @@ class KYCService:
             if self.api_key and self.base_url:
                 result = await self._external_kyc_check(user_id, document_data)
             else:
-                # Mock verification for demo
-                result = await self._mock_kyc_check(user_id, document_data)
+                # Only allow mock verification in demo mode
+                demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+                if demo_mode:
+                    result = await self._mock_kyc_check(user_id, document_data)
+                else:
+                    return {'success': False, 'error': 'KYC service not configured. Please integrate a real KYC provider.'}
             
             # Update verification status
             if result['success']:
@@ -320,7 +324,11 @@ class AMLService:
             if self.api_key and self.base_url:
                 result = await self._external_aml_screen(user_data)
             else:
-                result = await self._mock_aml_screen(user_data)
+                demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+                if demo_mode:
+                    result = await self._mock_aml_screen(user_data)
+                else:
+                    return {'success': False, 'error': 'AML service not configured. Please integrate a real AML provider.'}
             
             # Update check record
             aml_check.status = 'clear' if result['clear'] else 'hit'

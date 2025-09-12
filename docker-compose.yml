@@ -70,10 +70,10 @@ services:
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET:-generate-jwt-refresh-secret}
       WALLET_ENCRYPTION_KEY: ${WALLET_ENCRYPTION_KEY:-generate-wallet-encryption-key}
       
-      # Blockchain
-      ETHEREUM_RPC_URL: ${ETHEREUM_RPC_URL:-https://mainnet.infura.io/v3/demo}
-      POLYGON_RPC_URL: ${POLYGON_RPC_URL:-https://polygon-mainnet.infura.io/v3/demo}
-      BSC_RPC_URL: ${BSC_RPC_URL:-https://bsc-dataseed.binance.org/}
+      # Blockchain (must be provided; no demo defaults)
+      ETHEREUM_RPC_URL: ${ETHEREUM_RPC_URL}
+      POLYGON_RPC_URL: ${POLYGON_RPC_URL}
+      BSC_RPC_URL: ${BSC_RPC_URL}
       INFURA_PROJECT_ID: ${INFURA_PROJECT_ID}
       
       # API Keys

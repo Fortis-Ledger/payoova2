@@ -125,14 +125,3 @@ For issues or questions:
 - Ensure all services are running
 - Verify network connectivity
 
-## 🎯 Default Credentials
-
-**Admin Access:**
-- Email: admin@payoova.com
-- Password: admin123
-
-**Demo User:**
-- Email: demo@payoova.com
-- Password: demo123
-
-⚠️ **Change these in production!**

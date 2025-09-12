@@ -21,21 +21,22 @@ class Config:
     # JWT Configuration
     JWT_ACCESS_SECRET = os.environ.get('JWT_ACCESS_SECRET') or secrets.token_hex(32)
     JWT_REFRESH_SECRET = os.environ.get('JWT_REFRESH_SECRET') or secrets.token_hex(32)
-    JWT_ACCESS_TOKEN_EXPIRES = int(os.environ.get('TOKEN_EXPIRY_HOURS', 24)) * 3600  # in seconds
+    JWT_ACCESS_TOKEN_EXPIRES = int(os.environ.get('JWT_ACCESS_TOKEN_EXPIRES', 24))
+    JWT_REFRESH_TOKEN_EXPIRES = int(os.environ.get('JWT_REFRESH_TOKEN_EXPIRES', 720))
     
     # Encryption Keys
     WALLET_ENCRYPTION_KEY = os.environ.get('WALLET_ENCRYPTION_KEY')
     
-    # Blockchain Configuration - Production RPCs
-    ETHEREUM_RPC_URL = os.getenv('ETHEREUM_RPC_URL', 'https://eth-mainnet.g.alchemy.com/v2/demo')
-    ETHEREUM_TESTNET_RPC_URL = os.getenv('ETHEREUM_TESTNET_RPC_URL', 'https://eth-sepolia.g.alchemy.com/v2/demo')
-    POLYGON_RPC_URL = os.getenv('POLYGON_RPC_URL', 'https://polygon-mainnet.g.alchemy.com/v2/demo')
-    POLYGON_TESTNET_RPC_URL = os.getenv('POLYGON_TESTNET_RPC_URL', 'https://polygon-mumbai.g.alchemy.com/v2/demo')
-    BSC_RPC_URL = os.getenv('BSC_RPC_URL', 'https://bsc-dataseed1.binance.org/')
-    BSC_TESTNET_RPC_URL = os.getenv('BSC_TESTNET_RPC_URL', 'https://data-seed-prebsc-1-s1.binance.org:8545/')
-    ARBITRUM_RPC_URL = os.getenv('ARBITRUM_RPC_URL', 'https://arb-mainnet.g.alchemy.com/v2/demo')
-    OPTIMISM_RPC_URL = os.getenv('OPTIMISM_RPC_URL', 'https://opt-mainnet.g.alchemy.com/v2/demo')
-    AVALANCHE_RPC_URL = os.getenv('AVALANCHE_RPC_URL', 'https://api.avax.network/ext/bc/C/rpc')
+    # Blockchain Configuration - RPCs must be provided via environment variables (no demo defaults)
+    ETHEREUM_RPC_URL = os.getenv('ETHEREUM_RPC_URL', '')
+    ETHEREUM_TESTNET_RPC_URL = os.getenv('ETHEREUM_TESTNET_RPC_URL', '')
+    POLYGON_RPC_URL = os.getenv('POLYGON_RPC_URL', '')
+    POLYGON_TESTNET_RPC_URL = os.getenv('POLYGON_TESTNET_RPC_URL', '')
+    BSC_RPC_URL = os.getenv('BSC_RPC_URL', '')
+    BSC_TESTNET_RPC_URL = os.getenv('BSC_TESTNET_RPC_URL', '')
+    ARBITRUM_RPC_URL = os.getenv('ARBITRUM_RPC_URL', '')
+    OPTIMISM_RPC_URL = os.getenv('OPTIMISM_RPC_URL', '')
+    AVALANCHE_RPC_URL = os.getenv('AVALANCHE_RPC_URL', '')
     
     # Network Configuration
     NETWORK_MODE = os.getenv('NETWORK_MODE', 'testnet')  # 'mainnet' or 'testnet'
@@ -67,7 +68,7 @@ class Config:
     RATELIMIT_DEFAULT = os.environ.get('RATE_LIMIT_REQUESTS', '100') + " per " + str(int(os.environ.get('RATE_LIMIT_WINDOW', 900))) + " seconds"
     
     # Security Settings
-    BCRYPT_LOG_ROUNDS = int(os.environ.get('BCRYPT_ROUNDS', 12))
+    BCRYPT_LOG_ROUNDS = int(os.environ.get('BCRYPT_LOG_ROUNDS', 12))
     
     # KYC/AML Configuration
     KYC_API_KEY = os.environ.get('KYC_API_KEY')

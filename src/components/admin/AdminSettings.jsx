@@ -37,10 +37,10 @@ const AdminSettings = () => {
     smtp_user: '',
     smtp_pass: '',
 
-    // Blockchain Settings
-    ethereum_rpc_url: 'https://mainnet.infura.io/v3/demo',
-    polygon_rpc_url: 'https://polygon-mainnet.infura.io/v3/demo',
-    bsc_rpc_url: 'https://bsc-dataseed.binance.org/',
+    // Blockchain Settings (provide real RPC URLs via environment/secure storage)
+    ethereum_rpc_url: '',
+    polygon_rpc_url: '',
+    bsc_rpc_url: '',
     infura_project_id: '',
 
     // API Keys

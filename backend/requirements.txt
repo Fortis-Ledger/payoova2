@@ -17,10 +17,10 @@ bcrypt==4.1.2
 cryptography==42.0.5
 PyJWT==2.8.0
 
-# Blockchain & Web3
-web3==6.15.1
-eth-account==0.10.0
-eth-keys==0.4.0
+# Blockchain & Web3 (optional - will use mock if not available)
+# web3==6.15.1
+# eth-account==0.10.0
+# eth-keys==0.4.0
 
 # Rate Limiting & Caching
 Flask-Limiter==3.12.0

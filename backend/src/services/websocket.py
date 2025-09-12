@@ -2,7 +2,7 @@ import asyncio
 import json
 import logging
 from typing import Dict, Set, Optional
-from flask import current_app
+from flask import current_app, request
 from flask_socketio import SocketIO, emit, join_room, leave_room, disconnect
 from src.models.user import User, Wallet, Transaction, db
 from src.utils.security import JWTManager
@@ -253,9 +253,11 @@ class TransactionMonitor:
 
     async def _check_pending_transactions_with_context(self):
         """Check status of pending transactions with proper context"""
+        from flask import current_app
         try:
-            # Get all pending transactions
-            pending_txs = Transaction.query.filter_by(status='pending').all()
+            with current_app.app_context():
+                # Get all pending transactions
+                pending_txs = Transaction.query.filter_by(status='pending').all()
             
             for tx in pending_txs:
                 if not tx.transaction_hash:
@@ -327,9 +329,11 @@ class BalanceMonitor:
 
     async def _check_wallet_balances_with_context(self):
         """Check wallet balances for changes with proper context"""
+        from flask import current_app
         try:
-            # Get all active wallets
-            wallets = Wallet.query.filter_by(is_active=True).all()
+            with current_app.app_context():
+                # Get all active wallets
+                wallets = Wallet.query.filter_by(is_active=True).all()
             
             for wallet in wallets:
                 # Get current balance from blockchain

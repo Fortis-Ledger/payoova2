@@ -306,6 +306,129 @@ def transfer_crypto():
             'error': f'Transaction failed: {str(e)}'
         }), 500
 
+@wallet_bp.route('/wallet/list', methods=['GET'])
+@cross_origin()
+@require_auth
+def list_wallets():
+    """List all wallets for the current user"""
+    try:
+        user = get_current_user()
+        if not user:
+            return jsonify({'success': False, 'error': 'User not found'}), 404
+
+        # Get all active wallets for the user
+        wallets = Wallet.query.filter_by(
+            user_id=user.id,
+            is_active=True
+        ).all()
+
+        wallet_list = []
+        for wallet in wallets:
+            wallet_data = wallet.to_dict()
+            wallet_list.append(wallet_data)
+
+        return jsonify({
+            'success': True,
+            'wallets': wallet_list
+        })
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Failed to list wallets: {str(e)}'
+        }), 500
+
+@wallet_bp.route('/wallet/refresh-balances', methods=['POST'])
+@cross_origin()
+@require_auth
+def refresh_balances():
+    """Refresh balances for all user wallets"""
+    try:
+        user = get_current_user()
+        if not user:
+            return jsonify({'success': False, 'error': 'User not found'}), 404
+
+        # Get all active wallets for the user
+        wallets = Wallet.query.filter_by(
+            user_id=user.id,
+            is_active=True
+        ).all()
+
+        blockchain_svc = get_blockchain_service_instance()
+        balances = {}
+
+        for wallet in wallets:
+            balance_result = blockchain_svc.get_balance(wallet.address, wallet.network)
+            if balance_result['success']:
+                wallet.balance = balance_result['balance']
+                balances[wallet.network] = balance_result['balance']
+            else:
+                balances[wallet.network] = wallet.balance
+
+        db.session.commit()
+
+        return jsonify({
+            'success': True,
+            'balances': balances
+        })
+
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({
+            'success': False,
+            'error': f'Failed to refresh balances: {str(e)}'
+        }), 500
+
+@wallet_bp.route('/wallet/send', methods=['POST'])
+@cross_origin()
+@require_auth
+@transaction_rate_limit()
+def send_crypto():
+    """Send cryptocurrency (alias for transfer)"""
+    return transfer_crypto()
+
+@wallet_bp.route('/wallet/estimate-gas', methods=['POST'])
+@cross_origin()
+@require_auth
+def estimate_gas():
+    """Estimate gas fee for a transaction"""
+    try:
+        data = request.get_json() or {}
+        
+        # Validate required fields
+        required_fields = ['from_address', 'to_address', 'amount', 'network']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({
+                    'success': False,
+                    'error': f'Missing required field: {field}'
+                }), 400
+
+        network = sanitize_input(data['network'])
+        
+        # Get gas estimate from blockchain service
+        blockchain_svc = get_blockchain_service_instance()
+        gas_result = blockchain_svc.estimate_gas_fee(network)
+        
+        if gas_result['success']:
+            return jsonify({
+                'success': True,
+                'gas_fee': gas_result['gas_fee'],
+                'gas_price': gas_result.get('gas_price'),
+                'gas_limit': gas_result.get('gas_limit')
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': gas_result['error']
+            }), 500
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Failed to estimate gas: {str(e)}'
+        }), 500
+
 @wallet_bp.route('/wallet/history/<network>', methods=['GET'])
 @cross_origin()
 @require_auth

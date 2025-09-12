@@ -16,6 +16,13 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState(localStorage.getItem('authToken'));
 
+  // Configure axios base URL from environment
+  useEffect(() => {
+    const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+    axios.defaults.baseURL = apiBase;
+    console.log('API Base URL configured:', apiBase);
+  }, []);
+
   // Set up axios defaults
   useEffect(() => {
     if (token) {

@@ -92,36 +92,10 @@ def fix_database():
             )
         ''')
         
-        # Insert demo admin user
-        cursor.execute('''
-            INSERT INTO user (name, email, password_hash, role, is_active)
-            VALUES (?, ?, ?, ?, ?)
-        ''', (
-            'Admin User',
-            'admin@payoova.com',
-            'ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f',  # sha256('admin123')
-            'admin',
-            1
-        ))
-        
-        # Insert demo regular user
-        cursor.execute('''
-            INSERT INTO user (name, email, password_hash, role, is_active)
-            VALUES (?, ?, ?, ?, ?)
-        ''', (
-            'Demo User',
-            'demo@payoova.com',
-            'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3',  # sha256('hello')
-            'user',
-            1
-        ))
-        
         # Commit changes
         conn.commit()
         print("✅ Database schema fixed successfully!")
-        print("✅ Demo users created:")
-        print("   - Admin: admin@payoova.com / admin123")
-        print("   - User: demo@payoova.com / hello")
+        print("ℹ️ No demo users are created in production mode. Please register users via the signup API.")
         
     except Exception as e:
         print(f"❌ Error fixing database: {e}")

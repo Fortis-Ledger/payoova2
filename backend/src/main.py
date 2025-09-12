@@ -48,8 +48,9 @@ init_rate_limiter(app)
 
 # Enable CORS with proper configuration
 CORS(app, 
-     origins=app.config['CORS_ORIGINS'], 
-     allow_headers=["Content-Type", "Authorization"],
+     origins=['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'http://127.0.0.1:3000'], 
+     allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
+     methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
      supports_credentials=True)
 
 # Register blueprints
@@ -104,6 +105,7 @@ start_background_services()
 
 # Health check endpoint
 @app.route('/api/health', methods=['GET'])
+@app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint for monitoring"""
     try:
@@ -116,8 +118,10 @@ def health_check():
             'version': '2.0.0',
             'services': {
                 'database': 'healthy',
-                'api': 'healthy'
-            }
+                'api': 'healthy',
+                'cors': 'enabled'
+            },
+            'message': 'Payoova API is running successfully'
         }), 200
     except Exception as e:
         return jsonify({

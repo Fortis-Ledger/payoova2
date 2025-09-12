@@ -5134,3 +5134,64 @@ WHERE "transaction".status = ?]
 2025-09-11 21:12:34,333 - INFO - WebSocket services initialized
 2025-09-11 21:12:35,132 - INFO - Transaction monitoring started
 2025-09-11 21:12:35,132 - INFO - Balance monitoring started
+2025-09-12 07:06:10,828 - INFO - Server initialized for threading.
+2025-09-12 07:06:10,829 - INFO - Using in-memory rate limiting
+2025-09-12 07:06:11,031 - INFO - WebSocket services initialized
+2025-09-12 07:06:11,244 - INFO - Transaction monitoring started
+2025-09-12 07:06:11,263 - INFO - Balance monitoring started
+2025-09-12 07:06:12,199 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-09-12 07:06:12,200 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 07:06:12,200 - INFO -  * Restarting with stat
+2025-09-12 07:06:14,794 - INFO - Server initialized for threading.
+2025-09-12 07:06:14,794 - INFO - Using in-memory rate limiting
+2025-09-12 07:06:14,849 - INFO - WebSocket services initialized
+2025-09-12 07:06:14,858 - INFO - Balance monitoring started
+2025-09-12 07:06:14,893 - INFO - Transaction monitoring started
+2025-09-12 07:06:14,932 - WARNING -  * Debugger is active!
+2025-09-12 07:06:14,945 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 07:16:27,690 - INFO - Server initialized for threading.
+2025-09-12 07:16:27,691 - INFO - Using in-memory rate limiting
+2025-09-12 07:16:27,810 - INFO - WebSocket services initialized
+2025-09-12 07:16:27,831 - INFO - Transaction monitoring started
+2025-09-12 07:16:27,851 - INFO - Balance monitoring started
+2025-09-12 07:16:28,768 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-09-12 07:16:28,768 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 07:16:28,768 - INFO -  * Restarting with stat
+2025-09-12 07:16:31,333 - INFO - Server initialized for threading.
+2025-09-12 07:16:31,334 - INFO - Using in-memory rate limiting
+2025-09-12 07:16:31,386 - INFO - WebSocket services initialized
+2025-09-12 07:16:31,395 - INFO - Transaction monitoring started
+2025-09-12 07:16:31,397 - INFO - Balance monitoring started
+2025-09-12 07:16:31,470 - WARNING -  * Debugger is active!
+2025-09-12 07:16:31,483 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 07:26:00,414 - INFO - Server initialized for threading.
+2025-09-12 07:26:00,415 - INFO - Using in-memory rate limiting
+2025-09-12 07:26:00,482 - INFO - WebSocket services initialized
+2025-09-12 07:26:00,489 - INFO - Transaction monitoring started
+2025-09-12 07:26:19,631 - INFO - Server initialized for threading.
+2025-09-12 07:26:19,632 - INFO - Using in-memory rate limiting
+2025-09-12 07:26:19,700 - INFO - WebSocket services initialized
+2025-09-12 07:26:19,709 - INFO - Transaction monitoring started
+2025-09-12 07:26:19,761 - INFO - Balance monitoring started
+2025-09-12 07:26:20,707 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-09-12 07:26:20,707 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 07:26:20,707 - INFO -  * Restarting with stat
+2025-09-12 07:26:23,694 - INFO - Server initialized for threading.
+2025-09-12 07:26:23,695 - INFO - Using in-memory rate limiting
+2025-09-12 07:26:23,761 - INFO - WebSocket services initialized
+2025-09-12 07:26:23,771 - INFO - Transaction monitoring started
+2025-09-12 07:26:23,800 - INFO - Balance monitoring started
+2025-09-12 07:26:23,855 - WARNING -  * Debugger is active!
+2025-09-12 07:26:23,867 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 07:26:47,129 - INFO - 127.0.0.1 - - [12/Sep/2025 07:26:47] "GET /api/health HTTP/1.1" 200 -
+2025-09-12 07:31:20,934 - INFO - 127.0.0.1 - - [12/Sep/2025 07:31:20] "OPTIONS /api/api/auth/signup HTTP/1.1" 200 -
+2025-09-12 07:31:21,199 - INFO - 127.0.0.1 - - [12/Sep/2025 07:31:21] "[31m[1mPOST /api/api/auth/signup HTTP/1.1[0m" 405 -

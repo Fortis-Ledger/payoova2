@@ -16,9 +16,6 @@ def upgrade():
             db.create_all()
             print("✅ Database tables created successfully")
 
-            # Create demo users if they don't exist
-            _create_demo_users()
-
             print("✅ Database migration completed successfully")
 
     except Exception as e:
@@ -39,38 +36,6 @@ def downgrade():
         raise
 
 
-def _create_demo_users():
-    """Create demo users for testing"""
-    try:
-        # Check if demo users already exist
-        demo_user = User.query.filter_by(email='demo@payoova.com').first()
-        admin_user = User.query.filter_by(email='admin@payoova.com').first()
-
-        if not demo_user:
-            demo_user = User(
-                name='Demo User',
-                email='demo@payoova.com',
-                role='user'
-            )
-            demo_user.set_password('demo123')
-            db.session.add(demo_user)
-            print("✅ Demo user created")
-
-        if not admin_user:
-            admin_user = User(
-                name='Admin User',
-                email='admin@payoova.com',
-                role='admin'
-            )
-            admin_user.set_password('admin123')
-            db.session.add(admin_user)
-            print("✅ Admin user created")
-
-        db.session.commit()
-
-    except Exception as e:
-        print(f"❌ Failed to create demo users: {e}")
-        db.session.rollback()
 
 
 def run_migration():

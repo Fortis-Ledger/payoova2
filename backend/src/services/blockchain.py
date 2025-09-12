@@ -96,6 +96,8 @@ class BlockchainService:
                 'testnet_explorer': 'https://testnet.snowtrace.io'
             }
         }
+        # Demo mode flag (disable mocks by default)
+        self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
         # Load config if app context is available
         self._load_config()
 
@@ -165,19 +167,23 @@ class BlockchainService:
                     'network_info': self.networks.get(network, {})
                 }
             else:
-                # Mock wallet generation when web3 is not available
-                private_key = secrets.token_hex(32)
-                # Generate a mock Ethereum-style address
-                mock_address = '0x' + secrets.token_hex(20)
-
-                return {
-                    'success': True,
-                    'address': mock_address,
-                    'private_key': private_key,
-                    'network': network,
-                    'network_info': self.networks.get(network, {}),
-                    'mock': True
-                }
+                if self.demo_mode:
+                    # Mock wallet generation when web3 is not available (demo mode)
+                    private_key = secrets.token_hex(32)
+                    mock_address = '0x' + secrets.token_hex(20)
+                    return {
+                        'success': True,
+                        'address': mock_address,
+                        'private_key': private_key,
+                        'network': network,
+                        'network_info': self.networks.get(network, {}),
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'Web3 not available and RPC not configured. Please configure real RPC URLs.'
+                    }
         except Exception as e:
             return {
                 'success': False,
@@ -190,13 +196,20 @@ class BlockchainService:
             web3 = self.get_web3_instance(network)
             
             if not web3:
-                # Return mock balance for demo
-                return {
-                    'success': True,
-                    'balance': '0.0',
-                    'balance_wei': '0',
-                    'network': network
-                }
+                if self.demo_mode:
+                    return {
+                        'success': True,
+                        'balance': '0.0',
+                        'balance_wei': '0',
+                        'network': network,
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'RPC not configured or unreachable. Please configure valid RPC URLs.',
+                        'network': network
+                    }
             
             # Get balance in Wei
             balance_wei = web3.eth.get_balance(address)
@@ -222,14 +235,21 @@ class BlockchainService:
             web3 = self.get_web3_instance(network)
             
             if not web3:
-                # Return mock gas fee
-                base_fees = {'ethereum': 0.001, 'polygon': 0.0001, 'bsc': 0.0001}
-                return {
-                    'success': True,
-                    'gas_fee': str(base_fees.get(network, 0.001)),
-                    'gas_price': '20000000000',  # 20 Gwei
-                    'gas_limit': '21000'
-                }
+                if self.demo_mode:
+                    base_fees = {'ethereum': 0.001, 'polygon': 0.0001, 'bsc': 0.0001}
+                    return {
+                        'success': True,
+                        'gas_fee': str(base_fees.get(network, 0.001)),
+                        'gas_price': '20000000000',
+                        'gas_limit': '21000',
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'RPC not configured or unreachable. Cannot estimate gas.',
+                        'network': network
+                    }
             
             # Get current gas price
             gas_price = web3.eth.gas_price
@@ -263,15 +283,21 @@ class BlockchainService:
                 web3 = self.get_web3_instance(network)
 
                 if not web3:
-                    # Return mock transaction for demo
-                    tx_hash = '0x' + secrets.token_hex(32)
-                    return {
-                        'success': True,
-                        'transaction_hash': tx_hash,
-                        'status': 'pending',
-                        'network': network,
-                        'mock': True
-                    }
+                    if self.demo_mode:
+                        tx_hash = '0x' + secrets.token_hex(32)
+                        return {
+                            'success': True,
+                            'transaction_hash': tx_hash,
+                            'status': 'pending',
+                            'network': network,
+                            'mock': True
+                        }
+                    else:
+                        return {
+                            'success': False,
+                            'error': 'RPC not configured or unreachable. Cannot send transaction.',
+                            'network': network
+                        }
 
                 # Get account from private key
                 account = Account.from_key(private_key)
@@ -322,18 +348,24 @@ class BlockchainService:
                     'gas_price': str(gas_price)
                 }
             else:
-                # Mock transaction when web3 is not available
-                tx_hash = '0x' + secrets.token_hex(32)
-                return {
-                    'success': True,
-                    'transaction_hash': tx_hash,
-                    'status': 'pending',
-                    'network': network,
-                    'gas_used': '21000',  # Standard gas limit for ETH transfer
-                    'gas_price': '20000000000',  # 20 Gwei
-                    'mock': True,
-                    'message': 'Web3 not available - using mock transaction'
-                }
+                if self.demo_mode:
+                    tx_hash = '0x' + secrets.token_hex(32)
+                    return {
+                        'success': True,
+                        'transaction_hash': tx_hash,
+                        'status': 'pending',
+                        'network': network,
+                        'gas_used': '21000',
+                        'gas_price': '20000000000',
+                        'mock': True,
+                        'message': 'Web3 not available - using mock transaction'
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'Web3 not available. Please install web3 and configure RPC URLs.',
+                        'network': network
+                    }
 
         except Exception as e:
             return {
@@ -347,13 +379,20 @@ class BlockchainService:
             web3 = self.get_web3_instance(network)
             
             if not web3:
-                # Return mock status
-                return {
-                    'success': True,
-                    'status': 'confirmed',
-                    'block_number': 12345678,
-                    'confirmations': 12
-                }
+                if self.demo_mode:
+                    return {
+                        'success': True,
+                        'status': 'confirmed',
+                        'block_number': 12345678,
+                        'confirmations': 12,
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'RPC not configured or unreachable. Cannot get transaction status.',
+                        'network': network
+                    }
             
             # Get transaction receipt
             receipt = web3.eth.get_transaction_receipt(tx_hash)
@@ -460,16 +499,23 @@ class PriceService:
                         'vs_currency': vs_currency
                     }
                 else:
-                    # Return mock data if API fails
-                    mock_prices = {'ETH': 2500, 'MATIC': 0.8, 'BNB': 300}
-                    return {
-                        'success': True,
-                        'price': mock_prices.get(symbol.upper(), 0),
-                        'change_24h': 2.5,
-                        'symbol': symbol,
-                        'vs_currency': vs_currency,
-                        'mock': True
-                    }
+                    # Only return mock data if demo mode is enabled; otherwise return error
+                    demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+                    if demo_mode:
+                        mock_prices = {'ETH': 2500, 'MATIC': 0.8, 'BNB': 300}
+                        return {
+                            'success': True,
+                            'price': mock_prices.get(symbol.upper(), 0),
+                            'change_24h': 2.5,
+                            'symbol': symbol,
+                            'vs_currency': vs_currency,
+                            'mock': True
+                        }
+                    else:
+                        return {
+                            'success': False,
+                            'error': 'Price API unavailable. Please configure a valid API key or service.'
+                        }
         except Exception as e:
             return {
                 'success': False,

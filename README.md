@@ -2,15 +2,11 @@
 
 A full-stack cryptocurrency wallet application similar to Redot Pay, built with React and Flask.
 
-## 🚀 Live Demo
-
-**Production URL:** https://qjh9iec79z56.manus.space
 
 ## ✨ Features
 
 ### 🔐 User Features
 - **Beautiful Login/Signup System** - Professional crypto wallet interface
-- **Demo Account Access** - Try the platform without registration
 - **Multi-Network Wallet Generation** - Support for Ethereum, Polygon, BSC
 - **Send Crypto Functionality** - Complete transaction system with validation
 - **Receive Crypto** - QR codes and address sharing
@@ -134,7 +130,7 @@ payoova2/
     pip install web3==6.8.0 eth-account==0.8.0 eth-keys==0.4.0
     ```
 
-    **Note:** The application works perfectly without web3 using mock data for development.
+    **Note:** For production, configure real RPC URLs and install web3 for blockchain features. Without this, blockchain-specific endpoints will be unavailable.
 
 4. **Environment Configuration**
    ```bash
@@ -208,8 +204,7 @@ NODE_ENV=development
 
 1. **Getting Started**
    - Visit the application URL
-   - Click "Try Demo Account" for instant access
-   - Or create a new account with email/password
+   - Create a new account with email/password
 
 2. **Creating Wallets**
    - Navigate to Dashboard
@@ -430,6 +425,4 @@ npm install --legacy-peer-deps
 ---
 
 **Built with ❤️ by the Payoova Team**
-
-**Live Demo:** https://qjh9iec79z56.manus.space
 
