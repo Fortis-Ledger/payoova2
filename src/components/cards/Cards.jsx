@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import {
   CreditCard,
-  Plus,
   ArrowLeft,
   Smartphone,
   Globe,
@@ -16,12 +15,8 @@ import {
   Star,
   TrendingUp,
   Lock,
-  Eye,
-  Settings,
-  Wallet
+  Settings
 } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
-
 // Mock card data for Redot Pay-like design
 const mockCards = [
   {
@@ -31,7 +26,7 @@ const mockCards = [
     cardNumber: '4532 **** **** 1234',
     balance: 2450.00,
     currency: 'USD',
-    status: 'active',
+    status: 'coming_soon',
     gradient: 'from-blue-500 to-purple-600',
     icon: Smartphone
   },
@@ -72,9 +67,8 @@ const cardFeatures = [
 ];
 
 const Cards = () => {
-  const { user } = useAuth();
   const [showComingSoon, setShowComingSoon] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(null);
+
 
   const handleCardClick = (card) => {
     if (card.status === 'coming_soon') {
@@ -172,21 +166,15 @@ const Cards = () => {
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
                       <h3 className="text-xl font-semibold text-white">{card.name}</h3>
-                      {card.status === 'active' ? (
-                        <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
-                          Active
-                        </Badge>
-                      ) : (
-                        <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
-                          Coming Soon
-                        </Badge>
-                      )}
+                      <Badge className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+                        Coming Soon
+                      </Badge>
                     </div>
 
                     <p className="text-gray-400">
                       {card.type === 'virtual'
-                        ? 'Perfect for online shopping and digital payments. Instant activation and complete control.'
-                        : 'Physical card for in-store purchases and ATM withdrawals. Premium metal design with contactless payments.'
+                        ? 'Virtual cards are coming soon! Perfect for online shopping and digital payments with instant activation and complete control.'
+                        : 'Physical cards are coming soon! Premium metal design for in-store purchases and ATM withdrawals with contactless payments.'
                       }
                     </p>
 
@@ -206,17 +194,10 @@ const Cards = () => {
                         </div>
                       </div>
 
-                      {card.status === 'active' ? (
-                        <Button variant="ghost" size="sm" className="text-blue-400 hover:text-blue-300">
-                          <Settings className="w-4 h-4 mr-2" />
-                          Manage
-                        </Button>
-                      ) : (
-                        <Button variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300">
-                          <Clock className="w-4 h-4 mr-2" />
-                          Notify Me
-                        </Button>
-                      )}
+                      <Button variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300">
+                        <Clock className="w-4 h-4 mr-2" />
+                        Notify Me
+                      </Button>
                     </div>
                   </div>
                 </CardContent>

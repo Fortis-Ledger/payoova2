@@ -25,7 +25,7 @@ import { useWallet } from '../../contexts/WalletContext';
 
 const Dashboard = () => {
   const { user, logout } = useAuth();
-  const { wallets, balances, loading, generateWallet, refreshBalances } = useWallet();
+  const { wallets, balances, prices, loading, generateWallet, refreshBalances, fetchPrices } = useWallet();
   const [showBalances, setShowBalances] = useState(true);
   const [generatingWallet, setGeneratingWallet] = useState(false);
 
@@ -62,8 +62,21 @@ const Dashboard = () => {
   };
 
   const getTotalPortfolioValue = () => {
-    // This would calculate total USD value in a real app
-    return '$12,345.67';
+    let totalValue = 0;
+    const networkCurrencyMap = {
+      'ethereum': 'ETH',
+      'polygon': 'MATIC', 
+      'bsc': 'BNB'
+    };
+    
+    wallets.forEach(wallet => {
+      const balance = parseFloat(balances[wallet.network] || '0');
+      const currency = networkCurrencyMap[wallet.network];
+      const price = prices[currency]?.price || 0;
+      totalValue += balance * price;
+    });
+    
+    return totalValue > 0 ? `$${totalValue.toFixed(2)}` : '$0.00';
   };
 
   return (
@@ -137,7 +150,7 @@ const Dashboard = () => {
                 </div>
                 <div className="text-green-400 flex items-center justify-center space-x-1">
                   <TrendingUp className="w-4 h-4" />
-                  <span>+$234.56 (+1.94%) today</span>
+                  <span>Real-time portfolio tracking</span>
                 </div>
               </div>
             </CardContent>
@@ -239,7 +252,14 @@ const Dashboard = () => {
                       <div className="text-white font-semibold">
                         {showBalances ? `${formatBalance(balance)} ${network.symbol}` : '••••••'}
                       </div>
-                      <div className="text-gray-400 text-sm">≈ $0.00 USD</div>
+                      <div className="text-gray-400 text-sm">
+                        ≈ ${(() => {
+                          const balanceValue = parseFloat(balance) || 0;
+                          const currency = network.symbol;
+                          const price = prices[currency]?.price || 0;
+                          return (balanceValue * price).toFixed(2);
+                        })()} USD
+                      </div>
                     </div>
                   </div>
                   

@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
 
 const AuthContext = createContext();
@@ -12,107 +13,104 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
+  const {
+    user: auth0User,
+    isAuthenticated,
+    isLoading,
+    loginWithRedirect,
+    logout: auth0Logout,
+    getAccessTokenSilently
+  } = useAuth0();
+
   const [user, setUser] = useState(null);
+  const [token, setToken] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [token, setToken] = useState(localStorage.getItem('authToken'));
 
   // Configure axios base URL from environment
   useEffect(() => {
-    const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
+    const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
     axios.defaults.baseURL = apiBase;
     console.log('API Base URL configured:', apiBase);
   }, []);
 
-  // Set up axios defaults
+  // Set up axios defaults with Auth0 token
   useEffect(() => {
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    } else {
-      delete axios.defaults.headers.common['Authorization'];
-    }
-  }, [token]);
-
-  // Check authentication on app load
-  useEffect(() => {
-    const checkAuth = async () => {
-      if (token) {
+    const setupAuth = async () => {
+      if (isAuthenticated) {
         try {
-          const response = await axios.get('/api/auth/verify');
-          if (response.data) {
-            setUser(response.data);
+          const accessToken = await getAccessTokenSilently();
+          setToken(accessToken);
+          axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+
+          // Sync user data with backend
+          if (auth0User) {
+            const userData = {
+              id: auth0User.sub,
+              name: auth0User.name,
+              email: auth0User.email,
+              role: 'user' // Default role, can be updated from backend
+            };
+            setUser(userData);
+
+            // Optionally sync with backend
+            try {
+              await axios.post('/api/auth/sync-user', userData);
+            } catch (error) {
+              console.error('User sync error:', error);
+            }
           }
         } catch (error) {
-          console.error('Auth verification failed:', error);
-          localStorage.removeItem('authToken');
-          setToken(null);
+          console.error('Error getting access token:', error);
         }
+      } else {
+        setToken(null);
+        setUser(null);
+        delete axios.defaults.headers.common['Authorization'];
       }
-      setLoading(false);
+      setLoading(isLoading);
     };
 
-    checkAuth();
-  }, [token]);
+    setupAuth();
+  }, [isAuthenticated, isLoading, auth0User, getAccessTokenSilently]);
 
-  const login = async (email, password) => {
+  const login = async () => {
     try {
-      const response = await axios.post('/api/auth/login', {
-        email,
-        password
-      });
-
-      const { user: userData, token: authToken } = response.data;
-
-      setUser(userData);
-      setToken(authToken);
-      localStorage.setItem('authToken', authToken);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${authToken}`;
-
+      await loginWithRedirect();
       return { success: true };
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Login failed';
-      return { success: false, error: errorMessage };
+      console.error('Login error:', error);
+      return { success: false, error: 'Login failed' };
     }
   };
 
-  const signup = async (name, email, password) => {
+  const signup = async () => {
     try {
-      const response = await axios.post('/api/auth/signup', {
-        name,
-        email,
-        password
+      await loginWithRedirect({
+        screen_hint: 'signup'
       });
-
-      const { user: userData, token: authToken } = response.data;
-
-      setUser(userData);
-      setToken(authToken);
-      localStorage.setItem('authToken', authToken);
-      axios.defaults.headers.common['Authorization'] = `Bearer ${authToken}`;
-
       return { success: true };
     } catch (error) {
-      const errorMessage = error.response?.data?.message || 'Signup failed';
-      return { success: false, error: errorMessage };
+      console.error('Signup error:', error);
+      return { success: false, error: 'Signup failed' };
     }
   };
 
-  const logout = async () => {
-    try {
-      await axios.post('/api/auth/logout');
-    } catch (error) {
-      console.error('Logout error:', error);
-    } finally {
-      setUser(null);
-      setToken(null);
-      localStorage.removeItem('authToken');
-      delete axios.defaults.headers.common['Authorization'];
-    }
+  const logout = () => {
+    auth0Logout({
+      logoutParams: {
+        returnTo: window.location.origin
+      }
+    });
+    setUser(null);
+    setToken(null);
+    delete axios.defaults.headers.common['Authorization'];
   };
 
   const value = {
     user,
     token,
     loading,
+    isAuthenticated,
     login,
     signup,
     logout

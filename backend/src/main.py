@@ -13,6 +13,7 @@ from sqlalchemy import text
 from src.routes.user import user_bp
 from src.routes.auth import auth_bp
 from src.routes.wallet_simple import wallet_bp
+from src.routes.price import price_bp
 from src.routes.qr_routes import qr_bp
 from src.routes.admin import admin_bp
 from src.routes.kyc import kyc_bp
@@ -47,8 +48,8 @@ mail = Mail(app)
 init_rate_limiter(app)
 
 # Enable CORS with proper configuration
-CORS(app, 
-     origins=['http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5173', 'http://127.0.0.1:3000'], 
+CORS(app,
+     origins=['http://localhost:5174', 'http://localhost:5173', 'http://localhost:3000', 'http://127.0.0.1:5174', 'http://127.0.0.1:5173', 'http://127.0.0.1:3000'],
      allow_headers=["Content-Type", "Authorization", "X-Requested-With"],
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
      supports_credentials=True)
@@ -57,6 +58,7 @@ CORS(app,
 app.register_blueprint(user_bp, url_prefix='/api')
 app.register_blueprint(auth_bp, url_prefix='/api')
 app.register_blueprint(wallet_bp, url_prefix='/api')
+app.register_blueprint(price_bp, url_prefix='/api')
 app.register_blueprint(qr_bp, url_prefix='/api')
 app.register_blueprint(admin_bp, url_prefix='/api')
 app.register_blueprint(kyc_bp, url_prefix='/api')

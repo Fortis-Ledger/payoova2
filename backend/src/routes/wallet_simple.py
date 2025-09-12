@@ -5,8 +5,10 @@ from src.utils.security import require_auth, validate_ethereum_address, sanitize
 from src.utils.crypto_utils import WalletEncryption
 from src.utils.rate_limiter import wallet_rate_limit, transaction_rate_limit
 from src.services.blockchain import get_blockchain_service
+from src.services.transaction_monitor import get_transaction_monitor
 from datetime import datetime
 import secrets
+import asyncio
 
 wallet_bp = Blueprint('wallet_simple', __name__)
 
@@ -22,9 +24,34 @@ def get_blockchain_service_instance():
 
 def get_current_user():
     """Get current user from request context"""
-    if hasattr(request, 'current_user'):
-        user_id = request.current_user.get('user_id')
-        return User.query.get(user_id)
+    try:
+        if hasattr(request, 'current_user'):
+            user_id = request.current_user.get('user_id')
+            if user_id:
+                return User.query.get(user_id)
+        
+        # Fallback: try to get user from Auth0 token
+        auth_header = request.headers.get('Authorization')
+        if auth_header and auth_header.startswith('Bearer '):
+            token = auth_header.split(' ')[1]
+            
+            import base64
+            import json
+            
+            # Decode JWT payload (without verification for development)
+            parts = token.split('.')
+            if len(parts) == 3:
+                payload = parts[1]
+                payload += '=' * (4 - len(payload) % 4)
+                decoded_bytes = base64.urlsafe_b64decode(payload)
+                jwt_token = json.loads(decoded_bytes)
+                
+                auth0_id = jwt_token.get('sub')
+                if auth0_id:
+                    return User.query.filter_by(auth0_id=auth0_id).first()
+    except Exception as e:
+        print(f"Error getting current user: {e}")
+    
     return None
 
 @wallet_bp.route('/wallet/balance/<network>', methods=['GET'])
@@ -442,6 +469,30 @@ def get_wallet_history(network):
         # Get query parameters
         page = request.args.get('page', 1, type=int)
         per_page = min(request.args.get('per_page', 20, type=int), 100)
+        sync_blockchain = request.args.get('sync', 'false').lower() == 'true'
+
+        # Find user's wallet for this network
+        wallet = Wallet.query.filter_by(
+            user_id=user.id,
+            network=network,
+            is_active=True
+        ).first()
+
+        if not wallet:
+            return jsonify({
+                'success': False,
+                'error': f'No active wallet found for {network}'
+            }), 404
+
+        # Sync transactions from blockchain if requested
+        if sync_blockchain:
+            try:
+                monitor = get_transaction_monitor()
+                sync_result = asyncio.run(monitor.sync_wallet_transactions(wallet.id))
+                if not sync_result['success']:
+                    print(f"Warning: Failed to sync transactions: {sync_result['error']}")
+            except Exception as e:
+                print(f"Warning: Transaction sync failed: {str(e)}")
 
         # Get transactions for this network
         transactions = Transaction.query.filter_by(
@@ -487,4 +538,50 @@ def get_wallet_history(network):
         return jsonify({
             'success': False,
             'error': f'Failed to get transaction history: {str(e)}'
+        }), 500
+
+@wallet_bp.route('/wallet/sync-transactions/<network>', methods=['POST'])
+@cross_origin()
+@require_auth
+def sync_transactions(network):
+    """Manually sync transactions from blockchain for a network"""
+    try:
+        user = get_current_user()
+        if not user:
+            return jsonify({'success': False, 'error': 'User not found'}), 404
+
+        # Find user's wallet for this network
+        wallet = Wallet.query.filter_by(
+            user_id=user.id,
+            network=network,
+            is_active=True
+        ).first()
+
+        if not wallet:
+            return jsonify({
+                'success': False,
+                'error': f'No active wallet found for {network}'
+            }), 404
+
+        # Sync transactions from blockchain
+        monitor = get_transaction_monitor()
+        sync_result = asyncio.run(monitor.sync_wallet_transactions(wallet.id))
+        
+        if sync_result['success']:
+            return jsonify({
+                'success': True,
+                'synced_transactions': sync_result['synced_transactions'],
+                'total_found': sync_result['total_found'],
+                'message': f"Synced {sync_result['synced_transactions']} new transactions"
+            })
+        else:
+            return jsonify({
+                'success': False,
+                'error': sync_result['error']
+            }), 500
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': f'Failed to sync transactions: {str(e)}'
         }), 500

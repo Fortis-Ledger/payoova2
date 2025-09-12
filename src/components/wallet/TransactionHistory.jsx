@@ -23,7 +23,7 @@ import {
 import { useWallet } from '../../contexts/WalletContext';
 
 const TransactionHistory = () => {
-  const { transactions, loadTransactions, loading } = useWallet();
+  const { transactions, loadTransactions, loading, wallets } = useWallet();
   const [filters, setFilters] = useState({
     network: '',
     status: '',
@@ -55,14 +55,20 @@ const TransactionHistory = () => {
   }, [filters, currentPage]);
 
   const loadTransactionData = async () => {
-    const result = await loadTransactions({
-      ...filters,
-      page: currentPage,
-      per_page: 20
-    });
+    try {
+      const result = await loadTransactions({
+        ...filters,
+        page: currentPage,
+        per_page: 20
+      });
 
-    if (result.success) {
-      setTotalPages(result.pagination.pages);
+      if (result.success) {
+        setTotalPages(result.pagination?.pages || 1);
+      } else {
+        console.error('Failed to load transactions:', result.error);
+      }
+    } catch (error) {
+      console.error('Error loading transactions:', error);
     }
   };
 

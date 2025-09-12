@@ -96,8 +96,14 @@ class BlockchainService:
                 'testnet_explorer': 'https://testnet.snowtrace.io'
             }
         }
-        # Demo mode flag (disable mocks by default)
-        self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+        # Demo mode flag (prefer Flask config if available)
+        try:
+            if current_app:
+                self.demo_mode = bool(current_app.config.get('DEMO_MODE', False))
+            else:
+                self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
+        except RuntimeError:
+            self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
         # Load config if app context is available
         self._load_config()
 

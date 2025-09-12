@@ -22,7 +22,7 @@ import { useAuth } from '../../contexts/AuthContext';
 
 const SendCrypto = () => {
   const { user } = useAuth();
-  const { wallets, balances, sendCrypto, loading, getBalanceByNetwork, getPriceBySymbol } = useWallet();
+  const { wallets, balances, sendCrypto, loading, getBalanceByNetwork, getPriceBySymbol, estimateGasFee } = useWallet();
 
   const [formData, setFormData] = useState({
     fromNetwork: '',
@@ -61,17 +61,43 @@ const SendCrypto = () => {
 
   // Calculate estimated gas and total cost
   useEffect(() => {
-    if (formData.amount && selectedWallet) {
-      // Mock gas estimation - in real app this would come from API
-      const baseGas = formData.fromNetwork === 'ethereum' ? 0.001 : 0.0001;
-      const gasFee = (parseFloat(formData.amount) * 0.01) + baseGas; // 1% fee + base gas
-      setEstimatedGas(gasFee.toFixed(6));
-      setTotalCost((parseFloat(formData.amount) + gasFee).toFixed(6));
-    } else {
-      setEstimatedGas('0');
-      setTotalCost('0');
-    }
-  }, [formData.amount, selectedWallet, formData.fromNetwork]);
+    const calculateGas = async () => {
+      if (formData.amount && selectedWallet && formData.toAddress) {
+        try {
+          const gasResult = await estimateGasFee(
+            selectedWallet.address,
+            formData.toAddress,
+            formData.amount,
+            formData.fromNetwork
+          );
+          
+          if (gasResult.success) {
+            const gasFee = parseFloat(gasResult.gas_fee);
+            setEstimatedGas(gasFee.toFixed(6));
+            setTotalCost((parseFloat(formData.amount) + gasFee).toFixed(6));
+          } else {
+            // Fallback to mock estimation
+            const baseGas = formData.fromNetwork === 'ethereum' ? 0.001 : 0.0001;
+            const gasFee = (parseFloat(formData.amount) * 0.01) + baseGas;
+            setEstimatedGas(gasFee.toFixed(6));
+            setTotalCost((parseFloat(formData.amount) + gasFee).toFixed(6));
+          }
+        } catch (error) {
+          // Fallback to mock estimation
+          const baseGas = formData.fromNetwork === 'ethereum' ? 0.001 : 0.0001;
+          const gasFee = (parseFloat(formData.amount) * 0.01) + baseGas;
+          setEstimatedGas(gasFee.toFixed(6));
+          setTotalCost((parseFloat(formData.amount) + gasFee).toFixed(6));
+        }
+      } else {
+        setEstimatedGas('0');
+        setTotalCost('0');
+      }
+    };
+
+    const debounceTimer = setTimeout(calculateGas, 500);
+    return () => clearTimeout(debounceTimer);
+  }, [formData.amount, selectedWallet, formData.fromNetwork, formData.toAddress, estimateGasFee]);
 
   const validateAddress = (address) => {
     // Basic Ethereum address validation

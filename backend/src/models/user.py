@@ -7,9 +7,10 @@ db = SQLAlchemy()
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    auth0_id = db.Column(db.String(100), unique=True, nullable=True)  # Auth0 user ID
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(255), nullable=False)
+    password_hash = db.Column(db.String(255), nullable=True)  # Nullable for Auth0 users
     role = db.Column(db.String(20), default='user')  # 'user' or 'admin'
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     is_active = db.Column(db.Boolean, default=True)
@@ -20,20 +21,24 @@ class User(db.Model):
 
     def set_password(self, password):
         """Hash and set password using bcrypt"""
-        self.password_hash = PasswordManager.hash_password(password)
-    
+        if password:
+            self.password_hash = PasswordManager.hash_password(password)
+
     def check_password(self, password):
         """Check if provided password matches hash using bcrypt"""
+        if not self.password_hash:
+            return False  # Auth0 users don't have passwords
         return PasswordManager.verify_password(password, self.password_hash)
-    
+
     def generate_auth_token(self):
         """Generate authentication token"""
         return secrets.token_urlsafe(32)
-    
+
     def to_dict(self):
         """Convert user to dictionary"""
         return {
             'id': self.id,
+            'auth0_id': self.auth0_id,
             'name': self.name,
             'email': self.email,
             'role': self.role,

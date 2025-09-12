@@ -13,6 +13,9 @@ class Config:
     FLASK_ENV = os.environ.get('NODE_ENV', 'development')
     DEBUG = FLASK_ENV == 'development'
     
+    # Demo/Mock Settings
+    DEMO_MODE = os.environ.get('DEMO_MODE', 'false').lower() == 'true'
+    
     # Database Configuration
     DATABASE_URL = os.environ.get('DATABASE_URL', 'sqlite:///payoova.db')
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
@@ -91,6 +94,7 @@ class Config:
 class DevelopmentConfig(Config):
     """Development configuration"""
     DEBUG = True
+    DEMO_MODE = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///payoova_dev.db'
 
 class ProductionConfig(Config):

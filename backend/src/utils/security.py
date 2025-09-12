@@ -165,7 +165,9 @@ def require_auth(f):
     """Decorator to require authentication"""
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        from src.models.user import AuthToken, User
+        from src.models.user import User
+        import base64
+        import json
         
         auth_header = request.headers.get('Authorization')
 
@@ -174,28 +176,58 @@ def require_auth(f):
 
         token = auth_header.split(' ')[1]
 
-        # Check if token exists in database
-        auth_token = AuthToken.query.filter_by(token=token, is_active=True).first()
+        try:
+            # Decode Auth0 JWT token (without verification for development)
+            parts = token.split('.')
+            if len(parts) != 3:
+                return jsonify({'error': 'Invalid token format'}), 401
+            
+            # Add padding if needed
+            payload = parts[1]
+            payload += '=' * (4 - len(payload) % 4)
+            
+            # Decode payload
+            decoded_bytes = base64.urlsafe_b64decode(payload)
+            jwt_payload = json.loads(decoded_bytes)
+            
+            # Extract user info
+            auth0_id = jwt_payload.get('sub')
+            email = jwt_payload.get('email', '')
+            
+            if not auth0_id:
+                return jsonify({'error': 'Invalid token payload'}), 401
+            
+            # Find user in database
+            user = User.query.filter_by(auth0_id=auth0_id).first()
+            
+            if not user:
+                # Try to find by email as fallback
+                user = User.query.filter_by(email=email).first()
+                if user:
+                    # Link Auth0 ID to existing user
+                    user.auth0_id = auth0_id
+                    from src.models.user import db
+                    db.session.commit()
+                else:
+                    return jsonify({'error': 'User not found'}), 401
+            
+            if not user.is_active:
+                return jsonify({'error': 'User account is inactive'}), 401
 
-        if not auth_token:
+            # Add user to request context
+            request.current_user = {
+                'user_id': user.id,
+                'email': user.email,
+                'role': user.role,
+                'auth0_id': auth0_id
+            }
+
+            return f(*args, **kwargs)
+            
+        except Exception as e:
+            print(f"Auth error: {e}")
             return jsonify({'error': 'Invalid token'}), 401
-
-        if auth_token.is_expired():
-            return jsonify({'error': 'Token expired'}), 401
-
-        # Get user
-        user = User.query.get(auth_token.user_id)
-        if not user or not user.is_active:
-            return jsonify({'error': 'User not found or inactive'}), 401
-
-        # Add user to request context
-        request.current_user = {
-            'user_id': user.id,
-            'email': user.email,
-            'role': user.role
-        }
-
-        return f(*args, **kwargs)
+            
     return decorated_function
 
 def require_admin(f):

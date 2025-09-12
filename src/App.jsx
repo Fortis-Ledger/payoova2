@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Auth0Provider } from '@auth0/auth0-react';
 import './App.css';
 
 // Components
@@ -70,14 +71,30 @@ function AppRoutes() {
 }
 
 function App() {
+  const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
+  const audience = import.meta.env.VITE_AUTH0_AUDIENCE;
+
   return (
-    <Router>
-      <AuthProvider>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <AppRoutes />
-        </div>
-      </AuthProvider>
-    </Router>
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+        audience: audience,
+        scope: "openid profile email",
+      }}
+      useRefreshTokens={true}
+      cacheLocation="localstorage"
+    >
+      <Router>
+        <AuthProvider>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <AppRoutes />
+          </div>
+        </AuthProvider>
+      </Router>
+    </Auth0Provider>
   );
 }
 

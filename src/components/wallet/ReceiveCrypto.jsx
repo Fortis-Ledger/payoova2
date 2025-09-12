@@ -18,7 +18,7 @@ import {
 import { useWallet } from '../../contexts/WalletContext';
 
 const ReceiveCrypto = () => {
-  const { wallets, getBalanceByNetwork } = useWallet();
+  const { wallets, getBalanceByNetwork, generateWallet, loading } = useWallet();
   const [selectedNetwork, setSelectedNetwork] = useState('');
   const [selectedWallet, setSelectedWallet] = useState(null);
   const [qrCode, setQrCode] = useState('');
@@ -166,8 +166,21 @@ const ReceiveCrypto = () => {
                 {selectedNetwork && !selectedWallet && (
                   <Alert className="bg-yellow-500/10 border-yellow-500/20">
                     <AlertCircle className="h-4 w-4 text-yellow-400" />
-                    <AlertDescription className="text-yellow-400">
-                      No wallet found for this network. Please generate a wallet first.
+                    <AlertDescription className="text-yellow-400 space-y-2">
+                      <div>No wallet found for this network. Please generate a wallet first.</div>
+                      <Button
+                        onClick={async () => {
+                          const result = await generateWallet(selectedNetwork);
+                          if (!result.success) {
+                            alert(result.error);
+                          }
+                        }}
+                        disabled={loading}
+                        size="sm"
+                        className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                      >
+                        Generate {networks.find(n => n.id === selectedNetwork)?.name} Wallet
+                      </Button>
                     </AlertDescription>
                   </Alert>
                 )}

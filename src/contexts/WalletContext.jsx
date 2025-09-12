@@ -22,6 +22,102 @@ export const WalletProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   // const [socket, setSocket] = useState(null);
   const [connected, setConnected] = useState(false);
+  const [autoGenAttempted, setAutoGenAttempted] = useState(false);
+
+  // Fetch real-time prices for cryptocurrencies
+  const fetchPrices = async (walletList = wallets) => {
+    try {
+      const symbols = [...new Set(walletList.map(wallet => {
+        const networkCurrencyMap = {
+          'ethereum': 'ETH',
+          'polygon': 'MATIC',
+          'bsc': 'BNB',
+          'arbitrum': 'ETH',
+          'optimism': 'ETH',
+          'avalanche': 'AVAX'
+        };
+        return networkCurrencyMap[wallet.network] || 'ETH';
+      }))].filter(Boolean);
+
+      if (symbols.length === 0) return;
+
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/prices`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ symbols, vs_currency: 'usd' })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setPrices(data.prices || {});
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching prices:', error);
+    }
+  };
+
+  // Fetch transaction history for a specific network
+  const fetchTransactionHistory = async (network, sync = false) => {
+    try {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const syncParam = sync ? '?sync=true' : '';
+      const response = await fetch(`${apiBase}/api/wallet/history/${network}${syncParam}`, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setTransactions(prev => {
+            // Merge new transactions with existing ones, avoiding duplicates
+            const existingHashes = new Set(prev.map(tx => tx.transaction_hash));
+            const newTransactions = data.transactions.filter(tx => !existingHashes.has(tx.transaction_hash));
+            return [...newTransactions, ...prev].sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+          });
+          return { success: true, transactions: data.transactions };
+        }
+      }
+      return { success: false, error: 'Failed to fetch transaction history' };
+    } catch (error) {
+      console.error('Error fetching transaction history:', error);
+      return { success: false, error: error.message };
+    }
+  };
+
+  // Sync transactions from blockchain
+  const syncTransactions = async (network) => {
+    try {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/sync-transactions/${network}`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          // Refresh transaction history after sync
+          await fetchTransactionHistory(network);
+          return { success: true, message: data.message };
+        }
+      }
+      return { success: false, error: 'Failed to sync transactions' };
+    } catch (error) {
+      console.error('Error syncing transactions:', error);
+      return { success: false, error: error.message };
+    }
+  };
 
   // Initialize WebSocket connection - Temporarily disabled
   /*
@@ -114,8 +210,8 @@ export const WalletProvider = ({ children }) => {
   const fetchWallets = async () => {
     try {
       setLoading(true);
-      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
-      const response = await fetch(`${apiBase}/wallet/list`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/list`, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
@@ -125,15 +221,22 @@ export const WalletProvider = ({ children }) => {
       if (response.ok) {
         const data = await response.json();
         if (data.success) {
-          setWallets(data.wallets);
+          setWallets(data.wallets || []);
           
-          // Extract balances
-          const balanceMap = {};
-          data.wallets.forEach(wallet => {
-            balanceMap[wallet.network] = wallet.balance;
+          // Update balances
+          const newBalances = {};
+          data.wallets?.forEach(wallet => {
+            newBalances[wallet.network] = wallet.balance || '0';
           });
-          setBalances(balanceMap);
+          setBalances(newBalances);
+          
+          // Fetch real-time prices for portfolio calculation
+          await fetchPrices(data.wallets || []);
+        } else {
+          console.error('Failed to fetch wallets:', data.error);
         }
+      } else {
+        console.error('Failed to fetch wallets:', response.statusText);
       }
     } catch (error) {
       console.error('Error fetching wallets:', error);
@@ -145,8 +248,8 @@ export const WalletProvider = ({ children }) => {
   const generateWallet = async (network) => {
     try {
       setLoading(true);
-      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
-      const response = await fetch(`${apiBase}/wallet/create/${network}`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/create/${network}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -154,17 +257,22 @@ export const WalletProvider = ({ children }) => {
         }
       });
 
-      const data = await response.json();
-      
-      if (data.success) {
-        await fetchWallets(); // Refresh wallets list
-        return { success: true, wallet: data.wallet };
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          // Refresh wallets list
+          await fetchWallets();
+          return { success: true, wallet: data.wallet };
+        } else {
+          return { success: false, error: data.error };
+        }
       } else {
-        return { success: false, error: data.error };
+        const errorData = await response.json().catch(() => ({}));
+        return { success: false, error: errorData.error || 'Failed to create wallet' };
       }
     } catch (error) {
       console.error('Error generating wallet:', error);
-      return { success: false, error: 'Failed to generate wallet' };
+      return { success: false, error: error.message };
     } finally {
       setLoading(false);
     }
@@ -173,8 +281,8 @@ export const WalletProvider = ({ children }) => {
   const refreshBalances = async () => {
     try {
       setLoading(true);
-      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
-      const response = await fetch(`${apiBase}/wallet/refresh-balances`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/refresh-balances`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -203,37 +311,34 @@ export const WalletProvider = ({ children }) => {
   const sendCrypto = async (transactionData) => {
     try {
       setLoading(true);
-      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
-      const response = await fetch(`${apiBase}/wallet/send`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/send`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          from_address: transactionData.fromAddress,
-          to_address: transactionData.toAddress,
-          amount: transactionData.amount,
-          network: transactionData.network
-        })
+        body: JSON.stringify(transactionData)
       });
 
-      const data = await response.json();
-      
-      if (data.success) {
-        // Add transaction to local state
-        setTransactions(prev => [data.transaction, ...prev]);
-        
-        // Refresh balances after sending
-        setTimeout(() => refreshBalances(), 2000);
-        
-        return { success: true, transaction: data.transaction };
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          // Add transaction to local state
+          setTransactions(prev => [data.transaction, ...prev]);
+          // Refresh balances
+          await refreshBalances();
+          return { success: true, transaction: data.transaction };
+        } else {
+          return { success: false, error: data.error };
+        }
       } else {
-        return { success: false, error: data.error };
+        const errorData = await response.json().catch(() => ({}));
+        return { success: false, error: errorData.error || 'Transaction failed' };
       }
     } catch (error) {
       console.error('Error sending crypto:', error);
-      return { success: false, error: 'Failed to send transaction' };
+      return { success: false, error: error.message };
     } finally {
       setLoading(false);
     }
@@ -241,8 +346,8 @@ export const WalletProvider = ({ children }) => {
 
   const estimateGasFee = async (fromAddress, toAddress, amount, network) => {
     try {
-      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000/api';
-      const response = await fetch(`${apiBase}/wallet/estimate-gas`, {
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      const response = await fetch(`${apiBase}/api/wallet/estimate-gas`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -264,6 +369,118 @@ export const WalletProvider = ({ children }) => {
     }
   };
 
+  // Fetch wallets and balances on component mount and when user/token changes
+  useEffect(() => {
+    if (user && token) {
+      fetchWallets();
+      // Fetch prices every 30 seconds
+      const priceInterval = setInterval(() => {
+        fetchPrices();
+      }, 30000);
+      
+      return () => clearInterval(priceInterval);
+    }
+  }, [user, token]);
+
+  // Initial price fetch
+  useEffect(() => {
+    if (wallets.length > 0) {
+      fetchPrices();
+    }
+  }, [wallets]);
+
+  // Helper functions for components
+  const getBalanceByNetwork = (network) => {
+    return balances[network] || '0';
+  };
+
+  const getPriceBySymbol = (symbol) => {
+    return prices[symbol] || { price: 0, change_24h: 0 };
+  };
+
+  const loadTransactions = async (filters = {}) => {
+    try {
+      setLoading(true);
+      const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
+      
+      // Build query parameters
+      const params = new URLSearchParams();
+      if (filters.network) params.append('network', filters.network);
+      if (filters.status) params.append('status', filters.status);
+      if (filters.type) params.append('type', filters.type);
+      if (filters.search) params.append('search', filters.search);
+      if (filters.page) params.append('page', filters.page);
+      if (filters.per_page) params.append('per_page', filters.per_page);
+
+      // If no network specified, fetch from all networks
+      if (!filters.network && wallets.length > 0) {
+        let allTransactions = [];
+        let totalPages = 1;
+        
+        for (const wallet of wallets) {
+          const result = await fetchTransactionHistory(wallet.network, filters.sync);
+          if (result.success) {
+            allTransactions = [...allTransactions, ...result.transactions];
+          }
+        }
+        
+        // Sort by date
+        allTransactions.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+        
+        setTransactions(allTransactions);
+        return {
+          success: true,
+          transactions: allTransactions,
+          pagination: {
+            page: filters.page || 1,
+            per_page: filters.per_page || 20,
+            total: allTransactions.length,
+            pages: totalPages
+          }
+        };
+      } else if (filters.network) {
+        return await fetchTransactionHistory(filters.network, filters.sync);
+      }
+      
+      return { success: true, transactions: [], pagination: { page: 1, per_page: 20, total: 0, pages: 1 } };
+    } catch (error) {
+      console.error('Error loading transactions:', error);
+      return { success: false, error: error.message };
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Auto-generate wallets for new users
+  const autoGenerateWallets = async () => {
+    if (!user || wallets.length > 0) return;
+    
+    const networks = ['ethereum', 'polygon', 'bsc'];
+    const results = [];
+    
+    for (const network of networks) {
+      try {
+        const result = await generateWallet(network);
+        results.push({ network, success: result.success, error: result.error });
+      } catch (error) {
+        results.push({ network, success: false, error: error.message });
+      }
+    }
+    
+    return results;
+  };
+
+  // Auto-generate wallets when user first logs in
+  useEffect(() => {
+    if (user && token && wallets.length === 0 && !loading) {
+      const timer = setTimeout(() => {
+        autoGenerateWallets();
+      }, 2000); // Wait 2 seconds after login to auto-generate
+      
+      return () => clearTimeout(timer);
+    }
+  }, [user, token, wallets.length, loading]);
+
   const value = {
     wallets,
     balances,
@@ -271,11 +488,17 @@ export const WalletProvider = ({ children }) => {
     prices,
     loading,
     connected,
-    fetchWallets,
     generateWallet,
     refreshBalances,
     sendCrypto,
-    estimateGasFee
+    estimateGasFee,
+    fetchTransactionHistory,
+    syncTransactions,
+    fetchPrices,
+    loadTransactions,
+    getBalanceByNetwork,
+    getPriceBySymbol,
+    autoGenerateWallets
   };
 
   return (

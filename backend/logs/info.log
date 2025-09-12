@@ -5195,3 +5195,1584 @@ WHERE "transaction".status = ?]
 2025-09-12 07:26:47,129 - INFO - 127.0.0.1 - - [12/Sep/2025 07:26:47] "GET /api/health HTTP/1.1" 200 -
 2025-09-12 07:31:20,934 - INFO - 127.0.0.1 - - [12/Sep/2025 07:31:20] "OPTIONS /api/api/auth/signup HTTP/1.1" 200 -
 2025-09-12 07:31:21,199 - INFO - 127.0.0.1 - - [12/Sep/2025 07:31:21] "[31m[1mPOST /api/api/auth/signup HTTP/1.1[0m" 405 -
+2025-09-12 09:13:02,409 - INFO -  * Detected change in 'C:\\Users\\Microsoft\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\xlsxwriter\\chart_radar.py', reloading
+2025-09-12 09:13:03,249 - INFO -  * Restarting with stat
+2025-09-12 09:13:07,649 - INFO - Server initialized for threading.
+2025-09-12 09:13:07,650 - INFO - Using in-memory rate limiting
+2025-09-12 09:13:07,716 - INFO - WebSocket services initialized
+2025-09-12 09:13:07,725 - INFO - Transaction monitoring started
+2025-09-12 09:13:07,765 - INFO - Balance monitoring started
+2025-09-12 09:13:07,817 - WARNING -  * Debugger is active!
+2025-09-12 09:13:07,829 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:13:15,111 - INFO -  * Detected change in 'C:\\Users\\Microsoft\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\qrcode\\exceptions.py', reloading
+2025-09-12 09:13:15,438 - INFO -  * Restarting with stat
+2025-09-12 09:13:20,736 - INFO - Server initialized for threading.
+2025-09-12 09:13:20,738 - INFO - Using in-memory rate limiting
+2025-09-12 09:13:20,855 - INFO - WebSocket services initialized
+2025-09-12 09:13:20,863 - INFO - Transaction monitoring started
+2025-09-12 09:13:20,921 - INFO - Balance monitoring started
+2025-09-12 09:13:20,959 - WARNING -  * Debugger is active!
+2025-09-12 09:13:20,972 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:15:15,405 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:15:15,773 - INFO -  * Restarting with stat
+2025-09-12 09:17:28,486 - INFO - Server initialized for threading.
+2025-09-12 09:17:28,487 - INFO - Using in-memory rate limiting
+2025-09-12 09:17:28,558 - INFO - WebSocket services initialized
+2025-09-12 09:17:28,571 - INFO - Transaction monitoring started
+2025-09-12 09:17:28,617 - INFO - Balance monitoring started
+2025-09-12 09:18:01,014 - INFO - Server initialized for threading.
+2025-09-12 09:18:01,014 - INFO - Using in-memory rate limiting
+2025-09-12 09:18:01,131 - INFO - WebSocket services initialized
+2025-09-12 09:18:01,138 - INFO - Transaction monitoring started
+2025-09-12 09:18:01,229 - INFO - Balance monitoring started
+2025-09-12 09:18:23,745 - INFO - Server initialized for threading.
+2025-09-12 09:18:23,746 - INFO - Using in-memory rate limiting
+2025-09-12 09:18:23,856 - INFO - WebSocket services initialized
+2025-09-12 09:18:23,880 - INFO - Transaction monitoring started
+2025-09-12 09:18:23,910 - INFO - Balance monitoring started
+2025-09-12 09:18:24,984 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-09-12 09:18:24,984 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 09:18:24,984 - INFO -  * Restarting with stat
+2025-09-12 09:18:29,716 - INFO - Server initialized for threading.
+2025-09-12 09:18:29,716 - INFO - Using in-memory rate limiting
+2025-09-12 09:18:29,788 - INFO - WebSocket services initialized
+2025-09-12 09:18:29,799 - INFO - Balance monitoring started
+2025-09-12 09:18:29,814 - INFO - Transaction monitoring started
+2025-09-12 09:18:29,967 - WARNING -  * Debugger is active!
+2025-09-12 09:18:29,980 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:19:14,442 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:19:14,769 - INFO -  * Restarting with stat
+2025-09-12 09:19:20,268 - INFO - Server initialized for threading.
+2025-09-12 09:19:20,268 - INFO - Using in-memory rate limiting
+2025-09-12 09:19:20,329 - INFO - WebSocket services initialized
+2025-09-12 09:19:20,354 - INFO - Transaction monitoring started
+2025-09-12 09:19:20,421 - INFO - Balance monitoring started
+2025-09-12 09:19:20,515 - WARNING -  * Debugger is active!
+2025-09-12 09:19:20,528 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:36:35,857 - INFO - 127.0.0.1 - - [12/Sep/2025 09:36:35] "OPTIONS /api/api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:37:16,283 - INFO - 127.0.0.1 - - [12/Sep/2025 09:37:16] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 09:37:22,494 - INFO - 127.0.0.1 - - [12/Sep/2025 09:37:22] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 09:37:25,516 - INFO - 127.0.0.1 - - [12/Sep/2025 09:37:25] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 09:37:50,717 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\main.py', reloading
+2025-09-12 09:37:51,316 - INFO -  * Restarting with stat
+2025-09-12 09:37:57,115 - INFO - Server initialized for threading.
+2025-09-12 09:37:57,116 - INFO - Using in-memory rate limiting
+2025-09-12 09:37:57,188 - INFO - WebSocket services initialized
+2025-09-12 09:37:57,197 - INFO - Transaction monitoring started
+2025-09-12 09:37:57,205 - INFO - Balance monitoring started
+2025-09-12 09:37:57,367 - WARNING -  * Debugger is active!
+2025-09-12 09:37:57,379 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:39:08,989 - INFO - 127.0.0.1 - - [12/Sep/2025 09:39:08] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:39:11,332 - INFO - 127.0.0.1 - - [12/Sep/2025 09:39:11] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 09:39:15,530 - INFO - 127.0.0.1 - - [12/Sep/2025 09:39:15] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 09:39:17,883 - INFO - 127.0.0.1 - - [12/Sep/2025 09:39:17] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 09:40:56,408 - INFO - 127.0.0.1 - - [12/Sep/2025 09:40:56] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:41:18,420 - INFO - 127.0.0.1 - - [12/Sep/2025 09:41:18] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:44:07,707 - INFO - Server initialized for threading.
+2025-09-12 09:44:07,708 - INFO - Using in-memory rate limiting
+2025-09-12 09:44:07,775 - INFO - WebSocket services initialized
+2025-09-12 09:44:07,786 - INFO - Transaction monitoring started
+2025-09-12 09:44:07,786 - INFO - Balance monitoring started
+2025-09-12 09:44:26,827 - INFO - Server initialized for threading.
+2025-09-12 09:44:26,829 - INFO - Using in-memory rate limiting
+2025-09-12 09:44:26,894 - INFO - WebSocket services initialized
+2025-09-12 09:44:26,904 - INFO - Balance monitoring started
+2025-09-12 09:44:26,940 - INFO - Transaction monitoring started
+2025-09-12 09:45:44,098 - INFO - 127.0.0.1 - - [12/Sep/2025 09:45:44] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:48:31,609 - INFO - 127.0.0.1 - - [12/Sep/2025 09:48:31] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:49:23,689 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\wallet_simple.py', reloading
+2025-09-12 09:49:24,031 - INFO -  * Restarting with stat
+2025-09-12 09:49:34,313 - INFO - Server initialized for threading.
+2025-09-12 09:49:34,314 - INFO - Using in-memory rate limiting
+2025-09-12 09:49:34,431 - INFO - WebSocket services initialized
+2025-09-12 09:49:34,445 - INFO - Transaction monitoring started
+2025-09-12 09:49:34,547 - INFO - Balance monitoring started
+2025-09-12 09:49:34,666 - WARNING -  * Debugger is active!
+2025-09-12 09:49:34,678 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:49:44,642 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\wallet_simple.py', reloading
+2025-09-12 09:49:45,123 - INFO -  * Restarting with stat
+2025-09-12 09:49:50,316 - INFO - Server initialized for threading.
+2025-09-12 09:49:50,317 - INFO - Using in-memory rate limiting
+2025-09-12 09:49:50,385 - INFO - WebSocket services initialized
+2025-09-12 09:49:50,394 - INFO - Balance monitoring started
+2025-09-12 09:49:50,428 - INFO - Transaction monitoring started
+2025-09-12 09:49:50,562 - WARNING -  * Debugger is active!
+2025-09-12 09:49:50,574 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:50:33,630 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\main.py', reloading
+2025-09-12 09:50:33,959 - INFO -  * Restarting with stat
+2025-09-12 09:50:39,031 - INFO - Server initialized for threading.
+2025-09-12 09:50:39,032 - INFO - Using in-memory rate limiting
+2025-09-12 09:50:39,094 - INFO - WebSocket services initialized
+2025-09-12 09:50:39,101 - INFO - Balance monitoring started
+2025-09-12 09:50:39,169 - INFO - Transaction monitoring started
+2025-09-12 09:50:39,330 - WARNING -  * Debugger is active!
+2025-09-12 09:50:39,342 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:50:41,330 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\main.py', reloading
+2025-09-12 09:50:41,924 - INFO -  * Restarting with stat
+2025-09-12 09:50:47,573 - INFO - Server initialized for threading.
+2025-09-12 09:50:47,573 - INFO - Using in-memory rate limiting
+2025-09-12 09:50:47,631 - INFO - WebSocket services initialized
+2025-09-12 09:50:47,656 - INFO - Transaction monitoring started
+2025-09-12 09:50:47,703 - INFO - Balance monitoring started
+2025-09-12 09:50:47,804 - WARNING -  * Debugger is active!
+2025-09-12 09:50:47,815 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:52:14,636 - INFO - 127.0.0.1 - - [12/Sep/2025 09:52:14] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 09:54:31,518 - INFO - Server initialized for threading.
+2025-09-12 09:54:31,518 - INFO - Using in-memory rate limiting
+2025-09-12 09:54:31,582 - INFO - WebSocket services initialized
+2025-09-12 09:54:31,592 - INFO - Balance monitoring started
+2025-09-12 09:54:31,634 - INFO - Transaction monitoring started
+2025-09-12 09:54:56,993 - INFO - Server initialized for threading.
+2025-09-12 09:54:56,994 - INFO - Using in-memory rate limiting
+2025-09-12 09:54:57,056 - INFO - WebSocket services initialized
+2025-09-12 09:54:57,066 - INFO - Transaction monitoring started
+2025-09-12 09:54:57,113 - INFO - Balance monitoring started
+2025-09-12 09:54:58,211 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.111:5000
+2025-09-12 09:54:58,212 - INFO - [33mPress CTRL+C to quit[0m
+2025-09-12 09:54:58,212 - INFO -  * Restarting with stat
+2025-09-12 09:55:02,503 - INFO - Server initialized for threading.
+2025-09-12 09:55:02,504 - INFO - Using in-memory rate limiting
+2025-09-12 09:55:02,566 - INFO - WebSocket services initialized
+2025-09-12 09:55:02,575 - INFO - Transaction monitoring started
+2025-09-12 09:55:02,604 - INFO - Balance monitoring started
+2025-09-12 09:55:02,762 - WARNING -  * Debugger is active!
+2025-09-12 09:55:02,780 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:55:46,271 - INFO - 127.0.0.1 - - [12/Sep/2025 09:55:46] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:55:46,580 - INFO - 127.0.0.1 - - [12/Sep/2025 09:55:46] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 09:55:46,621 - INFO - 127.0.0.1 - - [12/Sep/2025 09:55:46] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 09:55:46,941 - INFO - 127.0.0.1 - - [12/Sep/2025 09:55:46] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:55:47,196 - INFO - 127.0.0.1 - - [12/Sep/2025 09:55:47] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:56:49,454 - INFO - 127.0.0.1 - - [12/Sep/2025 09:56:49] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:56:49,745 - INFO - 127.0.0.1 - - [12/Sep/2025 09:56:49] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 09:56:50,566 - INFO - 127.0.0.1 - - [12/Sep/2025 09:56:50] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 09:56:50,877 - INFO - 127.0.0.1 - - [12/Sep/2025 09:56:50] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:56:51,130 - INFO - 127.0.0.1 - - [12/Sep/2025 09:56:51] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:57:08,069 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:57:08,221 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:57:08,433 - INFO -  * Restarting with stat
+2025-09-12 09:57:08,666 - INFO -  * Restarting with stat
+2025-09-12 09:57:13,866 - INFO - Server initialized for threading.
+2025-09-12 09:57:13,867 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:13,914 - INFO - Server initialized for threading.
+2025-09-12 09:57:13,915 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:13,932 - INFO - WebSocket services initialized
+2025-09-12 09:57:13,941 - INFO - Balance monitoring started
+2025-09-12 09:57:13,982 - INFO - WebSocket services initialized
+2025-09-12 09:57:13,993 - INFO - Balance monitoring started
+2025-09-12 09:57:14,003 - INFO - Transaction monitoring started
+2025-09-12 09:57:14,033 - INFO - Transaction monitoring started
+2025-09-12 09:57:14,106 - WARNING -  * Debugger is active!
+2025-09-12 09:57:14,118 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:57:14,153 - WARNING -  * Debugger is active!
+2025-09-12 09:57:14,165 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:57:24,474 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:57:24,533 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 09:57:25,107 - INFO -  * Restarting with stat
+2025-09-12 09:57:25,207 - INFO -  * Restarting with stat
+2025-09-12 09:57:30,363 - INFO - Server initialized for threading.
+2025-09-12 09:57:30,363 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:30,400 - INFO - Server initialized for threading.
+2025-09-12 09:57:30,401 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:30,423 - INFO - WebSocket services initialized
+2025-09-12 09:57:30,432 - INFO - Transaction monitoring started
+2025-09-12 09:57:30,446 - INFO - Balance monitoring started
+2025-09-12 09:57:30,462 - INFO - WebSocket services initialized
+2025-09-12 09:57:30,470 - INFO - Transaction monitoring started
+2025-09-12 09:57:30,477 - INFO - Balance monitoring started
+2025-09-12 09:57:30,587 - WARNING -  * Debugger is active!
+2025-09-12 09:57:30,599 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:57:30,625 - WARNING -  * Debugger is active!
+2025-09-12 09:57:30,637 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:57:51,661 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\utils\\security.py', reloading
+2025-09-12 09:57:51,841 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\utils\\security.py', reloading
+2025-09-12 09:57:52,046 - INFO -  * Restarting with stat
+2025-09-12 09:57:52,223 - INFO -  * Restarting with stat
+2025-09-12 09:57:57,290 - INFO - Server initialized for threading.
+2025-09-12 09:57:57,291 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:57,349 - INFO - WebSocket services initialized
+2025-09-12 09:57:57,357 - INFO - Transaction monitoring started
+2025-09-12 09:57:57,390 - INFO - Server initialized for threading.
+2025-09-12 09:57:57,391 - INFO - Using in-memory rate limiting
+2025-09-12 09:57:57,417 - INFO - Balance monitoring started
+2025-09-12 09:57:57,456 - INFO - WebSocket services initialized
+2025-09-12 09:57:57,466 - INFO - Transaction monitoring started
+2025-09-12 09:57:57,475 - INFO - Balance monitoring started
+2025-09-12 09:57:57,519 - WARNING -  * Debugger is active!
+2025-09-12 09:57:57,531 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:57:57,623 - WARNING -  * Debugger is active!
+2025-09-12 09:57:57,635 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 09:58:49,875 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:49] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 09:58:50,150 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:50] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 09:58:50,259 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:50] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 09:58:50,568 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:50] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 09:58:50,571 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:50] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:58:50,916 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:50] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 09:58:54,618 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:54] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 09:58:54,926 - INFO - 127.0.0.1 - - [12/Sep/2025 09:58:54] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:04:59,466 - INFO - 127.0.0.1 - - [12/Sep/2025 10:04:59] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:04:59,748 - INFO - 127.0.0.1 - - [12/Sep/2025 10:04:59] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:08,153 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:08] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:05:08,464 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:08] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:19,183 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:19] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:05:19,504 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:19] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:26,321 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:26] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:05:26,643 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:26] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:27,159 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:27] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:51,360 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:51] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:05:51,637 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:51] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:05:51,915 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:51] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:05:52,224 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:52] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:05:52,507 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:52] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:05:56,140 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:56] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:05:56,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:05:56,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:56] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:05:56,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:05:57,028 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:57] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:05:57,076 - INFO - 127.0.0.1 - - [12/Sep/2025 10:05:57] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:00,148 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:00] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:00,669 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:00,877 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:03,218 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 10:06:03,702 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\routes\\auth.py', reloading
+2025-09-12 10:06:03,860 - INFO -  * Restarting with stat
+2025-09-12 10:06:04,195 - INFO -  * Restarting with stat
+2025-09-12 10:06:09,624 - INFO - Server initialized for threading.
+2025-09-12 10:06:09,627 - INFO - Using in-memory rate limiting
+2025-09-12 10:06:09,696 - INFO - WebSocket services initialized
+2025-09-12 10:06:09,705 - INFO - Balance monitoring started
+2025-09-12 10:06:09,783 - INFO - Transaction monitoring started
+2025-09-12 10:06:09,995 - INFO - Server initialized for threading.
+2025-09-12 10:06:09,996 - INFO - Using in-memory rate limiting
+2025-09-12 10:06:10,013 - WARNING -  * Debugger is active!
+2025-09-12 10:06:10,026 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:06:10,104 - INFO - WebSocket services initialized
+2025-09-12 10:06:10,113 - INFO - Transaction monitoring started
+2025-09-12 10:06:10,257 - INFO - Balance monitoring started
+2025-09-12 10:06:10,390 - WARNING -  * Debugger is active!
+2025-09-12 10:06:10,407 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:06:11,986 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:11] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:11,997 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:12,344 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:12] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:12,679 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:12,964 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:12] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:13,289 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:13] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:16,153 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:16] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:16,525 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:16] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:16,848 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:16] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:21,047 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:21] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:21,401 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:21] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:22,479 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:22] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:22,806 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:22] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:23,058 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:23] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:23,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:26,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:26] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:26,438 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:26,729 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:26,749 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:26] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:29,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:29] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:29,513 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:29] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:29,782 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:29] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:29,827 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:29] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:30,094 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:33,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:33] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:33,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:33] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:33,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:33] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:33,762 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:33] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:36,141 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:36,543 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:36] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:36,809 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:36] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:36,872 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:36] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:37,156 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:41,171 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:41] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:41,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:41] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:41,743 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:41] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:41,807 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:41] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:44,124 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:44,509 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:44] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:44,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:44] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:44,835 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:44] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:45,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:47,509 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:47] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:47,833 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:51,272 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:51] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:51,540 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:51] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:52,194 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:52] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:52,510 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:52] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:55,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:55] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:06:55,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:55,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:55] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:55,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:55] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:06:57,870 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:57] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:06:59,030 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:06:59,289 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:06:59,356 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:59] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:06:59,674 - INFO - 127.0.0.1 - - [12/Sep/2025 10:06:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:02,253 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:02] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:02,565 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:02] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:02,834 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:02] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:02,950 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:02] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:06,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:06,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:06] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:06,776 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:06] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:06,822 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:06] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:07,093 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:10,034 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\routes\\wallet_simple.py', reloading
+2025-09-12 10:07:10,462 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\routes\\wallet_simple.py', reloading
+2025-09-12 10:07:10,576 - INFO -  * Restarting with stat
+2025-09-12 10:07:11,007 - INFO -  * Restarting with stat
+2025-09-12 10:07:17,698 - INFO - Server initialized for threading.
+2025-09-12 10:07:17,698 - INFO - Using in-memory rate limiting
+2025-09-12 10:07:17,784 - INFO - WebSocket services initialized
+2025-09-12 10:07:17,793 - INFO - Balance monitoring started
+2025-09-12 10:07:17,848 - INFO - Transaction monitoring started
+2025-09-12 10:07:17,876 - WARNING -  * Debugger is active!
+2025-09-12 10:07:18,078 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:07:18,458 - INFO - Server initialized for threading.
+2025-09-12 10:07:18,459 - INFO - Using in-memory rate limiting
+2025-09-12 10:07:18,540 - INFO - WebSocket services initialized
+2025-09-12 10:07:18,567 - INFO - Transaction monitoring started
+2025-09-12 10:07:18,658 - INFO - Balance monitoring started
+2025-09-12 10:07:18,781 - WARNING -  * Debugger is active!
+2025-09-12 10:07:18,798 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:07:19,310 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:19] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:19,326 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:19] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:19,638 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:19] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:19,907 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:19] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:19,951 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:19] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:20,271 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:23,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:23,501 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:23,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:26,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:26] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:26,442 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:26,709 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:26] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:26,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:27,025 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:27,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:27] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:30,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:30] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:30,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:30] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:30,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:33,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:33] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:33,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:33] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:33,706 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:33] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:33,755 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:33] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:34,020 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:34] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:34,070 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:34] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:37,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:37] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:37,503 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:37,770 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:40,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:40] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:40,459 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:40] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:40,728 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:40] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:40,785 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:40] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:41,047 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:41] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:41,285 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:41] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:44,876 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:45,141 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:45,273 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:49,667 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:49] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:49,984 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:50,242 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:50] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:50,307 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:50,548 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:50] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:50,628 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:55,442 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:55] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:07:55,701 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:55,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:55] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:07:56,011 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:56,071 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:56] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:07:56,327 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:07:59,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:07:59,570 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:07:59,803 - INFO - 127.0.0.1 - - [12/Sep/2025 10:07:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:04,038 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:04,358 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:04,607 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:04,671 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:04,921 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:04,984 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:08,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:08] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:08,841 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:08] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:09,108 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:09] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:12,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:12] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:12,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:12] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:12,741 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:12] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:12,779 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:13,620 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:13] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:13,941 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:13] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:16,435 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:16] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:16,702 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:16] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:16,748 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:16] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:19,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:19] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:19,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:19] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:19,721 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:19] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:19,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:19] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:20,108 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:20] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:20,157 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:23,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:23,556 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:23,820 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:26,442 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:26] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:26,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:26,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:26] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:27,033 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:27,064 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:27,351 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:27] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:30,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:30] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:30,666 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:30] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:30,923 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:34,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:34] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:34,521 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:37,666 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:37] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:37,986 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:38,298 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:38] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:38,322 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:43,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:43] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:43,475 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:43] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:43,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:43] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:43,807 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:43] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:44,030 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:44] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:44,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:44] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:47,434 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:47,698 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:47] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:47,746 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:47] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:50,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:50] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:50,435 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:50] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:50,713 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:50] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:50,769 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:51,023 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:51] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:08:51,106 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:51] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:55,208 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:55,457 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:55] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:08:55,701 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:55] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:08:59,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:59] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:08:59,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:08:59,776 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:08:59,798 - INFO - 127.0.0.1 - - [12/Sep/2025 10:08:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:00,097 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:00,112 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:03,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:03,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:03] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:03,750 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:03] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:06,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:06] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:06,469 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:06,844 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:06] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:07,161 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:07,424 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:07] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:07,472 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:09,558 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:09] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:10,048 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:10] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:10,236 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:10] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:12,302 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:12] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:12,622 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:12] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:12,957 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:12] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:12,967 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:13,287 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:13] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:13,573 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:13] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:15,661 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:15] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:16,038 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:16] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:16,311 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:16] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:18,378 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:18] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:18,693 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:18] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:19,081 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:19] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:19,163 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:19] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:19,552 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:19] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:19,840 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:19] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:21,906 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:21] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:22,551 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:22] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:22,706 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:22] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:25,184 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:25,365 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:25,509 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:25,943 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:25,980 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:25] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:26,294 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:26] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:37,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:37] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:37,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:37] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:37,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:37] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:37,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:38,023 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:38] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:38,073 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:41,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:41] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:41,511 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:41] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:41,777 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:41] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:45,438 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:45] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:45,706 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:45] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:45,751 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:45] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:46,035 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:46] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:46,066 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:46] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:46,350 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:49,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:49,503 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:49] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:49,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:49] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:52,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:52] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:52,435 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:52] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:52,695 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:52] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:52,747 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:52] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:53,003 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:53] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:09:53,068 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:56,633 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:56,930 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:09:56,972 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:09:59,167 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:59] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:09:59,477 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:09:59,729 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:09:59,786 - INFO - 127.0.0.1 - - [12/Sep/2025 10:09:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:00,061 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:00,105 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:03,536 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:05,892 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:05] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:06,221 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:06] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:08,201 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:08] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:08,561 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:08] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:11,164 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:11] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:11,486 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:11,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:11] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:12,077 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:12,104 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:12] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:15,512 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:15] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:15,859 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:15] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:16,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:16] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:16,469 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:16] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:19,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:19] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:19,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:19] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:19,713 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:19] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:19,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:19] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:20,028 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:23,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:23,519 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:23,784 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:23] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:23,835 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:26,495 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:26] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:26,732 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:26,867 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:26] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:27,048 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:27,194 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:27] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:30,141 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:30] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:30,517 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:30] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:30,780 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:30] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:30,829 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:33,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:33] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:33,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:33] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:33,738 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:33] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:33,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:33] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:34,067 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:34] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:36,637 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:36,886 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:36] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:36,995 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:36] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:37,202 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:40,191 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:40] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:40,511 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:40] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:40,769 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:40] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:40,857 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:40] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:41,089 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:41] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:44,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:44,501 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:44] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:44,752 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:44] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:44,818 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:44] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:47,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:47] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:47,439 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:47,702 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:47] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:47,751 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:47] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:48,016 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:48] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:50,146 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:50] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:50,522 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:50,786 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:50] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:50,834 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:53,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:53] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:10:53,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:53] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:53,717 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:53] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:10:53,780 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:54,031 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:54] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:10:56,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:10:56,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:10:56,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:56] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:10:57,160 - INFO - 127.0.0.1 - - [12/Sep/2025 10:10:57] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:00,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:00] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:00,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:00] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:00,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:00] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:00,781 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:01,098 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:01] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:03,198 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:03,697 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:03] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:03,863 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:03] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:04,106 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:06,498 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:06] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:06,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:06,813 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:06] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:07,080 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:07,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:09,154 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:09] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:09,482 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:09] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:09,745 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:09] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:09,794 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:09] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:10,098 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:10] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:13,509 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:13] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:13,816 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:14,142 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:14] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:14,157 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:14,451 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:24,147 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:24] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:11:24,478 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:24] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:11:24,789 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:24] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:11:24,850 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:24] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:11:24,860 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:24] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:11:25,107 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:25] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:11:26,881 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:26] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:27,192 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:27,460 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:27,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:27,747 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:27,779 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:27,825 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:28,066 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:28] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:31,257 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:31,585 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:31] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:31,855 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:31] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:33,905 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:33] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:34,223 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:34,473 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:34] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:34,538 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:34,790 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:34] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:34,853 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:34] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:36,887 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:37,216 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:37,488 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:38,226 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:38] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:41,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:41] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:42,016 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:42] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:42,077 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:42] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:42,333 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:42] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:42,395 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:42] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:42,653 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:42] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:44,687 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:45,019 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:45,287 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:47,319 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:47] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:47,636 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:47,888 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:47] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:47,945 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:47] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:48,196 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:48] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:48,254 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:48] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:50,291 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:50] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:50,644 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:50,886 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:52,912 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:52] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:53,227 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:53] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:53,492 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:53] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:53,543 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:53,801 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:53] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:53,865 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:55,927 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:56,358 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:56,615 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:11:58,690 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:58] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:11:59,007 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:11:59,271 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:11:59,319 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:11:59,586 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:59] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:11:59,636 - INFO - 127.0.0.1 - - [12/Sep/2025 10:11:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:01,708 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:01] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:02,085 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:02] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:02,348 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:02] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:04,408 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:04] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:04,722 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:04] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:04,976 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:04] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:05,035 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:05] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:05,291 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:05] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:05,420 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:05] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:06,978 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:10,822 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:10] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:11,073 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:11,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:11] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:11,391 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:11] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:11,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:11] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:11,711 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:13,789 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:14,167 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:14,420 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:16,476 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:16] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:16,792 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:16] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:17,054 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:17] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:17,103 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:17,367 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:17] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:17,413 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:17] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:19,475 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:19] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:19,838 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:19] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:20,107 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:22,168 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:22] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:22,484 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:22] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:22,733 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:22] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:22,798 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:22] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:23,050 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:23] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:23,273 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:26,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:26,505 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:26,776 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:26] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:29,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:29] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:29,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:29] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:29,713 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:29] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:29,863 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:29] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:30,025 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:30] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:30,227 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:33,159 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:33] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:33,555 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:33] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:33,807 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:33] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:36,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:36] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:36,435 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:36,689 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:36] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:36,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:36] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:37,004 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:37] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:37,068 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:39,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:39] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:39,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:39] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:39,757 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:39] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:42,156 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:42] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:42,467 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:42] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:42,736 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:42] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:42,858 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:42] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:43,055 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:43] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:43,381 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:43] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:47,451 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:47,717 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:47] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:47,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:47] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:50,190 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:50] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:50,496 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:50] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:50,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:50] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:50,814 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:51,062 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:51] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:51,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:51] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:54,150 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:54] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:54,491 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:54] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:54,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:54] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:12:57,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:57] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:12:57,456 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:57] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:12:57,705 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:57] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:12:57,778 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:57] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:12:58,017 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:58] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:12:58,258 - INFO - 127.0.0.1 - - [12/Sep/2025 10:12:58] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:01,164 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:01] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:01,495 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:01] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:01,747 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:01] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:04,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:04] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:04,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:04] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:07,262 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:07] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:07,530 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:07,575 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:07] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:07,844 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:10,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:10] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:10,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:10] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:10,708 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:10] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:10,753 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:10] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:13,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:13,512 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:13] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:13,779 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:13] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:13,823 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:13] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:14,092 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:17,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:17] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:17,706 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:17,753 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:18,019 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:18] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:20,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:20,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:20] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:20,745 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:20] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:20,801 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:20] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:21,056 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:23,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:23] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:23,441 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:23,695 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:23,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:26,448 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:26,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:26] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:26,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:27,028 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:27,076 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:27] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:30,122 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:30] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:30,437 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:30] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:30,690 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:30] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:30,753 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:30] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:33,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:33] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:33,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:33] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:33,741 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:33] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:33,802 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:33] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:34,056 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:34] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:36,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:36] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:36,705 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:36,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:36] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:37,023 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:37] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:39,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:39] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:39,494 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:39] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:39,762 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:39] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:39,804 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:39] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:40,123 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:40] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:43,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:43] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:43,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:43] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:43,720 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:43] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:43,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:43] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:46,439 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:46] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:46,692 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:46] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:46,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:46] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:47,008 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:47] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:47,072 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:47] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:50,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:50] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:50,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:50] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:50,697 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:50,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:53,140 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:53] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:53,499 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:53] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:13:53,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:53,818 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:53] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:13:54,074 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:54] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:13:57,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:57] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:13:57,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:57] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:13:57,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:57] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:13:58,018 - INFO - 127.0.0.1 - - [12/Sep/2025 10:13:58] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:00,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:00] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:00,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:00] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:00,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:00,802 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:01,068 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:01] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:04,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:04] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:04,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:04] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:04,699 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:04] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:04,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:07,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:07] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:07,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:07] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:07,775 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:07,821 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:07] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:08,092 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:08] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:11,141 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:11] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:11,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:11,719 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:11] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:11,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:14,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:14] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:14,494 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:14] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:14,750 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:14,812 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:14] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:15,066 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:15] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:17,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:17] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:17,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:17,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:17,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:17] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:20,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:20,492 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:20] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:20,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:20] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:20,806 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:20] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:21,088 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:24,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:24] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:24,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:24] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:24,699 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:24] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:24,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:24] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:27,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:27] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:27,536 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:27] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:27,789 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:27,851 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:28,103 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:28] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:31,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:31] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:31,438 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:31,706 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:31] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:31,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:31] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:34,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:34,500 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:34] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:34,769 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:34,816 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:34] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:35,109 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:35] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:38,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:38] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:38,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:38] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:38,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:38] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:38,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:41,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:41] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:41,476 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:41] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:41,730 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:41] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:41,791 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:41] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:42,044 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:42] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:44,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:44] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:44,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:44,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:44] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:44,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:44] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:47,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:47] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:47,505 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:47] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:47,775 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:47] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:47,820 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:47] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:48,090 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:48] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:51,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:51] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:51,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:51] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:51,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:51] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:51,842 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:51] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:54,139 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:54] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:54,514 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:54] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:14:54,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:54] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:54,826 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:54] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:14:55,084 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:55] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:14:58,124 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:58] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:14:58,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:58] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:14:58,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:58] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:14:58,755 - INFO - 127.0.0.1 - - [12/Sep/2025 10:14:58] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:01,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:01] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:01,514 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:01] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:01,770 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:01] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:01,828 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:01] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:02,140 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:02] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:05,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:05] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:05,461 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:05] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:05,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:05] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:05,777 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:05] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:08,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:08] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:08,486 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:08] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:08,755 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:08] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:08,801 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:08] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:09,068 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:09] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:12,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:12] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:12,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:12] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:12,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:12,774 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:12] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:17,873 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:17] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:18,185 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:18] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:18,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:18] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:18,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:18] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:18,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:18] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:18,834 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:18] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:21,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:21] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:21,513 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:21,789 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:25,448 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:25] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:25,722 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:25] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:25,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:25] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:26,045 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:26,077 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:26] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:26,360 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:26] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:36,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:36] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:36,991 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:36] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:37,092 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:37] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:37,351 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:37,804 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:37] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:38,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:42,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:42] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:42,454 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:42] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:42,719 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:42] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:42,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:42] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:43,033 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:43] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:45,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:45] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:45,724 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:45,789 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:45] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:46,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:49,141 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:49] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:49,461 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:49,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:49] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:49,803 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:49] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:50,022 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:52,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:52] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:52,482 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:52] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:52,743 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:52] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:52,792 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:52] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:55,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:55] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:15:55,705 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:55,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:55] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:15:56,019 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:56,082 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:15:59,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:15:59,500 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:15:59,748 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:59] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:15:59,813 - INFO - 127.0.0.1 - - [12/Sep/2025 10:15:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:02,179 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:02] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:16:02,484 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:02] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:02,747 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:02] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:16:02,795 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:02] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:03,065 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:03] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:06,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:06,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:06] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:06,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:06] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:16:07,037 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:09,139 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:09] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:16:09,462 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:09] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:09,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:09] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:16:10,002 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:10] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:10,034 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:10] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:13,198 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:13,539 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:13] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:13,828 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:13] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:16:13,854 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:13] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:44,411 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:44] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:16:44,769 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:45,014 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:45] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:16:45,093 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:45,325 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:45] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:16:45,406 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:48,171 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:48] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:48,521 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:48] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:48,781 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:48] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:51,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:51] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:16:51,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:51] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:51,699 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:51] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:16:51,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:51] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:52,014 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:52] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:16:52,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:52] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:55,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:55,490 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:55] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:55,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:55] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:16:58,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:58] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:16:58,456 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:58] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:16:58,721 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:58] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:16:58,770 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:58] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:16:59,036 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:59] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:16:59,085 - INFO - 127.0.0.1 - - [12/Sep/2025 10:16:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:02,185 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:02] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:02,536 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:02] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:02,798 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:02] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:05,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:05] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:05,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:05] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:05,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:05] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:05,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:05] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:06,034 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:06] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:06,086 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:06] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:09,448 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:09] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:09,713 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:09] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:09,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:09] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:12,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:12] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:12,457 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:12] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:12,703 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:12] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:12,804 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:12] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:13,021 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:13] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:13,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:13] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:16,255 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:16] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:16,711 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:16] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:16,912 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:16] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:19,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:19] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:19,696 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:19] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:19,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:19] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:20,015 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:20] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:20,065 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:20] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:20,377 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:23,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:23,492 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:23,847 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:23] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:25,910 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:25] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:26,252 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:26] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:26,478 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:26] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:26,587 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:26] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:26,794 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:26] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:26,902 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:26] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:29,223 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:29] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:29,478 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:29] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:29,553 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:29] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:31,566 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:31] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:31,884 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:32,149 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:32] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:32,201 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:32] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:32,464 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:32] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:32,517 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:32] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:34,538 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:34,862 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:35,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:35] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:37,148 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:37] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:37,464 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:37] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:37,729 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:37] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:37,776 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:38,046 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:38] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:38,096 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:40,107 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:40] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:40,424 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:40] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:40,679 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:40] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:42,687 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:42] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:43,017 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:43] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:43,266 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:43] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:43,333 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:43] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:43,582 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:43] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:43,648 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:43] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:46,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:46] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:46,520 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:46] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:46,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:49,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:49] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:49,701 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:49,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:49] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:50,015 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:50,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:50] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:50,371 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:53,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:53] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:53,492 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:53,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:17:56,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:56] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:17:56,519 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:17:56,716 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:56] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:17:56,877 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:17:57,029 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:57] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:17:57,191 - INFO - 127.0.0.1 - - [12/Sep/2025 10:17:57] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:00,444 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:00] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:00,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:00,800 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:03,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:03] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:03,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:03,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:03] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:03,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:03] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:04,034 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:04] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:04,078 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:07,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:07] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:07,490 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:07,749 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:10,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:10] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:10,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:10] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:10,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:10] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:10,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:10] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:11,030 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:11] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:11,079 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:14,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:14] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:14,482 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:14,739 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:17,123 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:17] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:17,441 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:17,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:17] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:17,751 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:18,009 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:18] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:18,064 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:18] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:20,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:20,532 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:20] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:20,799 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:20] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:23,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:23] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:23,452 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:23] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:23,741 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:23] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:23,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:24,060 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:24] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:24,100 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:24] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:27,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:27] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:27,499 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:27,738 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:27] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:30,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:30] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:30,454 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:30] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:30,709 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:30] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:30,775 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:30] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:31,025 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:31] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:31,091 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:31] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:34,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:34,512 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:34,779 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:34] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:37,124 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:37] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:37,437 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:37] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:37,690 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:37] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:37,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:37] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:38,009 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:38] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:38,074 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:41,139 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:41] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:41,501 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:41] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:41,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:41] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:44,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:44] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:44,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:44] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:44,701 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:44] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:44,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:44] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:45,017 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:45] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:45,083 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:48,441 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:48] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:48,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:48] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:48,756 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:48] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:51,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:51] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:51,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:51] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:51,708 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:51] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:18:51,757 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:51] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:52,025 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:52] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:18:52,073 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:52] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:55,278 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:55,696 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:55] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:18:56,196 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:18:59,476 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:59] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:18:59,739 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:18:59,790 - INFO - 127.0.0.1 - - [12/Sep/2025 10:18:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:00,061 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:00,105 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:00,377 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:03,957 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:04,438 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:04] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:04,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:07,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:07] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:07,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:07] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:07,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:07] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:07,762 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:08,026 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:08] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:08,076 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:08] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:11,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:11,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:11] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:11,774 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:14,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:14] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:14,446 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:14] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:14,713 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:14] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:14,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:15,024 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:15] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:15,092 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:15] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:18,457 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:18] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:18,711 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:18] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:18,774 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:18] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:21,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:21] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:21,454 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:21] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:21,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:21] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:21,768 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:22,035 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:22] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:22,084 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:22] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:25,125 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:25] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:25,486 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:25] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:25,753 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:25] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:28,479 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:28] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:28,708 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:28] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:28,793 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:28] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:29,035 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:29] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:29,108 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:29] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:29,349 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:29] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:32,139 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:32] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:32,495 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:32] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:32,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:32] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:35,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:35] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:35,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:35] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:35,697 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:35] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:35,762 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:35] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:36,014 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:36] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:36,078 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:36] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:39,451 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:39] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:39,704 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:39] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:39,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:39] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:42,176 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:42] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:42,490 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:42] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:42,740 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:42] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:42,806 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:42] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:43,058 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:43] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:43,123 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:43] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:46,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:46] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:46,530 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:46] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:46,779 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:49,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:49] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:49,697 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:49,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:49] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:50,017 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:50] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:50,072 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:50] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:50,363 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:50] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:53,124 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:53] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:53,488 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:53,759 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:19:56,130 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:56] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:19:56,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:19:56,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:56] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:19:56,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:19:57,028 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:57] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:19:57,090 - INFO - 127.0.0.1 - - [12/Sep/2025 10:19:57] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:00,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:00] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:00,693 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:00,757 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:03,228 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:03] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:03,549 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:03,799 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:03] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:03,862 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:03] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:04,112 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:04] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:04,177 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:07,190 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:07] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:07,574 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:07,843 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:10,451 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:10] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:10,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:10] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:10,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:10] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:11,042 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:11] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:11,065 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:11] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:11,362 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:14,140 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:14] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:14,514 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:14,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:17,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:17] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:17,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:17,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:17] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:17,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:18,030 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:18] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:18,080 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:18] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:21,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:21] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:21,483 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:21,735 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:24,133 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:24] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:24,455 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:24] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:24,698 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:24] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:24,776 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:24] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:25,010 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:25] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:25,093 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:25] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:28,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:28] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:28,699 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:28] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:28,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:28] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:31,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:31] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:31,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:31,691 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:31] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:31,796 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:31] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:32,004 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:32] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:32,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:32] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:35,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:35] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:35,502 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:35] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:35,757 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:35] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:38,496 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:38] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:38,751 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:38] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:38,812 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:38] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:39,067 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:39] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:39,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:39] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:39,387 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:39] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:42,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:42] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:42,489 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:42] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:42,740 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:42] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:45,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:45] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:45,441 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:45] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:45,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:45] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:45,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:46,011 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:46] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:46,074 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:49,439 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:49,753 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:49] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:49,891 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:49] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:52,447 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:52] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:52,719 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:52] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:52,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:52] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:20:53,044 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:53] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:53,085 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:53] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:20:53,376 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:56,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:56,492 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:20:56,747 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:20:59,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:59] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:20:59,721 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:20:59,774 - INFO - 127.0.0.1 - - [12/Sep/2025 10:20:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:00,053 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:00] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:00,079 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:00,458 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:03,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:03] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:03,507 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:03] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:03,762 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:03] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:06,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:06] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:06,448 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:06,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:06] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:06,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:06] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:07,027 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:07] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:07,075 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:07] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:10,443 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:10] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:10,698 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:10] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:10,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:10] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:13,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:13] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:13,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:13,718 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:13] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:13,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:13] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:14,036 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:14] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:14,085 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:17,128 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:17,506 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:17,761 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:17] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:20,456 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:20] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:20,714 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:20,775 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:20] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:21,029 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:21,090 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:21] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:21,342 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:24,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:24] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:24,510 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:24] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:24,763 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:24] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:27,131 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:27] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:27,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:27] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:27,710 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:27] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:27,775 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:28,023 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:28] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:28,092 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:28] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:31,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:31,507 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:31] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:31,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:31] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:34,124 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:34] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:34,441 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:34,707 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:34] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:34,755 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:35,025 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:35] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:35,070 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:35] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:38,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:38] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:38,488 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:38] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:38,755 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:38] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:41,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:41] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:41,448 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:41] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:41,701 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:41] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:41,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:41] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:42,018 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:42] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:42,083 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:42] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:45,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:45] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:45,495 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:45] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:45,733 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:45] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:48,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:48] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:48,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:48] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:48,720 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:48] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:48,771 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:48] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:49,032 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:49] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:49,096 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:49] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:52,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:52] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:52,500 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:52] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:52,758 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:52] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:55,134 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:55] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:21:55,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:55] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:55,717 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:55] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:21:55,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:55] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:56,033 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:56] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:21:56,082 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:21:59,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:21:59,494 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:21:59,748 - INFO - 127.0.0.1 - - [12/Sep/2025 10:21:59] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:02,273 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:02] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:02,587 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:02] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:02,847 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:02] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:02,914 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:02] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:03,152 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:03] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:03,228 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:03] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:06,136 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:06] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:06,499 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:06] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:06,764 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:06] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:09,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:09] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:09,449 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:09] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:09,715 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:09] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:09,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:09] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:10,030 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:10] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:10,079 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:10] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:12,181 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\config.py', reloading
+2025-09-12 10:22:12,603 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\config.py', reloading
+2025-09-12 10:22:12,831 - INFO -  * Restarting with stat
+2025-09-12 10:22:13,096 - INFO -  * Restarting with stat
+2025-09-12 10:22:18,968 - INFO - Server initialized for threading.
+2025-09-12 10:22:18,968 - INFO - Server initialized for threading.
+2025-09-12 10:22:18,968 - INFO - Using in-memory rate limiting
+2025-09-12 10:22:18,968 - INFO - Using in-memory rate limiting
+2025-09-12 10:22:19,036 - INFO - WebSocket services initialized
+2025-09-12 10:22:19,037 - INFO - WebSocket services initialized
+2025-09-12 10:22:19,045 - INFO - Balance monitoring started
+2025-09-12 10:22:19,045 - INFO - Transaction monitoring started
+2025-09-12 10:22:19,087 - INFO - Transaction monitoring started
+2025-09-12 10:22:19,119 - INFO - Balance monitoring started
+2025-09-12 10:22:19,215 - WARNING -  * Debugger is active!
+2025-09-12 10:22:19,226 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:22:19,228 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:22:20,569 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:21,029 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:21] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:21,337 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:21,589 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:21] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:21,652 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:24,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:24] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:24,450 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:24] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:24,717 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:24] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:24,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:24] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:27,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:27] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:27,498 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:27] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:27,754 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:27] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:27,816 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:28,070 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:28] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:31,123 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:31] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:31,442 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:31] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:31,681 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:31] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:31,760 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:31] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:34,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:34] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:34,501 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:34] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:34,769 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:34] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:34,814 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:34] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:35,083 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:35] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:38,129 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:38] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:38,765 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:38] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:39,309 - INFO -  * Detected change in 'F:\\payoova2\\backend\\src\\services\\blockchain.py', reloading
+2025-09-12 10:22:39,655 - INFO -  * Detected change in 'f:\\payoova2\\backend\\src\\services\\blockchain.py', reloading
+2025-09-12 10:22:39,903 - INFO -  * Restarting with stat
+2025-09-12 10:22:40,163 - INFO -  * Restarting with stat
+2025-09-12 10:22:44,311 - INFO - Server initialized for threading.
+2025-09-12 10:22:44,312 - INFO - Using in-memory rate limiting
+2025-09-12 10:22:44,374 - INFO - WebSocket services initialized
+2025-09-12 10:22:44,383 - INFO - Transaction monitoring started
+2025-09-12 10:22:44,394 - INFO - Server initialized for threading.
+2025-09-12 10:22:44,395 - INFO - Using in-memory rate limiting
+2025-09-12 10:22:44,383 - INFO - Balance monitoring started
+2025-09-12 10:22:44,459 - INFO - WebSocket services initialized
+2025-09-12 10:22:44,468 - INFO - Balance monitoring started
+2025-09-12 10:22:44,495 - INFO - Transaction monitoring started
+2025-09-12 10:22:44,543 - WARNING -  * Debugger is active!
+2025-09-12 10:22:44,556 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:22:44,634 - WARNING -  * Debugger is active!
+2025-09-12 10:22:44,647 - INFO -  * Debugger PIN: 473-760-574
+2025-09-12 10:22:46,015 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:46] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:46,119 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:46] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:46,440 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:46] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:46,692 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:46] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:49,137 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:49] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:49,453 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:49] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:49,720 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:49] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:49,766 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:49] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:52,127 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:52] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:52,569 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:52] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:52,840 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:52] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:52,975 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:52] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:22:53,169 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:53] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:56,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:56] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:22:56,445 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:56] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:56,711 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:56] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:22:56,757 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:56] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:22:59,144 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:59] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:22:59,650 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:59] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:22:59,881 - INFO - 127.0.0.1 - - [12/Sep/2025 10:22:59] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:00,056 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:00] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:00,196 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:00] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:03,843 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:03] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:04,209 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:04] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:04,429 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:04] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:04,536 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:04] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:07,135 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:07] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:07,508 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:07] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:23:07,773 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:07] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:07,817 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:07] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:08,087 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:08] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:11,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:11] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:11,455 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:11] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:11,721 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:11] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:11,771 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:11] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:13,981 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:13] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:14,355 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:14] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:23:14,617 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:14] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:14,684 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:14] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:14,933 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:14] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:16,990 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:16] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:17,311 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:17] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:17,562 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:17] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:17,624 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:17] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:20,797 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:20] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:21,048 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:21] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:23:21,236 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:21] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:21,363 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:21] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:21,553 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:21] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:24,419 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:24] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:24,732 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:24] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:24,999 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:24] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:25,058 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:25] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:28,132 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:28] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:28,531 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:28] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:23:28,784 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:28] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:28,852 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:28] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:29,105 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:29] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:32,126 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:32] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:32,444 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:32] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:32,711 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:32] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:32,767 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:32] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:35,138 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:35] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:35,522 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:35] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:23:35,790 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:35] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:35,836 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:35] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:23:36,103 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:36] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:23:39,143 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:39] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:23:39,465 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:39] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:23:39,720 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:39] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:23:39,780 - INFO - 127.0.0.1 - - [12/Sep/2025 10:23:39] "[31m[1mPOST /api/wallet/create/bsc HTTP/1.1[0m" 401 -
+2025-09-12 10:24:17,948 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:17] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:24:18,220 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:18] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:24:18,361 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:18] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:24:18,673 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:18] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:24:18,941 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:18] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:24:22,393 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:22] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:24:22,700 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:22] "[31m[1mPOST /api/wallet/create/ethereum HTTP/1.1[0m" 401 -
+2025-09-12 10:24:23,240 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:23] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
+2025-09-12 10:24:23,307 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:23] "[31m[1mPOST /api/wallet/create/polygon HTTP/1.1[0m" 401 -
+2025-09-12 10:24:27,219 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:27] "OPTIONS /api/wallet/create/bsc HTTP/1.1" 200 -
+2025-09-12 10:24:47,968 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:47] "OPTIONS /api/auth/sync-user HTTP/1.1" 200 -
+2025-09-12 10:24:48,277 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:48] "[35m[1mPOST /api/auth/sync-user HTTP/1.1[0m" 500 -
+2025-09-12 10:24:48,536 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:48] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:24:48,709 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:48] "OPTIONS /api/wallet/list HTTP/1.1" 200 -
+2025-09-12 10:24:48,712 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:48] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:24:48,850 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:48] "[31m[1mGET /api/wallet/list HTTP/1.1[0m" 401 -
+2025-09-12 10:24:52,671 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:52] "OPTIONS /api/wallet/create/ethereum HTTP/1.1" 200 -
+2025-09-12 10:24:52,985 - INFO - 127.0.0.1 - - [12/Sep/2025 10:24:52] "OPTIONS /api/wallet/create/polygon HTTP/1.1" 200 -
