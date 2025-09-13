@@ -6,33 +6,39 @@ const TradingChart = ({ pair }) => {
   const [timeframe, setTimeframe] = useState('1H')
   const [chartType, setChartType] = useState('line')
   
-  // Mock price data
-  const generateMockData = () => {
-    const data = []
-    const basePrice = 2456.78
-    let currentPrice = basePrice
-    
-    for (let i = 0; i < 100; i++) {
-      const change = (Math.random() - 0.5) * 50
-      currentPrice += change
-      data.push({
-        time: new Date(Date.now() - (100 - i) * 3600000).toISOString(),
-        price: Math.max(currentPrice, 100),
-        volume: Math.random() * 1000000,
-        high: currentPrice + Math.random() * 20,
-        low: currentPrice - Math.random() * 20,
-        open: currentPrice - change,
-        close: currentPrice
-      })
-    }
-    return data
-  }
+  // Real price data state
+  const [priceData, setPriceData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const [chartData, setChartData] = useState(generateMockData())
-
+  // Fetch real price data
   useEffect(() => {
-    setChartData(generateMockData())
-  }, [pair, timeframe])
+    const fetchPriceData = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // TODO: Replace with actual API call to fetch price data
+        // const response = await fetch(`/api/trading/chart/${pair}?timeframe=${timeframe}`);
+        // const data = await response.json();
+        
+        // For now, set empty data until real API is implemented
+        setPriceData([]);
+      } catch (err) {
+        console.error('Error fetching price data:', err);
+        setError('Failed to load price data');
+        setPriceData([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPriceData();
+  }, [pair, timeframe]);
+
+  // Chart data is now managed by priceData state
+
+  // Chart data is now fetched via the fetchPriceData useEffect above
 
   const timeframes = ['5M', '15M', '1H', '4H', '1D', '1W']
 
@@ -112,7 +118,7 @@ const TradingChart = ({ pair }) => {
       <div className="h-full p-4">
         <ResponsiveContainer width="100%" height="100%">
           {chartType === 'line' ? (
-            <LineChart data={chartData}>
+            <LineChart data={priceData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
               <XAxis 
                 dataKey="time" 
@@ -142,7 +148,7 @@ const TradingChart = ({ pair }) => {
               />
             </LineChart>
           ) : (
-            <AreaChart data={chartData}>
+            <AreaChart data={priceData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
               <XAxis 
                 dataKey="time" 

@@ -106,6 +106,183 @@ class BlockchainService:
             self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
         # Load config if app context is available
         self._load_config()
+    
+    # ERC20 Token Contract Addresses
+    def get_token_contracts(self):
+        """Get token contract addresses for supported networks"""
+        try:
+            # Load from environment or use defaults
+            contracts = {
+                'ethereum': {
+                    'USDT': os.getenv('ETH_USDT_CONTRACT', '0xdAC17F958D2ee523a2206206994597C13D831ec7'),
+                    'USDC': os.getenv('ETH_USDC_CONTRACT', '0xA0b86a33E6441E6C7D3E4C7C5C6C7C5C6C7C5C6C')
+                },
+                'polygon': {
+                    'USDT': os.getenv('POLYGON_USDT_CONTRACT', '0xc2132D05D31c914a87C6611C10748AEb04B58e8F'),
+                    'USDC': os.getenv('POLYGON_USDC_CONTRACT', '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174')
+                },
+                'bsc': {
+                    'USDT': os.getenv('BSC_USDT_CONTRACT', '0x55d398326f99059fF775485246999027B3197955'),
+                    'USDC': os.getenv('BSC_USDC_CONTRACT', '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d')
+                }
+            }
+            return contracts
+        except Exception as e:
+            print(f"Error loading token contracts: {e}")
+            return {}
+    
+    # ERC20 ABI (minimal for balance and transfer)
+    def get_erc20_abi(self):
+        """Get minimal ERC20 ABI for token operations"""
+        return [
+            {
+                "constant": True,
+                "inputs": [{"name": "_owner", "type": "address"}],
+                "name": "balanceOf",
+                "outputs": [{"name": "balance", "type": "uint256"}],
+                "type": "function"
+            },
+            {
+                "constant": False,
+                "inputs": [
+                    {"name": "_to", "type": "address"},
+                    {"name": "_value", "type": "uint256"}
+                ],
+                "name": "transfer",
+                "outputs": [{"name": "", "type": "bool"}],
+                "type": "function"
+            },
+            {
+                "constant": True,
+                "inputs": [],
+                "name": "decimals",
+                "outputs": [{"name": "", "type": "uint8"}],
+                "type": "function"
+            },
+            {
+                "constant": True,
+                "inputs": [],
+                "name": "symbol",
+                "outputs": [{"name": "", "type": "string"}],
+                "type": "function"
+            }
+        ]
+    
+    def get_token_balance(self, address: str, network: str, token_symbol: str) -> Dict:
+        """Get ERC20 token balance for specific address"""
+        try:
+            web3 = self.get_web3_instance(network)
+            contracts = self.get_token_contracts()
+            
+            if not web3 or network not in contracts or token_symbol not in contracts[network]:
+                if self.demo_mode:
+                    # Return mock token balance
+                    mock_balances = {'USDT': '1000.50', 'USDC': '2500.75'}
+                    return {
+                        'success': True,
+                        'balance': mock_balances.get(token_symbol, '0.0'),
+                        'token': token_symbol,
+                        'network': network,
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': f'Token {token_symbol} not supported on {network} or RPC not configured',
+                        'network': network
+                    }
+            
+            # Get token contract
+            contract_address = contracts[network][token_symbol]
+            contract = web3.eth.contract(address=contract_address, abi=self.get_erc20_abi())
+            
+            # Get balance
+            balance_wei = contract.functions.balanceOf(address).call()
+            decimals = contract.functions.decimals().call()
+            
+            # Convert to human readable format
+            balance = balance_wei / (10 ** decimals)
+            
+            return {
+                'success': True,
+                'balance': str(balance),
+                'balance_wei': str(balance_wei),
+                'token': token_symbol,
+                'network': network,
+                'contract_address': contract_address
+            }
+        except Exception as e:
+            return {
+                'success': False,
+                'error': f"Failed to get {token_symbol} balance: {str(e)}",
+                'network': network
+            }
+    
+    def send_token_transaction(self, from_address: str, to_address: str, amount: str,
+                              private_key: str, network: str, token_symbol: str) -> Dict:
+        """Send ERC20 token transaction"""
+        try:
+            if not WEB3_AVAILABLE:
+                if self.demo_mode:
+                    tx_hash = '0x' + secrets.token_hex(32)
+                    return {
+                        'success': True,
+                        'transaction_hash': tx_hash,
+                        'status': 'pending',
+                        'network': network,
+                        'token': token_symbol,
+                        'mock': True
+                    }
+                else:
+                    return {
+                        'success': False,
+                        'error': 'Web3 not available and RPC not configured'
+                    }
+            
+            web3 = self.get_web3_instance(network)
+            contracts = self.get_token_contracts()
+            
+            if not web3 or network not in contracts or token_symbol not in contracts[network]:
+                return {
+                    'success': False,
+                    'error': f'Token {token_symbol} not supported on {network} or RPC not configured'
+                }
+            
+            # Get token contract
+            contract_address = contracts[network][token_symbol]
+            contract = web3.eth.contract(address=contract_address, abi=self.get_erc20_abi())
+            
+            # Get decimals and convert amount
+            decimals = contract.functions.decimals().call()
+            amount_wei = int(float(amount) * (10 ** decimals))
+            
+            # Build transaction
+            account = Account.from_key(private_key)
+            nonce = web3.eth.get_transaction_count(from_address)
+            
+            transaction = contract.functions.transfer(to_address, amount_wei).build_transaction({
+                'chainId': self.networks[network]['chain_id'],
+                'gas': 100000,
+                'gasPrice': web3.eth.gas_price,
+                'nonce': nonce,
+            })
+            
+            # Sign and send transaction
+            signed_txn = web3.eth.account.sign_transaction(transaction, private_key)
+            tx_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
+            
+            return {
+                'success': True,
+                'transaction_hash': tx_hash.hex(),
+                'status': 'pending',
+                'network': network,
+                'token': token_symbol
+            }
+        except Exception as e:
+            return {
+                'success': False,
+                'error': f"Failed to send {token_symbol} transaction: {str(e)}"
+            }
 
     def _load_config(self):
         """Load configuration from Flask app if available"""
@@ -305,15 +482,8 @@ class BlockchainService:
                             'network': network
                         }
 
-                # Get account from private key
+                # Create account from private key
                 account = Account.from_key(private_key)
-
-                # Verify the account address matches from_address
-                if account.address.lower() != from_address.lower():
-                    return {
-                        'success': False,
-                        'error': 'Private key does not match from address'
-                    }
 
                 # Get nonce
                 nonce = web3.eth.get_transaction_count(from_address)
@@ -321,21 +491,13 @@ class BlockchainService:
                 # Convert amount to Wei
                 amount_wei = web3.to_wei(float(amount), 'ether')
 
-                # Get gas price and estimate gas
-                gas_price = web3.eth.gas_price
-                gas_estimate = web3.eth.estimate_gas({
-                    'from': from_address,
-                    'to': to_address,
-                    'value': amount_wei
-                })
-
                 # Build transaction
                 transaction = {
-                    'nonce': nonce,
                     'to': to_address,
                     'value': amount_wei,
-                    'gas': gas_estimate,
-                    'gasPrice': gas_price,
+                    'gas': 21000,
+                    'gasPrice': web3.eth.gas_price,
+                    'nonce': nonce,
                     'chainId': self.networks[network]['chain_id']
                 }
 
@@ -349,34 +511,28 @@ class BlockchainService:
                     'success': True,
                     'transaction_hash': tx_hash.hex(),
                     'status': 'pending',
-                    'network': network,
-                    'gas_used': str(gas_estimate),
-                    'gas_price': str(gas_price)
+                    'network': network
                 }
             else:
                 if self.demo_mode:
+                    # Mock transaction when web3 is not available
                     tx_hash = '0x' + secrets.token_hex(32)
                     return {
                         'success': True,
                         'transaction_hash': tx_hash,
                         'status': 'pending',
                         'network': network,
-                        'gas_used': '21000',
-                        'gas_price': '20000000000',
-                        'mock': True,
-                        'message': 'Web3 not available - using mock transaction'
+                        'mock': True
                     }
                 else:
                     return {
                         'success': False,
-                        'error': 'Web3 not available. Please install web3 and configure RPC URLs.',
-                        'network': network
+                        'error': 'Web3 not available and RPC not configured. Cannot send transaction.'
                     }
-
         except Exception as e:
             return {
                 'success': False,
-                'error': f"Transaction failed: {str(e)}"
+                'error': f"Failed to send transaction: {str(e)}"
             }
     
     def get_transaction_status(self, tx_hash: str, network: str) -> Dict:
@@ -389,8 +545,9 @@ class BlockchainService:
                     return {
                         'success': True,
                         'status': 'confirmed',
-                        'block_number': 12345678,
                         'confirmations': 12,
+                        'block_number': 18500000,
+                        'network': network,
                         'mock': True
                     }
                 else:
@@ -401,10 +558,8 @@ class BlockchainService:
                     }
             
             # Get transaction receipt
-            receipt = web3.eth.get_transaction_receipt(tx_hash)
-            
-            if receipt:
-                # Get current block number
+            try:
+                receipt = web3.eth.get_transaction_receipt(tx_hash)
                 current_block = web3.eth.block_number
                 confirmations = current_block - receipt.blockNumber
                 
@@ -413,17 +568,19 @@ class BlockchainService:
                 return {
                     'success': True,
                     'status': status,
-                    'block_number': receipt.blockNumber,
                     'confirmations': confirmations,
-                    'gas_used': receipt.gasUsed
+                    'block_number': receipt.blockNumber,
+                    'gas_used': receipt.gasUsed,
+                    'network': network
                 }
-            else:
+            except Exception:
+                # Transaction not found or pending
                 return {
                     'success': True,
                     'status': 'pending',
-                    'confirmations': 0
+                    'confirmations': 0,
+                    'network': network
                 }
-                
         except Exception as e:
             return {
                 'success': False,
@@ -433,56 +590,69 @@ class BlockchainService:
     def validate_address(self, address: str, network: str) -> bool:
         """Validate cryptocurrency address"""
         try:
-            if not address or not address.startswith('0x') or len(address) != 42:
+            if not address or not address.startswith('0x'):
                 return False
-
+            
+            if len(address) != 42:
+                return False
+            
+            # Try to convert to checksum address
             if WEB3_AVAILABLE:
-                # Try to convert to checksum address
-                web3 = self.get_web3_instance(network)
-                if web3:
-                    web3.to_checksum_address(address)
-                else:
-                    # Basic validation for demo
-                    int(address[2:], 16)
+                try:
+                    Web3.to_checksum_address(address)
+                    return True
+                except Exception:
+                    return False
             else:
                 # Basic validation when web3 is not available
-                int(address[2:], 16)
-
-            return True
-        except:
+                return all(c in '0123456789abcdefABCDEF' for c in address[2:])
+        except Exception:
             return False
 
 class PriceService:
     """Cryptocurrency price service"""
     
     def __init__(self):
-        self.coingecko_base = "https://api.coingecko.com/api/v3"
-        self.api_key = None
-        # Load API key if app context is available
+        self.base_url = "https://api.coingecko.com/api/v3"
+        self.api_key = os.getenv('COINGECKO_API_KEY')
+        # Demo mode flag
         try:
             if current_app:
-                self.api_key = current_app.config.get('COINGECKO_API_KEY')
+                self.demo_mode = bool(current_app.config.get('DEMO_MODE', False))
+            else:
+                self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
         except RuntimeError:
-            # We're not in an application context
-            pass
+            self.demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
     
     async def get_price(self, symbol: str, vs_currency: str = 'usd') -> Dict:
         """Get current price for cryptocurrency"""
         try:
-            # Map symbols to CoinGecko IDs
-            coin_ids = {
-                'ETH': 'ethereum',
-                'MATIC': 'matic-network', 
-                'BNB': 'binancecoin'
-            }
+            if self.demo_mode or not self.api_key:
+                # Return mock prices when in demo mode or no API key
+                mock_prices = {
+                    'bitcoin': {'usd': 43250.12, 'change_24h': -2.1},
+                    'ethereum': {'usd': 2456.78, 'change_24h': 5.2},
+                    'matic-network': {'usd': 1.12, 'change_24h': 8.4},
+                    'binancecoin': {'usd': 345.67, 'change_24h': 3.7},
+                    'tether': {'usd': 1.00, 'change_24h': 0.1},
+                    'usd-coin': {'usd': 1.00, 'change_24h': 0.0}
+                }
+                
+                price_data = mock_prices.get(symbol.lower(), {'usd': 1.0, 'change_24h': 0.0})
+                
+                return {
+                    'success': True,
+                    'symbol': symbol,
+                    'price': price_data[vs_currency],
+                    'change_24h': price_data['change_24h'],
+                    'vs_currency': vs_currency,
+                    'mock': True
+                }
             
-            coin_id = coin_ids.get(symbol.upper())
-            if not coin_id:
-                return {'success': False, 'error': 'Unsupported symbol'}
-            
-            url = f"{self.coingecko_base}/simple/price"
+            # Real API call
+            url = f"{self.base_url}/simple/price"
             params = {
-                'ids': coin_id,
+                'ids': symbol,
                 'vs_currencies': vs_currency,
                 'include_24hr_change': 'true'
             }
@@ -495,52 +665,45 @@ class PriceService:
                 
                 if response.status_code == 200:
                     data = response.json()
-                    coin_data = data.get(coin_id, {})
                     
-                    return {
-                        'success': True,
-                        'price': coin_data.get(vs_currency, 0),
-                        'change_24h': coin_data.get(f'{vs_currency}_24h_change', 0),
-                        'symbol': symbol,
-                        'vs_currency': vs_currency
-                    }
-                else:
-                    # Only return mock data if demo mode is enabled; otherwise return error
-                    demo_mode = os.getenv('DEMO_MODE', 'false').lower() == 'true'
-                    if demo_mode:
-                        mock_prices = {'ETH': 2500, 'MATIC': 0.8, 'BNB': 300}
+                    if symbol in data:
+                        price_info = data[symbol]
                         return {
                             'success': True,
-                            'price': mock_prices.get(symbol.upper(), 0),
-                            'change_24h': 2.5,
                             'symbol': symbol,
-                            'vs_currency': vs_currency,
-                            'mock': True
+                            'price': price_info[vs_currency],
+                            'change_24h': price_info.get(f'{vs_currency}_24h_change', 0),
+                            'vs_currency': vs_currency
                         }
                     else:
                         return {
                             'success': False,
-                            'error': 'Price API unavailable. Please configure a valid API key or service.'
+                            'error': f'Price data not found for {symbol}'
                         }
+                else:
+                    return {
+                        'success': False,
+                        'error': f'API request failed with status {response.status_code}'
+                    }
         except Exception as e:
             return {
                 'success': False,
-                'error': f"Failed to get price: {str(e)}"
+                'error': f'Failed to get price: {str(e)}'
             }
 
-# Singleton instances
+# Global service instances
 blockchain_service = None
 price_service = None
 
 def get_blockchain_service():
-    """Get blockchain service instance"""
+    """Get or create blockchain service instance"""
     global blockchain_service
     if blockchain_service is None:
         blockchain_service = BlockchainService()
     return blockchain_service
 
 def get_price_service():
-    """Get price service instance"""
+    """Get or create price service instance"""
     global price_service
     if price_service is None:
         price_service = PriceService()

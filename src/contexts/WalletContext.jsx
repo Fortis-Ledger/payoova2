@@ -1,6 +1,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useAuth } from './AuthContext';
+import { cryptoAPI } from '../services/cryptoApi';
 // import io from 'socket.io-client'; // Temporarily disabled until dependency is resolved
 
 const WalletContext = createContext();
@@ -26,6 +27,47 @@ export const WalletProvider = ({ children }) => {
 
   // Fetch real-time prices for cryptocurrencies
   const fetchPrices = async (walletList = wallets) => {
+    try {
+      setLoading(true);
+      
+      // Use the real crypto API service
+      const priceData = await cryptoAPI.getPrices();
+      
+      if (priceData) {
+        setPrices(priceData);
+      }
+    } catch (error) {
+      console.error('Error fetching prices:', error);
+      // Set fallback prices
+      setPrices({
+        BTC: { price: 45000, change24h: 2.5 },
+        ETH: { price: 3200, change24h: 1.8 },
+        MATIC: { price: 0.85, change24h: -0.5 },
+        BNB: { price: 320, change24h: 0.8 }
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Fetch gas prices
+  const fetchGasPrices = async () => {
+    try {
+      const gasData = await cryptoAPI.getGasPrices();
+      return gasData;
+    } catch (error) {
+      console.error('Error fetching gas prices:', error);
+      return {
+        slow: 20,
+        standard: 25,
+        fast: 35,
+        instant: 50
+      };
+    }
+  };
+
+  // Legacy fetch method for backward compatibility
+  const legacyFetchPrices = async (walletList = wallets) => {
     try {
       const symbols = [...new Set(walletList.map(wallet => {
         const networkCurrencyMap = {
@@ -403,17 +445,17 @@ export const WalletProvider = ({ children }) => {
       setLoading(true);
       const apiBase = import.meta?.env?.VITE_API_URL || import.meta?.env?.VITE_API_BASE || 'http://localhost:5000';
       
-      // Build query parameters
+      // Build query parameters (convert "all" to empty string for backend)
       const params = new URLSearchParams();
-      if (filters.network) params.append('network', filters.network);
-      if (filters.status) params.append('status', filters.status);
-      if (filters.type) params.append('type', filters.type);
+      if (filters.network && filters.network !== 'all') params.append('network', filters.network);
+      if (filters.status && filters.status !== 'all') params.append('status', filters.status);
+      if (filters.type && filters.type !== 'all') params.append('type', filters.type);
       if (filters.search) params.append('search', filters.search);
       if (filters.page) params.append('page', filters.page);
       if (filters.per_page) params.append('per_page', filters.per_page);
 
-      // If no network specified, fetch from all networks
-      if (!filters.network && wallets.length > 0) {
+      // If no network specified or "all" selected, fetch from all networks
+      if ((!filters.network || filters.network === 'all') && wallets.length > 0) {
         let allTransactions = [];
         let totalPages = 1;
         
@@ -438,7 +480,7 @@ export const WalletProvider = ({ children }) => {
             pages: totalPages
           }
         };
-      } else if (filters.network) {
+      } else if (filters.network && filters.network !== 'all') {
         return await fetchTransactionHistory(filters.network, filters.sync);
       }
       

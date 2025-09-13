@@ -21,7 +21,7 @@ import {
   Download,
   FileText
 } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/SupabaseAuthContext';
 import AdminDashboard from './AdminDashboard';
 import AdminUsers from './AdminUsers';
 import AdminTransactions from './AdminTransactions';
@@ -48,13 +48,13 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex">
+    <div className="min-h-screen bg-background flex">
       {/* Sidebar */}
       <div className="w-64 bg-white/5 backdrop-blur-sm border-r border-white/10">
         {/* Header */}
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-destructive rounded-lg flex items-center justify-center">
               <Shield className="w-6 h-6 text-white" />
             </div>
             <div>

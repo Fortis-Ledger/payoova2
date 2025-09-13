@@ -25,9 +25,9 @@ import { useWallet } from '../../contexts/WalletContext';
 const TransactionHistory = () => {
   const { transactions, loadTransactions, loading, wallets } = useWallet();
   const [filters, setFilters] = useState({
-    network: '',
-    status: '',
-    type: '',
+    network: 'all',
+    status: 'all',
+    type: 'all',
     search: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
@@ -56,14 +56,17 @@ const TransactionHistory = () => {
 
   const loadTransactionData = async () => {
     try {
+      console.log('Loading transactions with filters:', filters);
       const result = await loadTransactions({
         ...filters,
         page: currentPage,
         per_page: 20
       });
 
+      console.log('Transaction load result:', result);
       if (result.success) {
         setTotalPages(result.pagination?.pages || 1);
+        console.log('Transactions loaded:', result.transactions?.length || 0);
       } else {
         console.error('Failed to load transactions:', result.error);
       }
@@ -118,9 +121,9 @@ const TransactionHistory = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="border-b border-white/10 bg-white/5 backdrop-blur-sm">
+      <div className="border-b border-border bg-card/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
@@ -131,7 +134,7 @@ const TransactionHistory = () => {
                 </Button>
               </Link>
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                   <Clock className="w-5 h-5 text-white" />
                 </div>
                 <span className="text-xl font-bold text-white">Transaction History</span>
@@ -152,31 +155,31 @@ const TransactionHistory = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Filters */}
-        <Card className="bg-white/5 border-white/10 backdrop-blur-sm mb-6">
+        <Card className="bg-card border-border backdrop-blur-sm mb-6">
           <CardHeader>
-            <CardTitle className="text-white">Filter Transactions</CardTitle>
-            <CardDescription className="text-gray-400">
+            <CardTitle className="text-foreground">Filter Transactions</CardTitle>
+            <CardDescription className="text-muted-foreground">
               Search and filter your transaction history
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                 <Input
                   placeholder="Search by hash or address..."
                   value={filters.search}
                   onChange={(e) => handleFilterChange('search', e.target.value)}
-                  className="pl-10 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  className="pl-10 bg-input border-border text-foreground placeholder:text-muted-foreground"
                 />
               </div>
 
               <Select value={filters.network} onValueChange={(value) => handleFilterChange('network', value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                <SelectTrigger className="bg-input border-border text-foreground">
                   <SelectValue placeholder="All Networks" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Networks</SelectItem>
+                  <SelectItem value="all">All Networks</SelectItem>
                   {networks.map((network) => (
                     <SelectItem key={network.id} value={network.id}>
                       {network.name}
@@ -186,11 +189,11 @@ const TransactionHistory = () => {
               </Select>
 
               <Select value={filters.status} onValueChange={(value) => handleFilterChange('status', value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                <SelectTrigger className="bg-input border-border text-foreground">
                   <SelectValue placeholder="All Status" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Status</SelectItem>
+                  <SelectItem value="all">All Status</SelectItem>
                   {statusOptions.map((status) => (
                     <SelectItem key={status.value} value={status.value}>
                       {status.label}
@@ -200,11 +203,11 @@ const TransactionHistory = () => {
               </Select>
 
               <Select value={filters.type} onValueChange={(value) => handleFilterChange('type', value)}>
-                <SelectTrigger className="bg-white/10 border-white/20 text-white">
+                <SelectTrigger className="bg-input border-border text-foreground">
                   <SelectValue placeholder="All Types" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Types</SelectItem>
+                  <SelectItem value="all">All Types</SelectItem>
                   {typeOptions.map((type) => (
                     <SelectItem key={type.value} value={type.value}>
                       {type.label}
@@ -215,11 +218,11 @@ const TransactionHistory = () => {
 
               <Button
                 onClick={() => {
-                  setFilters({ network: '', status: '', type: '', search: '' });
+                  setFilters({ network: 'all', status: 'all', type: 'all', search: '' });
                   setCurrentPage(1);
                 }}
                 variant="outline"
-                className="border-white/20 text-white hover:bg-white/10"
+                className="border-border text-foreground hover:bg-accent"
               >
                 Clear Filters
               </Button>
@@ -228,10 +231,10 @@ const TransactionHistory = () => {
         </Card>
 
         {/* Transactions List */}
-        <Card className="bg-white/5 border-white/10 backdrop-blur-sm">
+        <Card className="bg-card border-border backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="text-white">Transactions</CardTitle>
-            <CardDescription className="text-gray-400">
+            <CardTitle className="text-foreground">Transactions</CardTitle>
+            <CardDescription className="text-muted-foreground">
               {transactions.length} transactions found
             </CardDescription>
           </CardHeader>
@@ -242,11 +245,28 @@ const TransactionHistory = () => {
               </div>
             ) : transactions.length === 0 ? (
               <div className="text-center py-12">
-                <Clock className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-white text-lg font-semibold mb-2">No Transactions Found</h3>
-                <p className="text-gray-400">
-                  {Object.values(filters).some(v => v) ? 'Try adjusting your filters' : 'Your transaction history will appear here'}
-                </p>
+                <Clock className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-foreground text-lg font-semibold mb-2">No Transactions Found</h3>
+                <p className="text-muted-foreground mb-4">
+                   {Object.entries(filters).some(([key, value]) => key === 'search' ? value : value !== 'all') ? 'Try adjusting your filters to see more results' : 'You haven\'t made any transactions yet'}
+                 </p>
+                 {!Object.entries(filters).some(([key, value]) => key === 'search' ? value : value !== 'all') && (
+                  <div className="space-y-2">
+                    <p className="text-sm text-muted-foreground">Get started by:</p>
+                    <div className="flex justify-center space-x-4">
+                      <Link to="/send">
+                        <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-accent">
+                          Send Crypto
+                        </Button>
+                      </Link>
+                      <Link to="/receive">
+                        <Button variant="outline" size="sm" className="border-border text-foreground hover:bg-accent">
+                          Receive Crypto
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="space-y-4">
@@ -257,7 +277,7 @@ const TransactionHistory = () => {
                   const txColor = getTransactionColor(tx.transaction_type);
 
                   return (
-                    <div key={tx.id} className="p-4 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                    <div key={tx.id} className="p-4 bg-card/50 rounded-lg border border-border hover:bg-accent transition-colors">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
                           <div className={`w-10 h-10 ${networkInfo.color} rounded-lg flex items-center justify-center`}>
@@ -265,14 +285,14 @@ const TransactionHistory = () => {
                           </div>
                           <div>
                             <div className="flex items-center space-x-2">
-                              <span className="text-white font-semibold">
+                              <span className="text-foreground font-semibold">
                                 {tx.transaction_type === 'send' ? 'Sent' : 'Received'}
                               </span>
                               <Badge className={`${statusInfo.color} text-white`}>
                                 {statusInfo.label}
                               </Badge>
                             </div>
-                            <div className="text-gray-400 text-sm">
+                            <div className="text-muted-foreground text-sm">
                               {formatDate(tx.created_at)}
                             </div>
                           </div>

@@ -465,3 +465,138 @@ def get_transaction_status(tx_hash):
             
     except Exception as e:
         return jsonify({'success': False, 'error': f'Failed to get transaction status: {str(e)}'}), 500
+
+@wallet_bp.route('/wallet/token-balance', methods=['GET'])
+@cross_origin()
+@require_auth
+def get_token_balance():
+    """Get ERC20 token balance for user's wallet"""
+    try:
+        network = request.args.get('network', 'ethereum')
+        token = request.args.get('token', 'USDT')
+        address = request.args.get('address')
+        
+        if not address:
+            return jsonify({'success': False, 'error': 'Address is required'}), 400
+        
+        # Validate network and token
+        supported_networks = ['ethereum', 'polygon', 'bsc']
+        supported_tokens = ['USDT', 'USDC']
+        
+        if network not in supported_networks:
+            return jsonify({'success': False, 'error': 'Unsupported network'}), 400
+            
+        if token not in supported_tokens:
+            return jsonify({'success': False, 'error': 'Unsupported token'}), 400
+        
+        # Get token balance
+        result = blockchain_service.get_token_balance(address, network, token)
+        
+        if result['success']:
+            return jsonify({
+                'success': True,
+                'balance': result['balance'],
+                'token': token,
+                'network': network,
+                'mock': result.get('mock', False)
+            })
+        else:
+            return jsonify({'success': False, 'error': result['error']}), 500
+            
+    except Exception as e:
+        return jsonify({'success': False, 'error': f'Failed to get token balance: {str(e)}'}), 500
+
+@wallet_bp.route('/wallet/send-token', methods=['POST'])
+@cross_origin()
+@require_auth
+@transaction_rate_limit()
+def send_token():
+    """Send ERC20 token transaction"""
+    try:
+        data = request.get_json() or {}
+        
+        # Validate required fields
+        required_fields = ['from_address', 'to_address', 'amount', 'network', 'token']
+        for field in required_fields:
+            if field not in data:
+                return jsonify({'success': False, 'error': f'Missing required field: {field}'}), 400
+        
+        from_address = sanitize_input(data['from_address'])
+        to_address = sanitize_input(data['to_address'])
+        amount = sanitize_input(str(data['amount']))
+        network = sanitize_input(data['network'])
+        token = sanitize_input(data['token'])
+        
+        # Validate inputs
+        if not validate_ethereum_address(from_address) or not validate_ethereum_address(to_address):
+            return jsonify({'success': False, 'error': 'Invalid Ethereum address'}), 400
+        
+        try:
+            amount_float = float(amount)
+            if amount_float <= 0:
+                return jsonify({'success': False, 'error': 'Amount must be positive'}), 400
+        except ValueError:
+            return jsonify({'success': False, 'error': 'Invalid amount format'}), 400
+        
+        # Validate network and token
+        supported_networks = ['ethereum', 'polygon', 'bsc']
+        supported_tokens = ['USDT', 'USDC']
+        
+        if network not in supported_networks:
+            return jsonify({'success': False, 'error': 'Unsupported network'}), 400
+            
+        if token not in supported_tokens:
+            return jsonify({'success': False, 'error': 'Unsupported token'}), 400
+        
+        user = get_current_user()
+        if not user:
+            return jsonify({'success': False, 'error': 'User not found'}), 404
+        
+        # Get user's wallet for this network
+        wallet = Wallet.query.filter_by(user_id=user.id, network=network, address=from_address).first()
+        if not wallet:
+            return jsonify({'success': False, 'error': 'Wallet not found'}), 404
+        
+        # Decrypt private key
+        try:
+            private_key = WalletEncryption.decrypt_private_key(wallet.encrypted_private_key)
+        except Exception as e:
+            return jsonify({'success': False, 'error': 'Failed to decrypt wallet'}), 500
+        
+        # Send token transaction
+        result = blockchain_service.send_token_transaction(
+            from_address, to_address, amount, private_key, network, token
+        )
+        
+        if result['success']:
+            # Create transaction record
+            transaction = Transaction(
+                user_id=user.id,
+                wallet_id=wallet.id,
+                transaction_hash=result['transaction_hash'],
+                from_address=from_address,
+                to_address=to_address,
+                amount=amount,
+                network=network,
+                status=result['status'],
+                transaction_type='token_transfer',
+                token_symbol=token
+            )
+            
+            db.session.add(transaction)
+            db.session.commit()
+            
+            return jsonify({
+                'success': True,
+                'transaction_hash': result['transaction_hash'],
+                'status': result['status'],
+                'network': network,
+                'token': token,
+                'mock': result.get('mock', False)
+            })
+        else:
+            return jsonify({'success': False, 'error': result['error']}), 500
+            
+    except Exception as e:
+        db.session.rollback()
+        return jsonify({'success': False, 'error': f'Failed to send token: {str(e)}'}), 500

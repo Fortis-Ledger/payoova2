@@ -78,39 +78,47 @@ const AdminAnalytics = () => {
     }
   };
 
-  // Mock data for demonstration
-  const mockUserGrowth = [
-    { date: '2024-01-01', users: 100, active: 80 },
-    { date: '2024-01-02', users: 120, active: 95 },
-    { date: '2024-01-03', users: 140, active: 110 },
-    { date: '2024-01-04', users: 180, active: 140 },
-    { date: '2024-01-05', users: 220, active: 170 },
-    { date: '2024-01-06', users: 250, active: 200 },
-    { date: '2024-01-07', users: 280, active: 230 }
-  ];
+  // Real data states - replace mock data with actual API calls
+  const [userGrowthData, setUserGrowthData] = useState([]);
+  const [transactionVolumeData, setTransactionVolumeData] = useState([]);
+  const [networkDistributionData, setNetworkDistributionData] = useState([]);
+  const [performanceMetrics, setPerformanceMetrics] = useState({
+    uptime: '0%',
+    avgResponseTime: '0ms',
+    errorRate: '0%',
+    activeConnections: 0
+  });
 
-  const mockTransactionVolume = [
-    { date: '2024-01-01', volume: 15000, transactions: 45 },
-    { date: '2024-01-02', volume: 22000, transactions: 67 },
-    { date: '2024-01-03', volume: 18000, transactions: 52 },
-    { date: '2024-01-04', volume: 35000, transactions: 89 },
-    { date: '2024-01-05', volume: 28000, transactions: 76 },
-    { date: '2024-01-06', volume: 42000, transactions: 98 },
-    { date: '2024-01-07', volume: 38000, transactions: 87 }
-  ];
+  // TODO: Implement real data fetching
+  useEffect(() => {
+    const fetchAnalyticsData = async () => {
+      try {
+        setLoading(true);
+        // TODO: Replace with actual API calls
+        // const userGrowth = await fetchUserGrowthData();
+        // const transactionVolume = await fetchTransactionVolumeData();
+        // const networkDistribution = await fetchNetworkDistributionData();
+        // const metrics = await fetchPerformanceMetrics();
+        
+        // For now, set empty data
+        setUserGrowthData([]);
+        setTransactionVolumeData([]);
+        setNetworkDistributionData([]);
+        setPerformanceMetrics({
+          uptime: '0%',
+          avgResponseTime: '0ms',
+          errorRate: '0%',
+          activeConnections: 0
+        });
+      } catch (error) {
+        console.error('Error fetching analytics data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  const mockNetworkDistribution = [
-    { name: 'Ethereum', value: 45, color: '#627EEA' },
-    { name: 'Polygon', value: 35, color: '#8247E5' },
-    { name: 'BSC', value: 20, color: '#F3BA2F' }
-  ];
-
-  const mockPerformanceMetrics = {
-    uptime: '99.9%',
-    avgResponseTime: '145ms',
-    errorRate: '0.02%',
-    activeConnections: 1247
-  };
+    fetchAnalyticsData();
+  }, []);
 
   const getHealthStatus = (status) => {
     const statusConfig = {
@@ -198,15 +206,15 @@ const AdminAnalytics = () => {
               <div className="text-gray-400 text-sm">Uptime</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-blue-400">{mockPerformanceMetrics.avgResponseTime}</div>
+              <div className="text-2xl font-bold text-blue-400">{performanceMetrics.avgResponseTime}</div>
               <div className="text-gray-400 text-sm">Avg Response</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-400">{mockPerformanceMetrics.errorRate}</div>
+              <div className="text-2xl font-bold text-yellow-400">{performanceMetrics.errorRate}</div>
               <div className="text-gray-400 text-sm">Error Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">{mockPerformanceMetrics.activeConnections}</div>
+              <div className="text-2xl font-bold text-purple-400">{performanceMetrics.activeConnections}</div>
               <div className="text-gray-400 text-sm">Active Users</div>
             </div>
           </div>
@@ -281,7 +289,7 @@ const AdminAnalytics = () => {
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
                 <Pie
-                  data={mockNetworkDistribution}
+                  data={networkDistributionData}
                   cx="50%"
                   cy="50%"
                   outerRadius={100}
@@ -289,7 +297,7 @@ const AdminAnalytics = () => {
                   dataKey="value"
                   label={({name, value}) => `${name}: ${value}%`}
                 >
-                  {mockNetworkDistribution.map((entry, index) => (
+                  {networkDistributionData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Pie>
@@ -307,7 +315,7 @@ const AdminAnalytics = () => {
         </CardHeader>
         <CardContent>
           <ResponsiveContainer width="100%" height={400}>
-            <BarChart data={mockTransactionVolume}>
+            <BarChart data={transactionVolumeData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
               <XAxis dataKey="date" stroke="#9CA3AF" />
               <YAxis stroke="#9CA3AF" />

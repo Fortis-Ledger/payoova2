@@ -8,7 +8,7 @@ import { Textarea } from '../ui/textarea';
 import { Badge } from '../ui/badge';
 import { Alert, AlertDescription } from '../ui/alert';
 import { CheckCircle, XCircle, Clock, AlertTriangle, Upload, User, MapPin, FileText } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/SupabaseAuthContext';
 import axios from 'axios';
 
 const KYCVerification = () => {

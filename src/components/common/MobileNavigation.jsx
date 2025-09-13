@@ -26,7 +26,7 @@ import {
   FileText,
   CreditCard
 } from 'lucide-react';
-import { useAuth } from '../../contexts/AuthContext';
+import { useAuth } from '../../contexts/SupabaseAuthContext';
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { Auth0Provider } from '@auth0/auth0-react';
 import './App.css';
 
 // Components
@@ -13,15 +12,21 @@ import TransactionHistory from './components/wallet/TransactionHistory';
 import AdvancedFeatures from './components/wallet/AdvancedFeatures';
 import Cards from './components/cards/Cards';
 import KYCVerification from './components/kyc/KYCVerification';
+import UserSettings from './components/user/UserSettings';
 import AdminPanel from './components/admin/AdminPanel';
 import AdminAnalytics from './components/admin/AdminAnalytics';
 import TestRunner from './components/common/TestRunner';
+import SupabaseTest from './test/SupabaseTest';
 import MobileNavigation from './components/common/MobileNavigation';
 import LoadingScreen from './components/common/LoadingScreen';
 
-// Context
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import { WalletProvider } from './contexts/WalletContext';
+// Supabase Context
+import { AuthProvider, useAuth } from './contexts/SupabaseAuthContext.jsx';
+import { WalletProvider } from './contexts/SupabaseWalletContext.jsx';
+import { UserProvider } from './contexts/SupabaseUserContext.jsx';
+import { KYCProvider } from './contexts/SupabaseKYCContext.jsx';
+import { CardProvider } from './contexts/SupabaseCardContext.jsx';
+import { Web3Provider } from './contexts/Web3Context';
 
 function AppRoutes() {
   const { user, loading } = useAuth();
@@ -43,20 +48,30 @@ function AppRoutes() {
   // User routes
   if (user) {
     return (
-      <WalletProvider>
-        <MobileNavigation />
-        <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/send" element={<SendCrypto />} />
-          <Route path="/receive" element={<ReceiveCrypto />} />
-          <Route path="/transactions" element={<TransactionHistory />} />
-          <Route path="/cards" element={<Cards />} />
-          <Route path="/advanced-features" element={<AdvancedFeatures />} />
-          <Route path="/kyc" element={<KYCVerification />} />
-          <Route path="/test-runner" element={<TestRunner />} />
-          <Route path="*" element={<Navigate to="/dashboard" replace />} />
-        </Routes>
-      </WalletProvider>
+      <Web3Provider>
+        <WalletProvider>
+          <UserProvider>
+            <KYCProvider>
+              <CardProvider>
+                <MobileNavigation />
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/send" element={<SendCrypto />} />
+                  <Route path="/receive" element={<ReceiveCrypto />} />
+                  <Route path="/transactions" element={<TransactionHistory />} />
+                  <Route path="/cards" element={<Cards />} />
+                  <Route path="/advanced-features" element={<AdvancedFeatures />} />
+                  <Route path="/kyc" element={<KYCVerification />} />
+                  <Route path="/settings" element={<UserSettings />} />
+                  <Route path="/test-runner" element={<TestRunner />} />
+                  <Route path="/supabase-test" element={<SupabaseTest />} />
+                  <Route path="*" element={<Navigate to="/dashboard" replace />} />
+                </Routes>
+              </CardProvider>
+            </KYCProvider>
+          </UserProvider>
+        </WalletProvider>
+      </Web3Provider>
     );
   }
 
@@ -71,30 +86,14 @@ function AppRoutes() {
 }
 
 function App() {
-  const domain = import.meta.env.VITE_AUTH0_DOMAIN;
-  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
-  const audience = import.meta.env.VITE_AUTH0_AUDIENCE;
-
   return (
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      authorizationParams={{
-        redirect_uri: window.location.origin,
-        audience: audience,
-        scope: "openid profile email",
-      }}
-      useRefreshTokens={true}
-      cacheLocation="localstorage"
-    >
-      <Router>
-        <AuthProvider>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <AppRoutes />
-          </div>
-        </AuthProvider>
-      </Router>
-    </Auth0Provider>
+    <Router>
+      <AuthProvider>
+        <div className="dark min-h-screen bg-background text-foreground">
+          <AppRoutes />
+        </div>
+      </AuthProvider>
+    </Router>
   );
 }
 
