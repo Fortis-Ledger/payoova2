@@ -20,16 +20,17 @@ import SupabaseTest from './test/SupabaseTest';
 import MobileNavigation from './components/common/MobileNavigation';
 import LoadingScreen from './components/common/LoadingScreen';
 
-// Supabase Context
-import { AuthProvider, useAuth } from './contexts/SupabaseAuthContext.jsx';
-import { WalletProvider } from './contexts/SupabaseWalletContext.jsx';
+// Context Providers
+import { AuthProvider, useAuth } from './contexts/AuthContext.jsx';
+import { WalletProvider } from './contexts/WalletContext.jsx';
 import { UserProvider } from './contexts/SupabaseUserContext.jsx';
 import { KYCProvider } from './contexts/SupabaseKYCContext.jsx';
 import { CardProvider } from './contexts/SupabaseCardContext.jsx';
 import { Web3Provider } from './contexts/Web3Context';
 
 function AppRoutes() {
-  const { user, profile, loading, isAdmin } = useAuth();
+  const { user, loading, isAuthenticated } = useAuth();
+  const isAdmin = user?.role === 'admin';
 
   if (loading) {
     return <LoadingScreen />;
@@ -46,7 +47,7 @@ function AppRoutes() {
   }
 
   // User routes
-  if (user) {
+  if (isAuthenticated) {
     return (
       <Web3Provider>
         <WalletProvider>

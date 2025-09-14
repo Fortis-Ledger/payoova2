@@ -170,7 +170,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism", "avalanche"]
+              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism"]
             },
             "description": "Blockchain network"
           }
@@ -221,7 +221,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism", "avalanche"]
+              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism"]
             },
             "description": "Blockchain network"
           }
@@ -321,7 +321,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism", "avalanche"]
+              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism"]
             },
             "description": "Blockchain network"
           },
@@ -383,7 +383,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism", "avalanche"]
+              "enum": ["ethereum", "polygon", "bsc", "arbitrum", "optimism"]
             },
             "description": "Blockchain network"
           }

@@ -75,8 +75,7 @@ export const WalletProvider = ({ children }) => {
           'polygon': 'MATIC',
           'bsc': 'BNB',
           'arbitrum': 'ETH',
-          'optimism': 'ETH',
-          'avalanche': 'AVAX'
+          'optimism': 'ETH'
         };
         return networkCurrencyMap[wallet.network] || 'ETH';
       }))].filter(Boolean);

@@ -82,18 +82,6 @@ class BlockchainService:
                 'decimals': 18,
                 'explorer': 'https://optimistic.etherscan.io',
                 'testnet_explorer': 'https://goerli-optimism.etherscan.io'
-            },
-            'avalanche': {
-                'rpc_url': None,
-                'testnet_rpc_url': None,
-                'chain_id': 43114,
-                'testnet_chain_id': 43113,  # Fuji
-                'name': 'Avalanche C-Chain',
-                'testnet_name': 'Avalanche Fuji',
-                'symbol': 'AVAX',
-                'decimals': 18,
-                'explorer': 'https://snowtrace.io',
-                'testnet_explorer': 'https://testnet.snowtrace.io'
             }
         }
         # Demo mode flag (prefer Flask config if available)
@@ -294,15 +282,16 @@ class BlockchainService:
                 if network_mode == 'mainnet':
                     self.networks['ethereum']['rpc_url'] = current_app.config.get('ETHEREUM_RPC_URL')
                     self.networks['polygon']['rpc_url'] = current_app.config.get('POLYGON_RPC_URL')
-                    self.networks['bsc']['rpc_url'] = current_app.config.get('BSC_RPC_URL')
-                    self.networks['arbitrum']['rpc_url'] = current_app.config.get('ARBITRUM_RPC_URL')
-                    self.networks['optimism']['rpc_url'] = current_app.config.get('OPTIMISM_RPC_URL')
-                    self.networks['avalanche']['rpc_url'] = current_app.config.get('AVALANCHE_RPC_URL')
                 else:
-                    # Use testnet RPCs
-                    self.networks['ethereum']['rpc_url'] = current_app.config.get('ETHEREUM_TESTNET_RPC_URL')
-                    self.networks['polygon']['rpc_url'] = current_app.config.get('POLYGON_TESTNET_RPC_URL')
-                    self.networks['bsc']['rpc_url'] = current_app.config.get('BSC_TESTNET_RPC_URL')
+                    rpc_configs = {
+                        'ethereum': (os.getenv('ETHEREUM_RPC_URL'), os.getenv('ETHEREUM_TESTNET_RPC_URL')),
+                        'polygon': (os.getenv('POLYGON_RPC_URL'), os.getenv('POLYGON_TESTNET_RPC_URL')),
+                        'bsc': (os.getenv('BSC_RPC_URL'), os.getenv('BSC_TESTNET_RPC_URL')),
+                        'arbitrum': (os.getenv('ARBITRUM_RPC_URL'), os.getenv('ARBITRUM_TESTNET_RPC_URL')),
+                        'optimism': (os.getenv('OPTIMISM_RPC_URL'), os.getenv('OPTIMISM_TESTNET_RPC_URL'))
+                    }
+                    for network, (_, rpc_url) in rpc_configs.items():
+                        self.networks[network]['rpc_url'] = rpc_url
         except RuntimeError:
             # We're not in an application context, use defaults
             pass

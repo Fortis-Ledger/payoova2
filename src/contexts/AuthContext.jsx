@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { useAuth0 } from '@auth0/auth0-react';
+import { supabase } from '../config/supabase-config';
 import axios from 'axios';
 
 const AuthContext = createContext();
@@ -13,17 +13,8 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }) => {
-  const {
-    user: auth0User,
-    isAuthenticated,
-    isLoading,
-    loginWithRedirect,
-    logout: auth0Logout,
-    getAccessTokenSilently
-  } = useAuth0();
-
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(null);
+  const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // Configure axios base URL from environment
@@ -33,87 +24,110 @@ export const AuthProvider = ({ children }) => {
     console.log('API Base URL configured:', apiBase);
   }, []);
 
-  // Set up axios defaults with Auth0 token
+  // Set up Supabase auth listener
   useEffect(() => {
-    const setupAuth = async () => {
-      if (isAuthenticated) {
+    // Get initial session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      if (session?.access_token) {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${session.access_token}`;
+      }
+      setLoading(false);
+    });
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+      
+      if (session?.access_token) {
+        axios.defaults.headers.common['Authorization'] = `Bearer ${session.access_token}`;
+        
+        // Sync user with backend
         try {
-          const accessToken = await getAccessTokenSilently();
-          setToken(accessToken);
-          axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-
-          // Sync user data with backend
-          if (auth0User) {
-            const userData = {
-              id: auth0User.sub,
-              name: auth0User.name,
-              email: auth0User.email,
-              role: 'user' // Default role, can be updated from backend
-            };
-            setUser(userData);
-
-            // Optionally sync with backend
-            try {
-              await axios.post('/api/auth/sync-user', userData);
-            } catch (error) {
-              console.error('User sync error:', error);
-            }
-          }
+          await axios.post('/api/auth/sync-user', {
+            user: session.user
+          });
         } catch (error) {
-          console.error('Error getting access token:', error);
+          console.error('User sync error:', error);
         }
       } else {
-        setToken(null);
-        setUser(null);
         delete axios.defaults.headers.common['Authorization'];
       }
-      setLoading(isLoading);
-    };
+      setLoading(false);
+    });
 
-    setupAuth();
-  }, [isAuthenticated, isLoading, auth0User, getAccessTokenSilently]);
+    return () => subscription.unsubscribe();
+  }, []);
 
-  const login = async () => {
+  const login = async (email, password) => {
     try {
-      await loginWithRedirect();
-      return { success: true };
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password
+      });
+      if (error) throw error;
+      return { success: true, data };
     } catch (error) {
       console.error('Login error:', error);
-      return { success: false, error: 'Login failed' };
+      return { success: false, error: error.message };
     }
   };
 
-  const signup = async () => {
+  const signup = async (email, password, metadata = {}) => {
     try {
-      await loginWithRedirect({
-        screen_hint: 'signup'
+      const { data, error } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: metadata
+        }
       });
-      return { success: true };
+      if (error) throw error;
+      return { success: true, data };
     } catch (error) {
       console.error('Signup error:', error);
-      return { success: false, error: 'Signup failed' };
+      return { success: false, error: error.message };
     }
   };
 
-  const logout = () => {
-    auth0Logout({
-      logoutParams: {
-        returnTo: window.location.origin
-      }
-    });
-    setUser(null);
-    setToken(null);
-    delete axios.defaults.headers.common['Authorization'];
+  const logout = async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+      return { success: true };
+    } catch (error) {
+      console.error('Logout error:', error);
+      return { success: false, error: error.message };
+    }
+  };
+
+  const signInWithGoogle = async () => {
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo: `${window.location.origin}/dashboard`
+        }
+      });
+      if (error) throw error;
+      return { success: true, data };
+    } catch (error) {
+      console.error('Google sign-in error:', error);
+      return { success: false, error: error.message };
+    }
   };
 
   const value = {
     user,
-    token,
+    session,
     loading,
-    isAuthenticated,
     login,
     signup,
-    logout
+    logout,
+    signInWithGoogle,
+    isAuthenticated: !!session
   };
 
   return (

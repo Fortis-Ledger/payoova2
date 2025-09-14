@@ -8,8 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Wallet, Eye, EyeOff, ArrowRight, AlertCircle, Shield, Zap, Globe, Lock } from 'lucide-react';
-import { useAuth } from '../../contexts/SupabaseAuthContext';
-import { signInWithGoogle } from '../../config/supabase-config';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -30,14 +29,20 @@ const Login = () => {
     return () => clearInterval(interval);
   }, []);
   
-  const { login } = useAuth();
+  const { login, signInWithGoogle } = useAuth();
 
   const handleGoogleLogin = async () => {
     try {
-      await signInWithGoogle();
+      setLoading(true);
+      const result = await signInWithGoogle();
+      if (!result.success) {
+        setError(result.error || 'Google login failed. Please try again.');
+      }
     } catch (error) {
       console.error('Google login error:', error);
       setError('Google login failed. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 

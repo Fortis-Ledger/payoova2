@@ -39,7 +39,6 @@ class Config:
     BSC_TESTNET_RPC_URL = os.getenv('BSC_TESTNET_RPC_URL', '')
     ARBITRUM_RPC_URL = os.getenv('ARBITRUM_RPC_URL', '')
     OPTIMISM_RPC_URL = os.getenv('OPTIMISM_RPC_URL', '')
-    AVALANCHE_RPC_URL = os.getenv('AVALANCHE_RPC_URL', '')
     
     # Network Configuration
     NETWORK_MODE = os.getenv('NETWORK_MODE', 'testnet')  # 'mainnet' or 'testnet'
@@ -52,8 +51,6 @@ class Config:
     
     # Explorer API Keys
     ETHERSCAN_API_KEY = os.environ.get('ETHERSCAN_API_KEY')
-    POLYGONSCAN_API_KEY = os.environ.get('POLYGONSCAN_API_KEY')
-    BSCSCAN_API_KEY = os.environ.get('BSCSCAN_API_KEY')
     
     # API Keys
     COINGECKO_API_KEY = os.environ.get('COINGECKO_API_KEY')

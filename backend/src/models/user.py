@@ -7,7 +7,8 @@ db = SQLAlchemy()
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    auth0_id = db.Column(db.String(100), unique=True, nullable=True)  # Auth0 user ID
+    auth0_id = db.Column(db.String(100), unique=True, nullable=True)  # Auth0 user ID (deprecated)
+    supabase_id = db.Column(db.String(100), unique=True, nullable=True)  # Supabase user ID
     name = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(255), nullable=True)  # Nullable for Auth0 users
@@ -39,6 +40,7 @@ class User(db.Model):
         return {
             'id': self.id,
             'auth0_id': self.auth0_id,
+            'supabase_id': self.supabase_id,
             'name': self.name,
             'email': self.email,
             'role': self.role,

@@ -32,18 +32,18 @@ def init_database():
     
     with app.app_context():
         try:
-            print("🗄️  Creating database tables...")
+            print("Creating database tables...")
             
             # Create all tables
             db.create_all()
             
-            print("✅ Database tables created successfully!")
+            print("Database tables created successfully!")
             
             # Check if admin user exists
             admin_user = User.query.filter_by(email='admin@payoova.com').first()
             
             if not admin_user:
-                print("👤 Creating admin user...")
+                print("Creating admin user...")
                 
                 # Create admin user
                 admin_user = User(
@@ -56,17 +56,17 @@ def init_database():
                 db.session.add(admin_user)
                 db.session.commit()
                 
-                print("✅ Admin user created successfully!")
+                print("Admin user created successfully!")
                 print("   Email: admin@payoova.com")
                 print("   Password: admin123")
-                print("   ⚠️  Please change the admin password in production!")
+                print("   WARNING: Please change the admin password in production!")
             else:
-                print("👤 Admin user already exists")
+                print("Admin user already exists")
             
-            print("\n🎉 Database initialization completed successfully!")
+            print("\nDatabase initialization completed successfully!")
             
         except Exception as e:
-            print(f"❌ Database initialization failed: {str(e)}")
+            print(f"Database initialization failed: {str(e)}")
             return False
     
     return True
@@ -77,16 +77,16 @@ def reset_database():
     
     with app.app_context():
         try:
-            print("⚠️  Dropping all database tables...")
+            print("WARNING: Dropping all database tables...")
             db.drop_all()
-            
-            print("🗄️  Recreating database tables...")
+
+            print("Recreating database tables...")
             db.create_all()
-            
-            print("✅ Database reset completed successfully!")
+
+            print("Database reset completed successfully!")
             
         except Exception as e:
-            print(f"❌ Database reset failed: {str(e)}")
+            print(f"Database reset failed: {str(e)}")
             return False
     
     return True
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     
     if args.reset:
-        if input("⚠️  This will delete all data. Continue? (y/N): ").lower() == 'y':
+        if input("WARNING: This will delete all data. Continue? (y/N): ").lower() == 'y':
             reset_database()
         else:
             print("Database reset cancelled.")

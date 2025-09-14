@@ -14,21 +14,59 @@ class TransactionMonitor:
     
     def __init__(self):
         self.etherscan_api_key = os.getenv('ETHERSCAN_API_KEY')
-        self.polygonscan_api_key = os.getenv('POLYGONSCAN_API_KEY')
-        self.bscscan_api_key = os.getenv('BSCSCAN_API_KEY')
+        
+        # Chain IDs for Etherscan V2 API (testnet and mainnet)
+        self.chain_ids = {
+            'ethereum': {
+                'mainnet': 1,
+                'testnet': 11155111  # Sepolia
+            },
+            'polygon': {
+                'mainnet': 137,
+                'testnet': 80002     # Amoy
+            },
+            'bsc': {
+                'mainnet': 56,
+                'testnet': 97        # BSC Testnet
+            },
+            'arbitrum': {
+                'mainnet': 42161,
+                'testnet': 421614    # Arbitrum Sepolia
+            },
+            'optimism': {
+                'mainnet': 10,
+                'testnet': 11155420  # Optimism Sepolia
+            }
+        }
+        
+        # Get network mode from environment
+        self.network_mode = os.getenv('NETWORK_MODE', 'testnet')
         
         self.explorer_apis = {
             'ethereum': {
-                'base_url': 'https://api-sepolia.etherscan.io/api',
-                'api_key': self.etherscan_api_key
+                'base_url': 'https://api.etherscan.io/v2/api',
+                'api_key': self.etherscan_api_key,
+                'chainid': self.chain_ids['ethereum'][self.network_mode]
             },
             'polygon': {
-                'base_url': 'https://api-testnet.polygonscan.com/api',
-                'api_key': self.polygonscan_api_key
+                'base_url': 'https://api.etherscan.io/v2/api',
+                'api_key': self.etherscan_api_key,
+                'chainid': self.chain_ids['polygon'][self.network_mode]
             },
             'bsc': {
-                'base_url': 'https://api-testnet.bscscan.com/api',
-                'api_key': self.bscscan_api_key
+                'base_url': 'https://api.etherscan.io/v2/api',
+                'api_key': self.etherscan_api_key,
+                'chainid': self.chain_ids['bsc'][self.network_mode]
+            },
+            'arbitrum': {
+                'base_url': 'https://api.etherscan.io/v2/api',
+                'api_key': self.etherscan_api_key,
+                'chainid': self.chain_ids['arbitrum'][self.network_mode]
+            },
+            'optimism': {
+                'base_url': 'https://api.etherscan.io/v2/api',
+                'api_key': self.etherscan_api_key,
+                'chainid': self.chain_ids['optimism'][self.network_mode]
             }
         }
     
@@ -43,6 +81,7 @@ class TransactionMonitor:
                 return {'success': False, 'error': f'No API key configured for {network}'}
             
             params = {
+                'chainid': explorer['chainid'],
                 'module': 'account',
                 'action': 'txlist',
                 'address': address,
@@ -184,8 +223,7 @@ class TransactionMonitor:
             'polygon': 'MATIC',
             'bsc': 'BNB',
             'arbitrum': 'ETH',
-            'optimism': 'ETH',
-            'avalanche': 'AVAX'
+            'optimism': 'ETH'
         }
         return currency_map.get(network, 'ETH')
     
@@ -200,6 +238,7 @@ class TransactionMonitor:
                 return {'success': False, 'error': f'No API key configured for {network}'}
             
             params = {
+                'chainid': explorer['chainid'],
                 'module': 'transaction',
                 'action': 'gettxreceiptstatus',
                 'txhash': tx_hash,
