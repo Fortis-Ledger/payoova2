@@ -29,14 +29,14 @@ import { CardProvider } from './contexts/SupabaseCardContext.jsx';
 import { Web3Provider } from './contexts/Web3Context';
 
 function AppRoutes() {
-  const { user, loading } = useAuth();
+  const { user, profile, loading, isAdmin } = useAuth();
 
   if (loading) {
     return <LoadingScreen />;
   }
 
   // Admin routes
-  if (user && user.role === 'admin') {
+  if (user && isAdmin) {
     return (
       <Routes>
         <Route path="/admin/*" element={<AdminPanel />} />

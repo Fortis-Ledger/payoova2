@@ -1,16 +1,69 @@
-CREATE TYPE "public"."aml_check_status" AS ENUM('pending', 'passed', 'failed', 'manual_review');--> statement-breakpoint
-CREATE TYPE "public"."aml_risk_level" AS ENUM('low', 'medium', 'high', 'critical');--> statement-breakpoint
-CREATE TYPE "public"."card_status" AS ENUM('active', 'inactive', 'blocked', 'expired');--> statement-breakpoint
-CREATE TYPE "public"."card_transaction_status" AS ENUM('pending', 'completed', 'failed', 'cancelled');--> statement-breakpoint
-CREATE TYPE "public"."card_transaction_type" AS ENUM('purchase', 'withdrawal', 'refund', 'fee');--> statement-breakpoint
-CREATE TYPE "public"."card_type" AS ENUM('virtual', 'physical');--> statement-breakpoint
-CREATE TYPE "public"."kyc_document_type" AS ENUM('passport', 'drivers_license', 'national_id', 'utility_bill', 'bank_statement');--> statement-breakpoint
-CREATE TYPE "public"."kyc_status" AS ENUM('pending', 'under_review', 'approved', 'rejected', 'expired');--> statement-breakpoint
-CREATE TYPE "public"."transaction_status" AS ENUM('pending', 'confirmed', 'failed', 'cancelled');--> statement-breakpoint
-CREATE TYPE "public"."transaction_type" AS ENUM('send', 'receive', 'swap', 'stake', 'unstake', 'bridge');--> statement-breakpoint
-CREATE TYPE "public"."user_role" AS ENUM('user', 'admin', 'super_admin');--> statement-breakpoint
-CREATE TYPE "public"."verification_level" AS ENUM('basic', 'intermediate', 'advanced');--> statement-breakpoint
-CREATE TYPE "public"."wallet_network" AS ENUM('ethereum', 'bitcoin', 'polygon', 'bsc', 'arbitrum', 'optimism');--> statement-breakpoint
+-- Enum types (skip creation if they already exist)
+DO $$ BEGIN
+    CREATE TYPE "public"."aml_check_status" AS ENUM('pending', 'passed', 'failed', 'manual_review');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."aml_risk_level" AS ENUM('low', 'medium', 'high', 'critical');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."card_status" AS ENUM('active', 'inactive', 'blocked', 'expired');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."card_transaction_status" AS ENUM('pending', 'completed', 'failed', 'cancelled');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."card_transaction_type" AS ENUM('purchase', 'withdrawal', 'refund', 'fee');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."card_type" AS ENUM('virtual', 'physical');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."kyc_document_type" AS ENUM('passport', 'drivers_license', 'national_id', 'utility_bill', 'bank_statement');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."kyc_status" AS ENUM('pending', 'under_review', 'approved', 'rejected', 'expired');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."transaction_status" AS ENUM('pending', 'confirmed', 'failed', 'cancelled');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."transaction_type" AS ENUM('send', 'receive', 'swap', 'stake', 'unstake', 'bridge');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."user_role" AS ENUM('user', 'admin', 'super_admin');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."verification_level" AS ENUM('basic', 'intermediate', 'advanced');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
+DO $$ BEGIN
+    CREATE TYPE "public"."wallet_network" AS ENUM('ethereum', 'bitcoin', 'polygon', 'bsc', 'arbitrum', 'optimism');
+EXCEPTION
+    WHEN duplicate_object THEN null;
+END $$;--> statement-breakpoint
 CREATE TABLE "aml_checks" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"user_id" uuid NOT NULL,

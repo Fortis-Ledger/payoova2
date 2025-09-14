@@ -11,10 +11,9 @@ export default defineConfig({
     },
   },
   server: {
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 5173,
-    strictPort: true,
-    allowedHosts: ['5173-i2mwhxh7oxrugkwn6o0r7-0b927f06.manusvm.computer'],
+    strictPort: false,
     proxy: {
       '/api': {
         target: process.env.VITE_API_BASE || 'http://localhost:5000',

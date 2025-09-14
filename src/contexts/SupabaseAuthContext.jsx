@@ -54,22 +54,25 @@ export const AuthProvider = ({ children }) => {
   // Initialize authentication state
   const initializeAuth = async () => {
     try {
+      console.log('🔄 Initializing auth...');
       setLoading(true);
       
       // Get current session
       const { data: { session }, error } = await supabase.auth.getSession();
       
       if (error) {
-        console.error('Error getting session:', error);
-        return;
-      }
-
-      if (session) {
+        console.error('❌ Error getting session:', error);
+        // Don't return early - still need to set loading to false
+      } else if (session) {
+        console.log('✅ Session found, handling sign in...');
         await handleSignIn(session);
+      } else {
+        console.log('ℹ️ No session found, user not authenticated');
       }
     } catch (error) {
-      console.error('Error initializing auth:', error);
+      console.error('❌ Error initializing auth:', error);
     } finally {
+      console.log('✅ Auth initialization complete, setting loading to false');
       setLoading(false);
     }
   };
@@ -77,10 +80,12 @@ export const AuthProvider = ({ children }) => {
   // Handle successful sign in
   const handleSignIn = async (session) => {
     try {
+      console.log('🔄 Handling sign in for user:', session.user.id);
       setSession(session);
       setUser(session.user);
 
       // Get user profile
+      console.log('🔍 Fetching user profile...');
       const { data: userProfile, error } = await supabase
         .from(TABLES.users)
         .select('*')
@@ -88,13 +93,15 @@ export const AuthProvider = ({ children }) => {
         .single();
 
       if (error) {
-        console.error('Error fetching user profile:', error);
+        console.error('❌ Error fetching user profile:', error);
         // If profile doesn't exist, create it
         if (error.code === 'PGRST116') {
+          console.log('👤 User profile not found, creating new profile...');
           await createUserProfile(session.user);
           return;
         }
       } else {
+        console.log('✅ User profile found:', userProfile);
         setProfile(userProfile);
         setIsAdmin(userProfile.role === 'admin');
         
@@ -126,6 +133,7 @@ export const AuthProvider = ({ children }) => {
   // Create user profile after signup
   const createUserProfile = async (authUser) => {
     try {
+      console.log('👤 Creating user profile for:', authUser.email);
       const newProfile = {
         auth_user_id: authUser.id,
         email: authUser.email,
@@ -137,6 +145,7 @@ export const AuthProvider = ({ children }) => {
         security_preferences: {}
       };
 
+      console.log('📝 Inserting profile data:', newProfile);
       const { data, error } = await supabase
         .from(TABLES.users)
         .insert([newProfile])
@@ -144,9 +153,11 @@ export const AuthProvider = ({ children }) => {
         .single();
 
       if (error) {
+        console.error('❌ Error inserting user profile:', error);
         throw error;
       }
 
+      console.log('✅ User profile created successfully:', data);
       setProfile(data);
       setIsAdmin(data.role === 'admin');
       
@@ -155,7 +166,7 @@ export const AuthProvider = ({ children }) => {
       
       return data;
     } catch (error) {
-      console.error('Error creating user profile:', error);
+      console.error('❌ Error creating user profile:', error);
       throw error;
     }
   };
